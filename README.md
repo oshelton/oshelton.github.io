@@ -1,24 +1,17 @@
-# create-svelte
+# OShelton (Owen Shelt) Profile Page
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repo contains the source and assets needed by my profile web ssite and handles deployment of it to github pages.
 
-## Creating a project
+## Prerequisites
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+* Node.js and NPM
+    * On Windows, [NVM for Windows](https://github.com/coreybutler/nvm-windows) is still a good option for managing node installations on Windows, even if a ssuccessor is in the works.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `npm install`, start a development server:
 
-```bash
+```powershell
 npm run dev
 
 # or start the server and open the app in a new browser tab
@@ -29,10 +22,14 @@ npm run dev -- --open
 
 To create a production version of your app:
 
-```bash
+```powershell
 npm run build
 ```
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Deploying
+
+This application uses Sveltekit's [static adapter](https://kit.svelte.dev/docs/adapter-static) for deploying with some configuration tweaks from [metonym/sveltekit-gh-pages](https://github.com/metonym/sveltekit-gh-pages) to make it more github pages friendly.
+
+When commits are pushed to this repo's main brnach it should automatically deploy.
