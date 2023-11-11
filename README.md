@@ -32,4 +32,6 @@ You can preview the production build with `npm run preview`.
 
 This application uses Sveltekit's [static adapter](https://kit.svelte.dev/docs/adapter-static) for deploying with some configuration tweaks from [metonym/sveltekit-gh-pages](https://github.com/metonym/sveltekit-gh-pages) to make it more github pages friendly.
 
-When commits are pushed to this repo's main brnach it should automatically deploy.
+Unlike the example there though this site is configured to dpeloy from the docs directory which is where the `npm run build` command will place the generated files.
+
+Committing and pushing the changes to files in the docs directory to the main branch will result in Github Pages dpeloyment process automatically picking up and deploying them.
