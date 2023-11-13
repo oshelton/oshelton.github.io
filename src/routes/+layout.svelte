@@ -4,7 +4,7 @@
 	import './styles.css';
 </script>
 
-<div class="app">
+<div class="app absolute">
 	<Header />
 
 	<main>
@@ -21,15 +21,19 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		min-width: 100vw;
+		max-height: 100vh;
+		max-width: 100vw;
 	}
 
 	main {
 		flex: 1;
 		display: flex;
-		flex-direction: column;
-		padding: 1rem;
+		overflow: auto;
+		justify-content: center;
 		width: 100%;
 		max-width: 64rem;
+		padding: 1rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

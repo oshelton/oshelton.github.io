@@ -32,9 +32,10 @@
 	section {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
 		flex: 0.6;
+		margin-top: 4rem;
 	}
 
 	h1 {

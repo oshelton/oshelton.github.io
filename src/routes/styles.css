@@ -17,6 +17,7 @@
 }
 
 body {
+	overflow: hidden;
 	min-height: 100vh;
 	margin: 0;
 	background-attachment: fixed;
@@ -74,7 +75,7 @@ pre {
 	max-width: 48rem;
 	flex: 0.6;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	margin: 0 auto;
 }
 
