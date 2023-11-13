@@ -3,7 +3,7 @@
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	import { DarkMode } from 'flowbite-svelte';
 	import { page } from '$app/stores';
-	import logo from '$lib/images/site-logo.jpg'
+	import logo from '$lib/images/site-logo.jpg';
 
 	$: activeUrl = $page.url.pathname;
 </script>
