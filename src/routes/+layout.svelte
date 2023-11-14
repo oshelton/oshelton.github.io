@@ -1,19 +1,18 @@
 <script>
 	import '../app.postcss';
 	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import './styles.css';
 </script>
 
 <div class="app absolute">
 	<Header />
 
-	<main>
+	<main class="dark:divide-gray-700">
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
@@ -36,23 +35,5 @@
 		padding: 1rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>
