@@ -7,7 +7,7 @@ const config = {
 		adapter: adapter({
 			pages: 'docs'
 		})
-		/* Disabled until confirmed it is actually necessary ffor my primary profile page.
+		/* Don't need this for the primary profile site on Github.
 		paths: {
 			base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "",
 		},
