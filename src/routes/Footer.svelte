@@ -1,7 +1,6 @@
 <script>
 	import {
 		Footer,
-		FooterBrand,
 		FooterCopyright,
 		FooterIcon,
 		FooterLink,
