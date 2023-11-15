@@ -9,7 +9,9 @@
 	<Header />
 
 	<main class="dark:divide-gray-700">
-		<slot />
+		<section>
+			<slot />
+		</section>
 	</main>
 
 	<Footer />
