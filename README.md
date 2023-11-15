@@ -4,8 +4,8 @@ This repo contains the source and assets needed by my profile web ssite and hand
 
 ## Prerequisites
 
-* Node.js and NPM
-    * On Windows, [NVM for Windows](https://github.com/coreybutler/nvm-windows) is still a good option for managing node installations on Windows, even if a ssuccessor is in the works.
+- Node.js and NPM
+  - On Windows, [NVM for Windows](https://github.com/coreybutler/nvm-windows) is still a good option for managing node installations on Windows, even if a ssuccessor is in the works.
 
 ## Developing
 
