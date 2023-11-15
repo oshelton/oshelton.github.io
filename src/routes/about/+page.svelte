@@ -3,7 +3,7 @@
 	<meta name="description" content="About this app" />
 </svelte:head>
 
-<div class="text-column">
+<section>
 	<h1>About this app</h1>
 
 	<p>
@@ -18,4 +18,4 @@
 		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
 		the devtools network panel and reloading.
 	</p>
-</div>
+</section>

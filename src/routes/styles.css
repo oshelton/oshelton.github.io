@@ -1,6 +1,6 @@
 @import '@fontsource/fira-mono';
 
-.text-column {
+section {
 	display: flex;
 	max-width: 48rem;
 	flex: 0.6;
