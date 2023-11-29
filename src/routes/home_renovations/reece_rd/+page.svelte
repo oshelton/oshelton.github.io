@@ -1,6 +1,5 @@
 <script>
 	import { Skeleton } from 'flowbite-svelte';
-	import Footer from '../../Footer.svelte';
 </script>
 
 <svelte:head>
