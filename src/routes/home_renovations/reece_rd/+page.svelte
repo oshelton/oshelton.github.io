@@ -1,19 +1,14 @@
+<script>
+	import { Skeleton } from 'flowbite-svelte';
+	import Footer from '../../Footer.svelte';
+</script>
+
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>Reece Road Renovation</title>
+	<meta
+		name="description"
+		content="My family's renovation of a home in Waynesville for investment purposes."
+	/>
 </svelte:head>
 
-<h1>About this app</h1>
-
-<p>
-	This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the following
-	into your command line and following the prompts:
-</p>
-
-<pre>npm create svelte@latest</pre>
-
-<p>
-	The page you're looking at is purely static HTML, with no client-side interactivity needed.
-	Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-	the devtools network panel and reloading.
-</p>
+<Skeleton size="xl" class="my-8" />
