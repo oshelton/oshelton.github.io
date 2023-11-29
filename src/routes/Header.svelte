@@ -46,6 +46,17 @@
 				<DropdownItem href="/about/work">Work</DropdownItem>
 				<DropdownItem href={resumeFile} target="_blank">Generic Resume</DropdownItem>
 			</Dropdown>
+
+			<NavLi class="cursor-pointer">
+				Home Renovations<ChevronDownOutline
+					class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
+				/>
+			</NavLi>
+			<Dropdown {activeUrl} class="w-44 z-20">
+				<DropdownItem href="/home_renovations/reece_rd">Reece Rd Flip House</DropdownItem>
+				<DropdownItem href="/home_renovations/clayton_ga">Clayton Home</DropdownItem>
+				<DropdownItem href="/home_renovations/clyde_river">Clyde River Home</DropdownItem>
+			</Dropdown>
 		</NavUl>
 	</Navbar>
 </header>
