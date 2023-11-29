@@ -1,8 +1,18 @@
 <script>
 	import { Img } from 'flowbite-svelte';
-	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import {
+		Navbar,
+		NavBrand,
+		NavLi,
+		NavUl,
+		NavHamburger,
+		Dropdown,
+		DropdownItem
+	} from 'flowbite-svelte';
+	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { DarkMode } from 'flowbite-svelte';
 	import { page } from '$app/stores';
+	import resumeFile from '$lib/files/generic_resume.pdf';
 	import logo from '$lib/images/site-logo.jpg';
 
 	$: activeUrl = $page.url.pathname;
@@ -26,7 +36,16 @@
 
 		<NavUl {activeUrl}>
 			<NavLi href="/">Home</NavLi>
-			<NavLi href="/about">About</NavLi>
+
+			<NavLi class="cursor-pointer">
+				About Me<ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline" />
+			</NavLi>
+			<Dropdown {activeUrl} class="w-44 z-20">
+				<DropdownItem href="/education">Education</DropdownItem>
+				<DropdownItem href="/outside_work">Outside of Work</DropdownItem>
+				<DropdownItem href="/work">Work</DropdownItem>
+				<DropdownItem href={resumeFile} target="_blank">Generic Resume</DropdownItem>
+			</Dropdown>
 		</NavUl>
 	</Navbar>
 </header>
