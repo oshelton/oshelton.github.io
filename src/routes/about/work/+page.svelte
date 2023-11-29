@@ -4,10 +4,7 @@
 
 <svelte:head>
 	<title>Work</title>
-	<meta
-		name="description"
-		content="My work history."
-	/>
+	<meta name="description" content="My work history." />
 </svelte:head>
 
 <Skeleton size="xl" class="my-8" />

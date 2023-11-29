@@ -59,14 +59,10 @@
 			</Dropdown>
 
 			<NavLi class="cursor-pointer">
-				Software<ChevronDownOutline
-					class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
-				/>
+				Software<ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline" />
 			</NavLi>
 			<Dropdown {activeUrl} class="w-44 z-20">
-				<DropdownItem href="/software_projects/open_source"
-					>Open Source/Personal</DropdownItem
-				>
+				<DropdownItem href="/software_projects/open_source">Open Source/Personal</DropdownItem>
 				<DropdownItem href="/software_projects/work">Work</DropdownItem>
 				<DropdownItem href="/software_projects/school">School</DropdownItem>
 			</Dropdown>
