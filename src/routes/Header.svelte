@@ -41,9 +41,9 @@
 				About Me<ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline" />
 			</NavLi>
 			<Dropdown {activeUrl} class="w-44 z-20">
-				<DropdownItem href="/education">Education</DropdownItem>
-				<DropdownItem href="/outside_work">Outside of Work</DropdownItem>
-				<DropdownItem href="/work">Work</DropdownItem>
+				<DropdownItem href="/about/education">Education</DropdownItem>
+				<DropdownItem href="/about/outside_work">Outside of Work</DropdownItem>
+				<DropdownItem href="/about/work">Work</DropdownItem>
 				<DropdownItem href={resumeFile} target="_blank">Generic Resume</DropdownItem>
 			</Dropdown>
 		</NavUl>
