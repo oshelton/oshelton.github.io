@@ -12,8 +12,8 @@
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { DarkMode } from 'flowbite-svelte';
 	import { page } from '$app/stores';
-	import resumeFile from '$lib/files/generic_resume.pdf';
 	import logo from '$lib/images/site-logo.jpg';
+	import { NavigationMenus } from './navigation.js';
 
 	$: activeUrl = $page.url.pathname;
 </script>
@@ -37,35 +37,18 @@
 		<NavUl {activeUrl}>
 			<NavLi href="/">Home</NavLi>
 
-			<NavLi class="cursor-pointer">
-				About Me<ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline" />
-			</NavLi>
-			<Dropdown {activeUrl} class="w-44 z-20">
-				<DropdownItem href="/about/education">Education</DropdownItem>
-				<DropdownItem href="/about/outside_work">Outside of Work</DropdownItem>
-				<DropdownItem href="/about/work">Work</DropdownItem>
-				<DropdownItem href={resumeFile} target="_blank">Generic Resume</DropdownItem>
-			</Dropdown>
-
-			<NavLi class="cursor-pointer">
-				Home Renovations<ChevronDownOutline
-					class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
-				/>
-			</NavLi>
-			<Dropdown {activeUrl} class="w-44 z-20">
-				<DropdownItem href="/home_renovations/reece_rd">Reece Rd Flip House</DropdownItem>
-				<DropdownItem href="/home_renovations/clayton_ga">Clayton Home</DropdownItem>
-				<DropdownItem href="/home_renovations/clyde_river">Clyde River Home</DropdownItem>
-			</Dropdown>
-
-			<NavLi class="cursor-pointer">
-				Software<ChevronDownOutline class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline" />
-			</NavLi>
-			<Dropdown {activeUrl} class="w-44 z-20">
-				<DropdownItem href="/software_projects/open_source">Open Source/Personal</DropdownItem>
-				<DropdownItem href="/software_projects/work">Work</DropdownItem>
-				<DropdownItem href="/software_projects/school">School</DropdownItem>
-			</Dropdown>
+			{#each NavigationMenus as menu}
+				<NavLi class="cursor-pointer">
+					{menu.label}<ChevronDownOutline
+						class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
+					/>
+				</NavLi>
+				<Dropdown {activeUrl} class="w-44 z-20">
+					{#each menu.items as item}
+						<DropdownItem href={item.url} target={item.target}>{item.label}</DropdownItem>
+					{/each}
+				</Dropdown>
+			{/each}
 		</NavUl>
 	</Navbar>
 </header>
