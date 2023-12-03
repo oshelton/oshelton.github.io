@@ -33,19 +33,19 @@ I do a *lot* more than just engineer software...`,
 				'Education',
 				'All about my educational history.',
 				'/about/education',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'Outside of Work',
 				'All about my outside of work hobbies and interests.',
 				'/about/outside_work',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'Work',
 				'All about my work history and experience.',
 				'/about/work',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'Generic resume',
@@ -66,19 +66,19 @@ So far, just two home of our own and one that was an investment/flip property.`,
 				'Reece Rd House',
 				'About my first major home renovation project with my inlaws.',
 				'/home_renovations/reece_rd',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'Clayton Home',
 				'All about the renovation work we did on our first owned home as a married couple.',
 				'/home_renovations/clayton_ga',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'Clyde River Home',
 				'All about the renovations we are making to our current home.',
 				'/home_renovations/clyde_river',
-				'_self'
+				null
 			)
 		]
 	),
@@ -91,19 +91,19 @@ So far, just two home of our own and one that was an investment/flip property.`,
 				'Open Source',
 				'About my open source and personal projects.',
 				'/software_projects/open_source',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'Work',
 				'A chosen selection of some of my work related projects that I can talk about.',
 				'/software_projects/work',
-				'_self'
+				null
 			),
 			new NavigationMenuItem(
 				'School',
 				'Some of the more interesting and more significant projects I worked on in school.',
 				'/software_projects/school',
-				'_self'
+				null
 			)
 		]
 	)
