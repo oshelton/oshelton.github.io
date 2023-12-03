@@ -1,4 +1,4 @@
-# OShelton (Owen Shelt) Profile Page
+# OShelton' (Jack Owen Shelton) Profile Page
 
 This repo contains the source and assets needed by my profile web ssite and handles deployment of it to github pages.
 
@@ -13,18 +13,19 @@ Once you've created a project and installed dependencies with `npm install`, sta
 
 ```powershell
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
+
+This will auto open your default browser to the appropriate URL and it will auto refresh as you make changes in code.
 
 ## Building
 
-To create a production version of your app:
+To create a production version of the app's files:
 
 ```powershell
 npm run build
 ```
+
+Unlike a default sveltekit build this will place the output files in a docs directory to make Github Pages happy. 
 
 You can preview the production build with `npm run preview`.
 
