@@ -1,4 +1,9 @@
-import { InfoCircleOutline, HomeOutline, DesktopPcOutline, RuleCombinedOutline } from 'flowbite-svelte-icons';
+import {
+	InfoCircleOutline,
+	HomeOutline,
+	DesktopPcOutline,
+	RuleCombinedOutline
+} from 'flowbite-svelte-icons';
 import resumeFile from '$lib/files/generic_resume.pdf';
 
 // Class representing a navigation menu with items.
@@ -125,7 +130,7 @@ These projects also come plans included.`,
 				`This is a simple jig I use to sharpen chainsaw blades when they aren't mounted on my chainsaw.`,
 				'/diy/chainsaw_sharpener',
 				null
-			),
+			)
 		]
 	)
 ];
