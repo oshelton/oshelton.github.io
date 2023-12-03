@@ -32,7 +32,7 @@
 
 <div class="py-8 gap-4 columns-1 lg:columns-2 md:columns-2">
 	{#each NavigationMenus as menu}
-		<Card class="my-4 break-inside-avoid-column">
+		<Card class="mb-4 max-w-full break-inside-avoid-column">
 			<Heading tag="h6" class="flex mb-4 align-middle">
 				<svelte:component this={menu.icon} class="w-5 h-5 mr-2 my-auto" />
 				{menu.label}
