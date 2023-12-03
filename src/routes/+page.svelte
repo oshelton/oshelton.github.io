@@ -1,5 +1,7 @@
 <script>
-	import { Heading, P } from 'flowbite-svelte';
+	import { Button, Card, Heading, Hr, P } from 'flowbite-svelte';
+	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
+	import { NavigationMenus } from '$lib/navigation.js';
 </script>
 
 <svelte:head>
@@ -17,16 +19,34 @@
 	Photography
 </Heading>
 
-<P class="mb-4">
-	This is the profile/portfolio site of Jack Owen Shelton (there's a little picture of me in the top
-	left).
-</P>
+<P class="mb-4">This is the profile/portfolio site of Jack Owen Shelton.</P>
 
 <P class="mb-4">
 	This site is dedicated to various parts of my life, projects I have worked on over the years, and
-	giving visitors a better picture of who I am.
+	giving folks a better picture of who I am and what I am up to.
 </P>
 
 <P class="mb-8">At some point it may even host a blog.</P>
 
-<Heading tag="h5">Thank you for visiting and enjoy your stay!</Heading>
+<Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
+
+<div class="py-8 gap-4 columns-1 lg:columns-2 md:columns-2">
+	{#each NavigationMenus as menu}
+		<Card class="my-4 break-inside-avoid-column">
+			<Heading tag="h6" class="flex mb-4 align-middle">
+				<svelte:component this={menu.icon} class="w-5 h-5 mr-2 my-auto" />
+				{menu.label}
+			</Heading>
+
+			<MarkdownParagraph source={menu.description} />
+
+			<div class="flex flex-wrap gap-2">
+				{#each menu.items as item}
+					<Button class="p-2" href={item.url} target={item.target} pill>
+						{item.label}
+					</Button>
+				{/each}
+			</div>
+		</Card>
+	{/each}
+</div>

@@ -12,8 +12,9 @@
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { DarkMode } from 'flowbite-svelte';
 	import { page } from '$app/stores';
+
 	import logo from '$lib/images/site-logo.jpg';
-	import { NavigationMenus } from './navigation.js';
+	import { NavigationMenus } from '$lib/navigation.js';
 
 	$: activeUrl = $page.url.pathname;
 </script>
