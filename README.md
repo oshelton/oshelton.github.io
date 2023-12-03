@@ -25,7 +25,7 @@ To create a production version of the app's files:
 npm run build
 ```
 
-Unlike a default sveltekit build this will place the output files in a docs directory to make Github Pages happy. 
+Unlike a default sveltekit build this will place the output files in a docs directory to make Github Pages happy.
 
 You can preview the production build with `npm run preview`.
 
