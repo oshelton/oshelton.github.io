@@ -1,4 +1,4 @@
-import { InfoCircleOutline, HomeOutline, DesktopPcOutline } from 'flowbite-svelte-icons';
+import { InfoCircleOutline, HomeOutline, DesktopPcOutline, RuleCombinedOutline } from 'flowbite-svelte-icons';
 import resumeFile from '$lib/files/generic_resume.pdf';
 
 // Class representing a navigation menu with items.
@@ -105,6 +105,27 @@ So far, just two home of our own and one that was an investment/flip property.`,
 				'/software_projects/school',
 				null
 			)
+		]
+	),
+	new NavigationMenu(
+		'DIY/Woodworking',
+		`I occasionally find that I need to create something with my bare hands to meet a need we have around the house.
+		
+These projects also come plans included.`,
+		RuleCombinedOutline,
+		[
+			new NavigationMenuItem(
+				'Double Stack Firewood Rack',
+				'This is a double depth firewood rack I have built 3 of for storing firewood at our home.',
+				'/diy/double_firewood_rack',
+				null
+			),
+			new NavigationMenuItem(
+				'Chainsaw Sharpening Jig',
+				`This is a simple jig I use to sharpen chainsaw blades when they aren't mounted on my chainsaw.`,
+				'/diy/chainsaw_sharpener',
+				null
+			),
 		]
 	)
 ];

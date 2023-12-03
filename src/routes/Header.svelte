@@ -44,7 +44,7 @@
 						class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
 					/>
 				</NavLi>
-				<Dropdown {activeUrl} class="w-44 z-20">
+				<Dropdown {activeUrl} class="z-20">
 					{#each menu.items as item}
 						<DropdownItem href={item.url} target={item.target}>{item.label}</DropdownItem>
 					{/each}
