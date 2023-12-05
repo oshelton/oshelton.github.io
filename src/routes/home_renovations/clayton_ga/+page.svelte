@@ -1,10 +1,10 @@
 <script>
-	import { Skeleton } from 'flowbite-svelte';
+	import { page } from '$app/stores';
+
+	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
+	import UnderConstructionSign from '$lib/components/UnderConstructionSign.svelte';
 </script>
 
-<svelte:head>
-	<title>Clayton Georgia Home Renovation</title>
-	<meta name="description" content="My wife and I's renovation of our home in Clayton Georgia." />
-</svelte:head>
+<PageTitleBlock url={$page.url.pathname} />
 
-<Skeleton size="xl" class="my-8" />
+<UnderConstructionSign />

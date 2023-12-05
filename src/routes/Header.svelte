@@ -46,7 +46,7 @@
 				</NavLi>
 				<Dropdown {activeUrl} class="z-20">
 					{#each menu.items as item}
-						<DropdownItem href={item.url} target={item.target}>{item.label}</DropdownItem>
+						<DropdownItem href={item.url} target={item.target}>{item.title}</DropdownItem>
 					{/each}
 				</Dropdown>
 			{/each}
