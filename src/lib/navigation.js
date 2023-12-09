@@ -33,13 +33,15 @@ class NavigationMenuItem {
 	 * @param {string} description - Longer form markdown description of the item.
 	 * @param {string} url - Relative to the root URL to the target page.
 	 * @param {string} target - Target to use when opening the page; may be null or one of https://www.w3schools.com/tags/att_a_target.asp.
+	 * @param {boolean} underConstruction - Whether or not this page is still under construction.
 	 */
-	constructor(title, metaDescription, description, url, target) {
+	constructor(title, metaDescription, description, url, target, underConstruction) {
 		this.title = title;
 		this.metaDescription = metaDescription;
 		this.description = description;
 		this.url = url;
 		this.target = target;
+		this.underConstruction = underConstruction;
 	}
 }
 
@@ -66,28 +68,32 @@ I do a *lot* more than just engineer software...`,
 
 I can't claim to *hold* a graduate degree sadly as I did not complete my graduate studies at UGA, but I was still able to learn a lot and benefited greatly from the experience.`,
 				'/about/education',
-				null
+				null,
+				false
 			),
 			new NavigationMenuItem(
 				'Outside of Work',
 				'All about my outside of work hobbies and interests.',
 				'',
 				'/about/outside_work',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'Work',
 				'All about my work history and experience.',
 				'',
 				'/about/work',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'Generic resume',
 				'A link to a generic resume.  Hopefully up to date.',
 				'',
 				resumeFile,
-				'_blank'
+				'_blank',
+				true
 			)
 		]
 	),
@@ -103,21 +109,24 @@ So far, just two home of our own and one that was an investment/flip property.`,
 				'About my first major home renovation project with my inlaws.',
 				'',
 				'/home_renovations/reece_rd',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'Clayton Home',
 				'All about the renovation work we did on our first owned home as a married couple.',
 				'',
 				'/home_renovations/clayton_ga',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'Clyde River Home',
 				'All about the renovations we are making to our current home.',
 				'',
 				'/home_renovations/clyde_river',
-				null
+				null,
+				true
 			)
 		]
 	),
@@ -131,21 +140,24 @@ So far, just two home of our own and one that was an investment/flip property.`,
 				'About my open source and personal projects.',
 				'',
 				'/software_projects/open_source',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'Work',
 				'A chosen selection of some of my work related projects that I can talk about.',
 				'',
 				'/software_projects/work',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'School',
 				'Some of the more interesting and more significant projects I worked on in school.',
 				'',
 				'/software_projects/school',
-				null
+				null,
+				true
 			)
 		]
 	),
@@ -161,14 +173,16 @@ These projects also come plans included.`,
 				'This is a double depth firewood rack I have built 3 of for storing firewood at our home.',
 				'',
 				'/diy/double_firewood_rack',
-				null
+				null,
+				true
 			),
 			new NavigationMenuItem(
 				'Chainsaw Sharpening Jig',
 				`This is a simple jig I use to sharpen chainsaw blades when they aren't mounted on my chainsaw.`,
 				'',
 				'/diy/chainsaw_sharpener',
-				null
+				null,
+				true
 			)
 		]
 	)

@@ -7,14 +7,18 @@
 		NavUl,
 		NavHamburger,
 		Dropdown,
-		DropdownItem
+		DropdownItem,
+		Tooltip
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { DarkMode } from 'flowbite-svelte';
+	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
 	import { page } from '$app/stores';
 
 	import logo from '$lib/images/site-logo.jpg';
 	import { NavigationMenus } from '$lib/navigation.js';
+	import UnderConstructionSign from '$lib/components/UnderConstructionSign.svelte';
 
 	$: activeUrl = $page.url.pathname;
 </script>
@@ -46,7 +50,17 @@
 				</NavLi>
 				<Dropdown {activeUrl} class="z-20">
 					{#each menu.items as item}
-						<DropdownItem href={item.url} target={item.target}>{item.title}</DropdownItem>
+						<DropdownItem href={item.url} target={item.target}>
+							{#if item.underConstruction}
+								<span class="flex gap-2">
+									<Icon size="16" src={ConeStriped} />
+									<Tooltip>This page is under construction.</Tooltip> 
+									{item.title}
+								</span>
+							{:else}
+								<span class="ml-6">{item.title}</span>
+							{/if}
+						</DropdownItem>
 					{/each}
 				</Dropdown>
 			{/each}
