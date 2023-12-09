@@ -4,7 +4,7 @@
 -->
 
 <script>
-	import { Li, P } from 'flowbite-svelte';
+	import { Li } from 'flowbite-svelte';
 </script>
 
 <Li><slot /></Li>
