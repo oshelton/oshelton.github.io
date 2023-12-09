@@ -54,7 +54,7 @@
 							{#if item.underConstruction}
 								<span class="flex gap-2">
 									<Icon size="16" src={ConeStriped} />
-									<Tooltip>This page is under construction.</Tooltip> 
+									<Tooltip>This page is under construction.</Tooltip>
 									{item.title}
 								</span>
 							{:else}
