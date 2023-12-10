@@ -18,7 +18,6 @@
 
 	import logo from '$lib/images/site-logo.jpg';
 	import { NavigationMenus } from '$lib/navigation.js';
-	import UnderConstructionSign from '$lib/components/UnderConstructionSign.svelte';
 
 	$: activeUrl = $page.url.pathname;
 </script>
