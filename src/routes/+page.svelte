@@ -1,5 +1,8 @@
 <script>
-	import { Button, Card, Heading, Hr, P } from 'flowbite-svelte';
+	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
+	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
+
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 	import { NavigationMenus } from '$lib/navigation.js';
 </script>
@@ -42,9 +45,20 @@
 
 			<div class="flex flex-wrap gap-2">
 				{#each menu.items as item}
-					<Button class="p-2" href={item.url} target={item.target} pill>
-						{item.label}
-					</Button>
+					{#if item.underConstruction}
+						<Button class="p-2" color="alternative" href={item.url} target={item.target} pill>
+							<span class="flex gap-1">
+								<Icon size="16" className="my-auto" src={ConeStriped} />
+								{item.title}
+							</span>
+						</Button>
+
+						<Tooltip>This page is under construction.</Tooltip>
+					{:else}
+						<Button class="p-2" href={item.url} target={item.target} pill>
+							{item.title}
+						</Button>
+					{/if}
 				{/each}
 			</div>
 		</Card>
