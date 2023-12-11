@@ -74,10 +74,10 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 			new NavigationMenuItem(
 				'Outside of Work',
 				'All about my outside of work hobbies and interests.',
-				'',
+				`I am a man of many hobbies.  Some of which will be covered on this site in greater detail and some which won't be.`,
 				'/about/outside_work',
 				null,
-				true
+				false
 			),
 			new NavigationMenuItem(
 				'Work',
