@@ -74,7 +74,9 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 			new NavigationMenuItem(
 				'Outside of Work',
 				'All about my outside of work hobbies and interests.',
-				`I am a man of many hobbies.  Some of which will be covered on this site in greater detail and some which won't be.`,
+				`I am a man of many hobbies.  Some of which will be covered on this site in greater detail and some which won't be.
+				
+Many of my hobbies with more easily demonstrated creations are discussed in depth in the menus at the top of the page.`,
 				'/about/outside_work',
 				null,
 				false
