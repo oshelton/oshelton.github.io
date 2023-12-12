@@ -1,6 +1,5 @@
 <script>
-	import { A, Alert, Heading, P, List, Li } from 'flowbite-svelte';
-	import { InfoCircleSolid } from 'flowbite-svelte-icons';
+	import { A, Heading, P, List, Li } from 'flowbite-svelte';
 	import { page } from '$app/stores';
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
