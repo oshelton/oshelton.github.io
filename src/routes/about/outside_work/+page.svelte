@@ -4,6 +4,9 @@
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PopupImage from '$lib/components/PopupImage.svelte';
+	import PageToc from '$lib/components/PageToc.svelte';
+	
+	import { GetItemForUrl } from '$lib/navigation.js';
 
 	import CharlestonBeach1 from '$lib/images/outside_of_work/photography/charleston_beach_1.webp';
 	import SterlingSnow from '$lib/images/outside_of_work/photography/sterling_snow.webp';
@@ -18,12 +21,21 @@
 	import Elk from '$lib/images/outside_of_work/hiking/elk.webp';
 	import MaxPatchAscent from '$lib/images/outside_of_work/hiking/max_patch_ascent.webp';
 	import MaxPatchTop from '$lib/images/outside_of_work/hiking/max_patch_top.webp';
+
+	let url = $page.url.pathname;
+	let navItem = GetItemForUrl(url);
 </script>
 
-<PageTitleBlock url={$page.url.pathname} />
+<PageTitleBlock url={url} />
+
+<PageToc item={navItem} contents={[
+	{ title: "Faith", url: url + "#faith" },
+	{ title: "Photography", url: url + "#photography" },
+	{ title: "Hiking", url: url + "#hiking" }
+]} />
 
 <span class=" flex flex-col gap-4 pb-4">
-	<Heading tag="h4">Faith</Heading>
+	<Heading id="faith" tag="h4">Faith</Heading>
 
 	<P>
 		A critically important of mine and my family's life is our faith. My wife and I are members of <A
@@ -47,7 +59,7 @@
 		community and elsewhere.
 	</P>
 
-	<Heading tag="h4">Photography</Heading>
+	<Heading id="photography" tag="h4">Photography</Heading>
 
 	<P>
 		Photography has been an important part of my life for a very long time. My dad had been a
@@ -124,7 +136,7 @@
 		>
 	</List>
 
-	<Heading tag="h4">Hiking</Heading>
+	<Heading id="hiking" tag="h4">Hiking</Heading>
 
 	<P>
 		I live in the mountains of western North Carolina, definitely one of the most beautiful places
