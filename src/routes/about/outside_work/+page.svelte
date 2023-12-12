@@ -24,6 +24,24 @@
 <PageTitleBlock url={$page.url.pathname} />
 
 <span class=" flex flex-col gap-4 pb-4">
+	<Heading tag="h4">Faith</Heading>
+
+	<P>
+		A critically important of mine and my family's life is our faith.  My wife and I are members of <A href="https://www.woodlandbaptist.org/">Woodland Baptist church</A> in Waynesville North Carolina.
+	</P>
+
+	<P>
+		She serves on a rotation in the church nursery during Sunday morning services on occasion and I help lead the youth group on Wednesday nights including mentoring, serving, and occasionally teaching from the Bible.
+	</P>
+
+	<P>
+		I also meet weekly with a group of older men and we share what's going on in our lives and have a brief devotion that is on a rotation.
+	</P>
+
+	<P>
+		We both also contribute both financially and with service to a number of causes in our local community and elsewhere.
+	</P>
+
 	<Heading tag="h4">Photography</Heading>
 
 	<P>
