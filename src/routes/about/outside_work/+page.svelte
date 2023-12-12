@@ -1,5 +1,6 @@
 <script>
-	import { A, Heading, P, List, Li } from 'flowbite-svelte';
+	import { A, Alert, Heading, P, List, Li } from 'flowbite-svelte';
+	import { InfoCircleSolid } from 'flowbite-svelte-icons';
 	import { page } from '$app/stores';
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
@@ -13,11 +14,16 @@
 	import BumbleBee from '$lib/images/outside_of_work/photography/bumble_bee_flower.webp';
 	import SnowFlowerClayton from '$lib/images/outside_of_work/photography/snow_flower_clayton.webp';
 	import SnowWaynesville from '$lib/images/outside_of_work/photography/snow_waynesville.webp';
+
+	import ChatoogaRiver from '$lib/images/outside_of_work/hiking/chatooga_river.webp';
+	import Elk from '$lib/images/outside_of_work/hiking/elk.webp';
+	import MaxPatchAscent from '$lib/images/outside_of_work/hiking/max_patch_ascent.webp';
+	import MaxPatchTop from '$lib/images/outside_of_work/hiking/max_patch_top.webp';
 </script>
 
 <PageTitleBlock url={$page.url.pathname} />
 
-<span class=" flex flex-col gap-4">
+<span class=" flex flex-col gap-4 pb-4">
 	<Heading tag="h4">Photography</Heading>
 
 	<P>
@@ -94,4 +100,43 @@
 			></Li
 		>
 	</List>
+
+	<Heading tag="h4">Hiking</Heading>
+
+	<P>
+		I live in the mountains of western North Carolina, definitely one of the most beautiful places
+		in the country for hiking. I'm not able to take advantage of it nearly as much as I would like,
+		but when I can, I do my best to get out into the woods.
+	</P>
+
+	<P>
+		I even proposed to my wife Megan on the trails at <A
+			href="https://ashevilletrails.com/blue-ridge-parkway/graveyard-fields-trail-waterfalls/"
+			>Graveyard fields</A
+		> off of the <A href="https://www.blueridgeparkway.org/">Blue Ridge Parkway</A>.
+	</P>
+
+	<P>Some of my favorite photos from hiking trips:</P>
+
+	<div class="gap-4 flex flex-row flex-wrap">
+		<PopupImage
+			src={ChatoogaRiver}
+			tooltip="A foggy day on the Chatooga River near Clayton Georgia"
+		/>
+		<PopupImage
+			src={Elk}
+			imgSize="h-32"
+			tooltip="A bull elk we spotted while hiking through the Cataloochee valley"
+		/>
+		<PopupImage
+			src={MaxPatchAscent}
+			tooltip="The ascent up to the peak of Max Patch in western NC"
+		/>
+		<PopupImage src={MaxPatchTop} tooltip="The view from the top of Max Patch in western NC" />
+	</div>
+
+	<P>
+		When spring rolls around I hope to rejoin a group of retired men who go hiking every Tuesday.
+		Not every Tuesday but definitely some Tuesdays.
+	</P>
 </span>
