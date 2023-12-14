@@ -2,7 +2,7 @@
 
 section {
 	display: flex;
-	flex: .9;
+	flex: 0.9;
 	flex-direction: column;
 	justify-content: flex-start;
 	margin: 0 auto;
