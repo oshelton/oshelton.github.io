@@ -40,11 +40,14 @@
 
 <PageTitleBlock {url} />
 
-<PageToc item={navItem} contents={[
-	{ title: "Faith", url: url + "#faith" },
-	{ title: "Photography", url: url + "#photography" },
-	{ title: "Hiking", url: url + "#hiking" }
-]} />
+<PageToc
+	item={navItem}
+	contents={[
+		{ title: 'Faith', url: url + '#faith' },
+		{ title: 'Photography', url: url + '#photography' },
+		{ title: 'Hiking', url: url + '#hiking' }
+	]}
+/>
 
 <span class=" flex flex-col gap-4 pb-4">
 	<Heading id="faith" tag="h4">Faith</Heading>
