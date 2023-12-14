@@ -3,8 +3,9 @@
 
 	export let imgClass = 'rounded-lg';
 	export let imgSize = 'w-48';
-	export let tooltip;
-	export let src;
+	export let tooltip = null;
+	export let src = null;
+	export let fullSrc = null;
 
 	let isFullPreviewOpen = false;
 </script>
@@ -18,5 +19,9 @@
 {/if}
 
 <Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl" autoclose outsideclose>
-	<Img {src} size="max-w" />
+	{#if fullSrc}
+		<Img src={fullSrc} size="max-w" />
+	{:else}
+		<Img {src} size="max-w" />
+	{/if}
 </Modal>

@@ -5,28 +5,40 @@
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PopupImage from '$lib/components/PopupImage.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
-	
+
 	import { GetItemForUrl } from '$lib/navigation.js';
 
 	import CharlestonBeach1 from '$lib/images/outside_of_work/photography/charleston_beach_1.webp';
+	import CharlestonBeach1Small from '$lib/images/outside_of_work/photography/charleston_beach_1_small.webp';
 	import SterlingSnow from '$lib/images/outside_of_work/photography/sterling_snow.webp';
+	import SterlingSnowSmall from '$lib/images/outside_of_work/photography/sterling_snow_small.webp';
 	import SeaOatsSunset from '$lib/images/outside_of_work/photography/sea_oats_sunset.webp';
+	import SeaOatsSunsetSmall from '$lib/images/outside_of_work/photography/sea_oats_sunset_small.webp';
 	import SunsetSound from '$lib/images/outside_of_work/photography/sunset_sound.webp';
+	import SunsetSoundSmall from '$lib/images/outside_of_work/photography/sunset_sound_small.webp';
 	import SunriseHatteras from '$lib/images/outside_of_work/photography/sunrise_hatteras.webp';
+	import SunriseHatterasSmall from '$lib/images/outside_of_work/photography/sunrise_hatteras_small.webp';
 	import BumbleBee from '$lib/images/outside_of_work/photography/bumble_bee_flower.webp';
+	import BumbleBeeSmall from '$lib/images/outside_of_work/photography/bumble_bee_flower_small.webp';
 	import SnowFlowerClayton from '$lib/images/outside_of_work/photography/snow_flower_clayton.webp';
+	import SnowFlowerClaytonSmall from '$lib/images/outside_of_work/photography/snow_flower_clayton_small.webp';
 	import SnowWaynesville from '$lib/images/outside_of_work/photography/snow_waynesville.webp';
+	import SnowWaynesvilleSmall from '$lib/images/outside_of_work/photography/snow_waynesville_small.webp';
 
 	import ChatoogaRiver from '$lib/images/outside_of_work/hiking/chatooga_river.webp';
+	import ChatoogaRiverSmall from '$lib/images/outside_of_work/hiking/chatooga_river_small.webp';
 	import Elk from '$lib/images/outside_of_work/hiking/elk.webp';
+	import ElkSmall from '$lib/images/outside_of_work/hiking/elk_small.webp';
 	import MaxPatchAscent from '$lib/images/outside_of_work/hiking/max_patch_ascent.webp';
+	import MaxPatchAscentSmall from '$lib/images/outside_of_work/hiking/max_patch_ascent_small.webp';
 	import MaxPatchTop from '$lib/images/outside_of_work/hiking/max_patch_top.webp';
+	import MaxPatchTopSmall from '$lib/images/outside_of_work/hiking/max_patch_top_small.webp';
 
 	let url = $page.url.pathname;
 	let navItem = GetItemForUrl(url);
 </script>
 
-<PageTitleBlock url={url} />
+<PageTitleBlock {url} />
 
 <PageToc item={navItem} contents={[
 	{ title: "Faith", url: url + "#faith" },
@@ -75,30 +87,40 @@
 
 	<div class="gap-4 flex flex-row flex-wrap">
 		<PopupImage
-			src={CharlestonBeach1}
+			src={CharlestonBeach1Small}
+			fullSrc={CharlestonBeach1}
 			tooltip="A foggy morning on Folly Island beach in South Carolina"
 		/>
 		<PopupImage
-			src={SterlingSnow}
+			src={SterlingSnowSmall}
+			fullSrc={SterlingSnow}
 			tooltip="Our dog Sterling hanging out on a snowy day in Clayton Georgia"
 		/>
-		<PopupImage src={SeaOatsSunset} tooltip="Sea Oats on Hatteras island at sunset" />
+		<PopupImage fullSrc={SeaOatsSunset} tooltip="Sea Oats on Hatteras island at sunset" />
 		<PopupImage
-			src={SunsetSound}
+			src={SunsetSoundSmall}
+			fullSrc={SunsetSound}
 			imgSize="h-32"
 			tooltip="The sun setting over the sound on Hatteras island"
 		/>
-		<PopupImage src={SunriseHatteras} tooltip="Sunrise from a beach on Hatteras island" />
 		<PopupImage
-			src={BumbleBee}
+			src={SunriseHatterasSmall}
+			fullSrc={SunriseHatteras}
+			tooltip="Sunrise from a beach on Hatteras island"
+		/>
+		<PopupImage
+			src={BumbleBeeSmall}
+			fullSrc={BumbleBee}
 			tooltip="A bumble bee enjoying a spring flower in Clayton Georgia"
 		/>
 		<PopupImage
-			src={SnowFlowerClayton}
+			src={SnowFlowerClaytonSmall}
+			fullSrc={SnowFlowerClayton}
 			tooltip="A spring snow covers a spring flower in Clayton Georgia"
 		/>
 		<PopupImage
-			src={SnowWaynesville}
+			src={SnowWaynesvilleSmall}
+			fullSrc={SnowWaynesville}
 			tooltip="A snowy Christmas morning in Waynesville North Carolina"
 		/>
 	</div>
@@ -155,19 +177,26 @@
 
 	<div class="gap-4 flex flex-row flex-wrap">
 		<PopupImage
-			src={ChatoogaRiver}
+			src={ChatoogaRiverSmall}
+			fullSrc={ChatoogaRiver}
 			tooltip="A foggy day on the Chatooga River near Clayton Georgia"
 		/>
 		<PopupImage
-			src={Elk}
+			src={ElkSmall}
+			fullSrc={Elk}
 			imgSize="h-32"
 			tooltip="A bull elk we spotted while hiking through the Cataloochee valley"
 		/>
 		<PopupImage
-			src={MaxPatchAscent}
+			src={MaxPatchAscentSmall}
+			fullSrc={MaxPatchAscent}
 			tooltip="The ascent up to the peak of Max Patch in western NC"
 		/>
-		<PopupImage src={MaxPatchTop} tooltip="The view from the top of Max Patch in western NC" />
+		<PopupImage
+			src={MaxPatchTopSmall}
+			fullSrc={MaxPatchTop}
+			tooltip="The view from the top of Max Patch in western NC"
+		/>
 	</div>
 
 	<P>
