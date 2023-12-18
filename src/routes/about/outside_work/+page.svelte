@@ -99,7 +99,11 @@
 			fullSrc={SterlingSnow}
 			tooltip="Our dog Sterling hanging out on a snowy day in Clayton Georgia"
 		/>
-		<PopupImage fullSrc={SeaOatsSunset} tooltip="Sea Oats on Hatteras island at sunset" />
+		<PopupImage
+			src={SeaOatsSunsetSmall}
+			fullSrc={SeaOatsSunset}
+			tooltip="Sea Oats on Hatteras island at sunset"
+		/>
 		<PopupImage
 			src={SunsetSoundSmall}
 			fullSrc={SunsetSound}
