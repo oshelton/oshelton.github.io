@@ -13,7 +13,7 @@
 
 <Footer
 	footerType="socialmedia"
-	class="border-t border-gray-200 dark:border-gray-600 dark:bg-gray-800"
+	class="bg-slate-200 border-t border-slate-500 dark:border-gray-600 dark:bg-gray-800"
 >
 	<div class="sm:flex sm:items-center sm:justify-between">
 		<FooterCopyright by="Owen Shelton" year={2023} href="mailto://jowenshelton@gmail.com" />
