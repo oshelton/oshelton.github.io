@@ -47,8 +47,8 @@
 				<P>
 					In grad school I was blesssed to be able to interact and work with people from radically
 					different backgrounds, cultures, and beliefs than my own. I was introduced to Indian and
-					Middle Eastern cuisine and was able to just hang out and work with people from all over the
-					world and get to know them and establish friendships with them.
+					Middle Eastern cuisine and was able to just hang out and work with people from all over
+					the world and get to know them and establish friendships with them.
 				</P>
 
 				<P>
@@ -57,8 +57,8 @@
 				</P>
 
 				<P
-					>I was still able to work on some cool projects though while I was there, and discovered how
-					awesome Linux can be.</P
+					>I was still able to work on some cool projects though while I was there, and discovered
+					how awesome Linux can be.</P
 				>
 
 				<!-- Add project links here. -->
@@ -68,7 +68,9 @@
 				<List tag="ul" class="list-outside ml-4">
 					<Li>UGA Department of Computer Science Outstanding Teaching Assistant, Spring 2012</Li>
 					<Li
-						>I published <A href="https://ieeexplore.ieee.org/abstract/document/6209169">one paper</A>
+						>I published <A href="https://ieeexplore.ieee.org/abstract/document/6209169"
+							>one paper</A
+						>
 						during my studies</Li
 					>
 				</List>
@@ -101,8 +103,8 @@
 				</P>
 
 				<P>
-					As an honor student at VSU I was expected to go above and beyond the normal expectations of
-					my classes, which translated into opportunities to work on some very cool projects:
+					As an honor student at VSU I was expected to go above and beyond the normal expectations
+					of my classes, which translated into opportunities to work on some very cool projects:
 				</P>
 
 				<!-- Add project links here. -->
@@ -114,9 +116,9 @@
 
 				<List tag="ul" class="list-outside ml-4">
 					<Li
-						>I worked a semester as a Quality assurance analyst (software tester) for a local software
-						company. This was an extremely valuable experience and really gave me my first taste of
-						what working in the field could be like.</Li
+						>I worked a semester as a Quality assurance analyst (software tester) for a local
+						software company. This was an extremely valuable experience and really gave me my first
+						taste of what working in the field could be like.</Li
 					>
 					<Li
 						>I also worked several semesters as a teaching assisstant; evaluating and grading other
@@ -150,8 +152,8 @@
 				<P>
 					High school at <A href="https://www.clinchcounty.com/domain/13"
 						>Clinch County High School in Homerville Georgia</A
-					> was a curious time for me full of ups and downs. I made a lot of friends and was able to participate
-					in a lot of activities and learned a lot.
+					> was a curious time for me full of ups and downs. I made a lot of friends and was able to
+					participate in a lot of activities and learned a lot.
 				</P>
 
 				<P>
@@ -161,7 +163,8 @@
 				</P>
 
 				<P
-					>Especially since I played Tuba. That thing was <strong>heavy</strong>. But boy was it fun.</P
+					>Especially since I played Tuba. That thing was <strong>heavy</strong>. But boy was it
+					fun.</P
 				>
 
 				<P>
@@ -171,14 +174,14 @@
 				</P>
 
 				<P>
-					It was this initial exploration into the field that convinced me that I could make a career
-					out of software engineering; both due to it being something I enjoyed and something I
-					appeared to have some talent for.
+					It was this initial exploration into the field that convinced me that I could make a
+					career out of software engineering; both due to it being something I enjoyed and something
+					I appeared to have some talent for.
 				</P>
 
 				<P
-					>Some of these projects still exist and even run in 2023 without recompiling (which is nice
-					since getting them into a recompilable state would likely take some time):</P
+					>Some of these projects still exist and even run in 2023 without recompiling (which is
+					nice since getting them into a recompilable state would likely take some time):</P
 				>
 
 				<!-- Add project links here. -->
@@ -195,8 +198,8 @@
 
 				<List tag="ul" class="list-outside ml-4">
 					<Li
-						>Extremely active in my high school band, and played in both marching and orchestral bands
-						year round. I was a very skilled tuba player back in the day.</Li
+						>Extremely active in my high school band, and played in both marching and orchestral
+						bands year round. I was a very skilled tuba player back in the day.</Li
 					>
 					<Li
 						>I was also very active in my local Boy Scout troop, regularly going camping, and
