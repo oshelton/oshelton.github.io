@@ -34,11 +34,18 @@
 	import MaxPatchTop from '$lib/images/outside_of_work/hiking/max_patch_top.webp';
 	import MaxPatchTopSmall from '$lib/images/outside_of_work/hiking/max_patch_top_small.webp';
 
-	let url = $page.url.pathname;
-	let navItem = GetItemForUrl(url);
+	const url = $page.url.pathname;
+	const navItem = GetItemForUrl(url);
+	const pageDescription = `I am a man of many hobbies.  Some of which will be covered on this site in greater detail and some which won't be.
+				
+Many of my hobbies with more easily demonstrated creations are discussed in depth in the menus at the top of the page.`;
 </script>
 
-<PageTitleBlock {url} />
+<PageTitleBlock
+	title={navItem.title}
+	metaDescription="All about my outside of work hobbies and interests."
+	markdown={pageDescription}
+/>
 
 <PageToc
 	item={navItem}

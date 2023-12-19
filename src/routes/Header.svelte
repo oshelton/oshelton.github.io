@@ -43,7 +43,7 @@
 
 			{#each NavigationMenus as menu}
 				<NavLi class="cursor-pointer">
-					{menu.label}<ChevronDownOutline
+					{menu.title}<ChevronDownOutline
 						class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
 					/>
 				</NavLi>

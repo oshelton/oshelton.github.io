@@ -5,6 +5,27 @@
 
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 	import { NavigationMenus } from '$lib/navigation.js';
+
+	function getDescriptionForItem(menu) {
+		if (menu.title === 'About Me') {
+			return `All about me, my work history, education backstory, and some of the other things I enjoy doing.
+
+I do a *lot* more than just engineer software...`;
+		} else if (menu.title === 'Home Renovations') {
+			return `I have done several home renovations.
+		
+So far, just two homes of our own and one that was an investment/flip property.`;
+		} else if (menu.title === 'Software') {
+			return "I've written quite a few cool projects over the years for work and for fun.";
+		} else if (menu.title === 'DIY/Woodworking') {
+			return `I occasionally find that I need to create something with my bare hands to meet a need we have around the house.
+		
+These projects also come plans included.`;
+		} else {
+			console.error(`Unknown nav title ${menu.title} encountered.`);
+			return '';
+		}
+	}
 </script>
 
 <svelte:head>
@@ -38,10 +59,10 @@
 		<Card class="mb-4 max-w-full break-inside-avoid-column">
 			<Heading tag="h6" class="flex mb-4 align-middle">
 				<svelte:component this={menu.icon} class="w-5 h-5 mr-2 my-auto" />
-				{menu.label}
+				{menu.title}
 			</Heading>
 
-			<MarkdownParagraph source={menu.description} />
+			<MarkdownParagraph source={getDescriptionForItem(menu)} />
 
 			<div class="flex flex-wrap gap-2">
 				{#each menu.items as item}

@@ -13,11 +13,22 @@
 
 	import { GetItemForUrl } from '$lib/navigation.js';
 
-	let url = $page.url.pathname;
-	let navItem = GetItemForUrl(url);
+	const url = $page.url.pathname;
+	const navItem = GetItemForUrl(url);
+	const pageDescription = `My educational history can be divided into three phases (one phase more than most):
+
+1. High School and everything else before college.
+1. Undergraduate college at Valdosta State University.
+1. Graduate school at UGA.
+
+I can't claim to *hold* a graduate degree sadly as I did not complete my graduate studies at UGA, but I was still able to learn a lot and benefited greatly from the experience.`;
 </script>
 
-<PageTitleBlock url={$page.url.pathname} />
+<PageTitleBlock
+	title={navItem.title}
+	metaDescription="All about my educational history."
+	markdown={pageDescription}
+/>
 
 <PageToc
 	item={navItem}
