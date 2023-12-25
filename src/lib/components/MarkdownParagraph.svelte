@@ -3,6 +3,7 @@
 	import Paragraph from '$lib/components/markdownRenderers/Paragraph.svelte';
 	import List from '$lib/components/markdownRenderers/List.svelte';
 	import ListItem from '$lib/components/markdownRenderers/ListItem.svelte';
+	import BlockQuote from '$lib/components/markdownRenderers/BlockQuote.svelte';
 
 	export let source;
 </script>
@@ -11,6 +12,6 @@
 	<SvelteMarkdown
 		{source}
 		options={{ breaks: true }}
-		renderers={{ paragraph: Paragraph, list: List, listItem: ListItem }}
+		renderers={{ paragraph: Paragraph, list: List, listItem: ListItem, blockquote: BlockQuote }}
 	/>
 </div>
