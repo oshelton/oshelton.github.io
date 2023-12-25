@@ -36,9 +36,7 @@
 
 	const url = $page.url.pathname;
 	const navItem = GetItemForUrl(url);
-	const pageDescription = `I am a man of many hobbies.  Some of which will be covered on this site in greater detail and some which won't be.
-				
-Many of my hobbies with more easily demonstrated creations are discussed in depth in the menus at the top of the page.`;
+	const pageDescription = `I am a man of many hobbies.  Some are discussed in depth in the menus above and for those that aren't this page covers them.`;
 </script>
 
 <PageTitleBlock
