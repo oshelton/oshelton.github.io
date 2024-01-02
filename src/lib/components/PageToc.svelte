@@ -1,8 +1,15 @@
+<!--
+	@component
+	Component for representing a basic page table of contents.
+-->
+
 <script>
 	import { A, Button, Popover, P, Tooltip } from 'flowbite-svelte';
 	import { BarsSolid } from 'flowbite-svelte-icons';
 
+	/** @type {string} Title of the page to display in the TOC.*/
 	export let item;
+	/** @type {{url: string, title: string}[]} Content items to display in the TOC. */
 	export let contents;
 </script>
 

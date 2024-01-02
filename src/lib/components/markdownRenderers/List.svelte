@@ -6,7 +6,9 @@
 <script>
 	import { List } from 'flowbite-svelte';
 
+	/** @type {boolean} Whether or not the list is ordered. */
 	export let ordered;
+	/** @type {string} The current value to start the list at. */
 	export let start;
 </script>
 
