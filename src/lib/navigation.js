@@ -22,7 +22,7 @@ class NavigationMenu {
 	}
 }
 
-/** Classs representing a single item in a Navigation dropdown menu. */
+/** Class representing a single item in a Navigation dropdown menu. */
 class NavigationMenuItem {
 	/**
 	 * Construct a new NavigationMenuItem.
@@ -47,7 +47,7 @@ export const NavigationMenus = [
 	new NavigationMenu('About Me', InfoCircleOutline, [
 		new NavigationMenuItem('Education', '/about/education', null, false),
 		new NavigationMenuItem('Outside of Work', '/about/outside_work', null, false),
-		new NavigationMenuItem('Work', '/about/work', null, true),
+		new NavigationMenuItem('Work', '/about/work', null, false),
 		new NavigationMenuItem('Generic resume', resumeFile, '_blank', false)
 	]),
 	new NavigationMenu('Home Renovations', HomeOutline, [
