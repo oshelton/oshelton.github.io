@@ -40,7 +40,7 @@
 <Timeline order="vertical">
 	<span id="simpson">
 		<TimelineItem
-			title="Simpson Strong-Tie: Senior Software Engineer CS Director Team"
+			title="Simpson Strong-Tie: Senior Software Engineer/Technical Lead CS Director Team"
 			date="December 2022 - Present"
 		>
 			<div class={timelineItemContainerClasses}>
@@ -53,7 +53,7 @@
 				</P>
 
 				<P>
-					Specifically I serve as the developer lead of my team. This means that I lead the
+					Specifically I serve as the technical lead of my team. This means that I lead the
 					engineering efforts of my team in the planning, discussion, and implementation of new
 					features, improvements, and bug fixes to the products we are responsible for. This often
 					involves lots of meetings with stakeholders in both my team, other teams, and at times
