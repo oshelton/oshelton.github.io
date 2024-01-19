@@ -35,4 +35,4 @@ This application uses Sveltekit's [static adapter](https://kit.svelte.dev/docs/a
 
 Unlike the example there though this site is configured to deploy from the docs directory which is where the `npm run build` command will place the generated files.
 
-Committing and pushing the changes to files in the docs directory to the main branch will result in Github Pages deployment process automatically picking up and deploying them.  This makes it possible to commit and push to the repo while still maintaining manual control over when deployment happens.
+Committing and pushing the changes to files in the docs directory to the main branch will result in Github Pages deployment process automatically picking up and deploying them. This makes it possible to commit and push to the repo while still maintaining manual control over when deployment happens.
