@@ -1,5 +1,5 @@
 <script>
-	import { Button, Card, Heading, Hr, P, Span, Tooltip } from 'flowbite-svelte';
+	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
 
