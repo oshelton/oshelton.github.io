@@ -98,7 +98,6 @@ These projects also come plans included.`;
 
 		{#if change.changedPageItems && change.changedPageItems.length > 0}
 			<div class="ml-12 col-span-2 flex gap-4 flex-wrap">
-
 				{#each change.changedPageItems as pageItem}
 					<Button class="p-2" color="alternative" href={pageItem.url} target={pageItem.target} pill>
 						<span class="flex gap-1">
