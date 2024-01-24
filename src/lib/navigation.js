@@ -41,7 +41,7 @@ class NavigationMenuItem {
 
 /**
  * Exported array of navigation menus.
- * @type {NavigationMenu[]}
+ * @type NavigationMenu[]
  */
 export const NavigationMenus = [
 	new NavigationMenu('About Me', InfoCircleOutline, [
@@ -69,6 +69,7 @@ export const NavigationMenus = [
 /**
  * Get the NavigationMenuItem corresponding to the passed url.
  * @param {string} url - The url to retrieve an item for, must be provided.
+ * @returns NavigationMenuItem
  */
 export function GetItemForUrl(url) {
 	if (!url) {

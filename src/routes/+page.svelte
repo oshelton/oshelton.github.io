@@ -1,10 +1,11 @@
 <script>
-	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
+	import { Button, Card, Heading, Hr, P, Span, Tooltip } from 'flowbite-svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
 
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 	import { NavigationMenus } from '$lib/navigation.js';
+	import { AllRecentChanges } from '$lib/data/recent-changes';
 
 	function getDescriptionForItem(menu) {
 		if (menu.title === 'About Me') {
@@ -83,5 +84,29 @@ These projects also come plans included.`;
 				{/each}
 			</div>
 		</Card>
+	{/each}
+</div>
+
+<Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
+
+<Heading tag="h2" class="mb-8 text-2xl lg:text-3xl flex flex-row flex-wrap">Recent Changes</Heading>
+
+<div class="grid grid-cols-2 gap-4">
+	{#each AllRecentChanges as change}
+		<P>{change.title}</P>
+		<P>{change.date.toDateString()}</P>
+
+		{#if change.changedPageItems && change.changedPageItems.length > 0}
+			<div class="ml-12 col-span-2 flex gap-4 flex-wrap">
+
+				{#each change.changedPageItems as pageItem}
+					<Button class="p-2" color="alternative" href={pageItem.url} target={pageItem.target} pill>
+						<span class="flex gap-1">
+							{pageItem.title}
+						</span>
+					</Button>
+				{/each}
+			</div>
+		{/if}
 	{/each}
 </div>
