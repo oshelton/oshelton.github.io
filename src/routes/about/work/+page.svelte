@@ -8,9 +8,12 @@
 
 	import { page } from '$app/stores';
 
+	import { CountPageVisit } from '$lib/analytics';
 	import { GetItemForUrl } from '$lib/navigation';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
+
+	CountPageVisit();
 
 	const url = $page.url.pathname;
 	const navItem = GetItemForUrl(url);

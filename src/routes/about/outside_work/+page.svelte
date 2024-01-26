@@ -6,6 +6,7 @@
 	import PopupImage from '$lib/components/PopupImage.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 
+	import { CountPageVisit } from '$lib/analytics';
 	import { GetItemForUrl } from '$lib/navigation.js';
 
 	import CharlestonBeach1 from '$lib/images/outside_of_work/photography/charleston_beach_1.webp';
@@ -33,6 +34,8 @@
 	import MaxPatchAscentSmall from '$lib/images/outside_of_work/hiking/max_patch_ascent_small.webp';
 	import MaxPatchTop from '$lib/images/outside_of_work/hiking/max_patch_top.webp';
 	import MaxPatchTopSmall from '$lib/images/outside_of_work/hiking/max_patch_top_small.webp';
+
+	CountPageVisit();
 
 	const url = $page.url.pathname;
 	const navItem = GetItemForUrl(url);

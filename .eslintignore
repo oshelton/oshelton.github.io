@@ -14,4 +14,3 @@ yarn.lock
 
 # Ignore non-application files.
 README.md
-/static/count.js
