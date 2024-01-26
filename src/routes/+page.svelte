@@ -2,7 +2,6 @@
 	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
-	import { afterNavigate } from '$app/navigation';
 
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 	import { CountPageVisit } from '$lib/analytics';
