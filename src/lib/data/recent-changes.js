@@ -28,5 +28,10 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange(
+		'Added initial GoatCounter analytics support for completed pages.',
+		new Date(2024, 0, 26),
+		[]
+	),
 	new RecentChange('Added initial recent changes support.', new Date(2024, 0, 24), [])
 ];

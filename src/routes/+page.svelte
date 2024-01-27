@@ -4,7 +4,7 @@
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
 
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
-	import { CountPageVisit } from '$lib/analytics';
+	import { CountPageVisit } from '$lib/visitor';
 	import { NavigationMenus } from '$lib/navigation.js';
 	import { AllRecentChanges } from '$lib/data/recent-changes';
 

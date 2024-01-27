@@ -6,7 +6,7 @@
 	import PopupImage from '$lib/components/PopupImage.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 
-	import { CountPageVisit } from '$lib/analytics';
+	import { CountPageVisit } from '$lib/visitor';
 	import { GetItemForUrl } from '$lib/navigation.js';
 
 	import CharlestonBeach1 from '$lib/images/outside_of_work/photography/charleston_beach_1.webp';
