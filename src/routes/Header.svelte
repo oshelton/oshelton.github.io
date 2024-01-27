@@ -17,7 +17,7 @@
 	import { page } from '$app/stores';
 
 	import logo from '$lib/images/site-logo.jpg';
-	import { NavigationMenus, NavigationMenuItem } from '$lib/navigation.js';
+	import { NavigationMenus } from '$lib/navigation.js';
 	import { CountNavigationAction } from '$lib/visitor';
 
 	$: activeUrl = $page.url.pathname;
