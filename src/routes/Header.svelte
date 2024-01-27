@@ -17,9 +17,20 @@
 	import { page } from '$app/stores';
 
 	import logo from '$lib/images/site-logo.jpg';
-	import { NavigationMenus } from '$lib/navigation.js';
+	import { NavigationMenus, NavigationMenuItem } from '$lib/navigation.js';
+	import { CountNavigationAction } from '$lib/visitor';
 
 	$: activeUrl = $page.url.pathname;
+
+	/**
+	 * Handle an item being clicked
+	 * @param item {NavigationMenuItem} - item that was clicked.
+	 */
+	function itemIsClicked(item) {
+		if (item.countClick) {
+			CountNavigationAction(item.url);
+		}
+	}
 </script>
 
 <header class="w-full flex z-20 top-0 left-0">
@@ -49,7 +60,7 @@
 				</NavLi>
 				<Dropdown {activeUrl} class="z-20">
 					{#each menu.items as item}
-						<DropdownItem href={item.url} target={item.target}>
+						<DropdownItem href={item.url} target={item.target} on:click={() => itemIsClicked(item)}>
 							{#if item.underConstruction}
 								<span class="flex gap-2">
 									<Icon size="16" src={ConeStriped} />
