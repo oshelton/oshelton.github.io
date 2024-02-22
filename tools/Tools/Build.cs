@@ -132,7 +132,7 @@ class Build : NukeBuild
 			});
 
 		tmpPostsDataFilePath.AppendAllLines(foundMetadata.Select(metadata =>
-			$"PostMetadata['{metadata.Id}'] = {{ title: '{metadata.Title}', id: '{metadata.Id}', posted: '{metadata.Posted}', lastModified: '{metadata.Posted}', summary: '{metadata.Summary}', tags: [ '{string.Join("', '", metadata.Tags)}' ] }};"));
+			$"PostMetadata['{metadata.Id}'] = {{ title: `{metadata.Title}`, id: '{metadata.Id}', posted: '{metadata.Posted}', lastModified: '{metadata.Posted}', summary: `{metadata.Summary}`, tags: [ `{string.Join("`, `", metadata.Tags)}` ] }};"));
 
 		// Write out Post Previous and Next Information.
 		tmpPostsDataFilePath.AppendAllLines(new[]
