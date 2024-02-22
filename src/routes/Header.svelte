@@ -1,4 +1,5 @@
 <script>
+	import { browser } from '$app/environment';
 	import { Img } from 'flowbite-svelte';
 	import {
 		Navbar,
@@ -20,7 +21,7 @@
 	import { NavigationMenus } from '$lib/navigation.js';
 	import { CountNavigationAction } from '$lib/visitor';
 
-	$: activeUrl = $page.url.pathname + $page.url.search;
+	$: activeUrl = $page.url.pathname + (browser && $page.url.search);
 
 	/**
 	 * Handle an item being clicked

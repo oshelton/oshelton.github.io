@@ -1,13 +1,14 @@
 <script>
+	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 
 	import { GetMetadataForPost, GetComponentForPost } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import { P, Badge } from 'flowbite-svelte';
 
-	const postId = $page.url.searchParams.get('id');
-	const postMetadata = GetMetadataForPost(postId);
-	const postComponent = GetComponentForPost(postId);
+	const postId = browser && $page.url.searchParams.get('id');
+	const postMetadata = browser && GetMetadataForPost(postId);
+	const postComponent = browser && GetComponentForPost(postId);
 </script>
 
 <PageTitleBlock title={postMetadata.title} metaDescription={postMetadata.summary} markdown="" />
@@ -21,7 +22,9 @@
 	{/if}
 	<br />
 	<strong>Tags:</strong>
-	{#each postMetadata.tags as tag}<Badge color="green" rounded class="ml-2">{tag}</Badge>{/each}
+	{#if browser}
+		{#each postMetadata.tags as tag}<Badge color="green" rounded class="ml-2">{tag}</Badge>{/each}
+	{/if}
 </P>
 
 <svelte:component this={postComponent} />
