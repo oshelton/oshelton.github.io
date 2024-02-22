@@ -11,11 +11,11 @@
 	CountPageVisit();
 
 	function getDescriptionForItem(menu) {
-		if (menu.title === 'About Me') {
+		if (menu.title === 'About') {
 			return `All about me, my work history, education backstory, and some of the other things I enjoy doing.
 
 I do a *lot* more than just engineer software...`;
-		} else if (menu.title === 'Home Renovations') {
+		} else if (menu.title === 'Renovations') {
 			return `I have done several home renovations.
 		
 So far, just two homes of our own and one that was an investment/flip property.`;
@@ -25,6 +25,8 @@ So far, just two homes of our own and one that was an investment/flip property.`
 			return `I occasionally find that I need to create something with my bare hands to meet a need we have around the house.
 		
 These projects also come plans included.`;
+		} else if (menu.title === 'Blog') {
+			return 'This site also plays host to a blog where I discuss various tech things and some of my projects.';
 		} else {
 			console.error(`Unknown nav title ${menu.title} encountered.`);
 			return '';

@@ -5,6 +5,8 @@ import {
 	RuleCombinedOutline
 } from 'flowbite-svelte-icons';
 import Enumerable from 'linq';
+
+import { GetLatestPostId, BuildUrlForPost } from './blog/PostsHelpers';
 import resumeFile from '$lib/files/generic_resume.pdf';
 
 /** Class representing a navigation menu with one or more items. */
@@ -46,13 +48,18 @@ export class NavigationMenuItem {
  * @type NavigationMenu[]
  */
 export const NavigationMenus = [
-	new NavigationMenu('About Me', InfoCircleOutline, [
+	new NavigationMenu('About', InfoCircleOutline, [
 		new NavigationMenuItem('Education', '/about/education', null, false),
 		new NavigationMenuItem('Outside of Work', '/about/outside_work', null, false),
 		new NavigationMenuItem('Work', '/about/work', null, false),
 		new NavigationMenuItem('Generic resume', resumeFile, '_blank', false, true)
 	]),
-	new NavigationMenu('Home Renovations', HomeOutline, [
+	new NavigationMenu('Blog', InfoCircleOutline, [
+		new NavigationMenuItem('Latest Post', BuildUrlForPost(GetLatestPostId()), null, false),
+		new NavigationMenuItem('All Posts', '/blog/all', null, true),
+		new NavigationMenuItem('Search Posts', '/blog/search', null, true)
+	]),
+	new NavigationMenu('Renovations', HomeOutline, [
 		new NavigationMenuItem('Reece Rd House', '/home_renovations/reece_rd', null, true),
 		new NavigationMenuItem('Clayton Home', '/home_renovations/clayton_ga', null, true),
 		new NavigationMenuItem('Clyde River Home', '/home_renovations/clyde_river', null, true)
