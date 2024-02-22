@@ -1,10 +1,13 @@
 <script>
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
+	import { P, Badge } from 'flowbite-svelte';
 
 	import { GetMetadataForPost, GetComponentForPost } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
-	import { P, Badge } from 'flowbite-svelte';
+	import { CountPageVisit } from '$lib/visitor';
+
+	CountPageVisit();
 
 	const postId = browser && $page.url.searchParams.get('id');
 	const postMetadata = browser && GetMetadataForPost(postId);

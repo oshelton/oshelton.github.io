@@ -6,6 +6,9 @@
 	import { GetItemForUrl } from '$lib/navigation';
 	import { BuildUrlForPost, GetAllPostMetadata } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
+	import { CountPageVisit } from '$lib/visitor';
+
+	CountPageVisit();
 
 	const url = $page.url.pathname;
 	const navItem = GetItemForUrl(url);
