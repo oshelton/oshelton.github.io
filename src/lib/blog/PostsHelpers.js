@@ -62,6 +62,16 @@ export function BuildUrlForPost(postId) {
 }
 
 /**
+ * Get all post metadata.
+ * @returns All post metadata ordered most recent to furthest back.
+ */
+export function GetAllPostMetadata() {
+	return Enumerable.from(Object.values(PostMetadata))
+		.orderByDescending((x) => x.posted)
+		.toArray();
+}
+
+/**
  * Get metadata for the most recent posts.
  * @param {number} mostRecentCount - Number of most recent posts to retrieve, must be 1 or greater.
  * @returns Array of metadata corresponding to the most recent posts.

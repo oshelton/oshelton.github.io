@@ -8,7 +8,7 @@ Posts['86f85de2-571b-4df4-9b39-140907351b5d'] = BirthOfANewNewBlog;
 
 /** Association between Post id and its metadata. */
 export const PostMetadata = [];
-PostMetadata['86f85de2-571b-4df4-9b39-140907351b5d'] = { title: 'Birth of a new blog!', id: '86f85de2-571b-4df4-9b39-140907351b5d', posted: '2/22/2024', lastModified: '2/22/2024', summary: 'So I created a simple blogging platform for my portfolio site...', tags: [ 'blog', 'housekeeping', 'announcement' ] };
+PostMetadata['86f85de2-571b-4df4-9b39-140907351b5d'] = { title: `Birth of a new blog!`, id: '86f85de2-571b-4df4-9b39-140907351b5d', posted: '2/22/2024', lastModified: '2/22/2024', summary: `So I created a simple blogging platform for my portfolio site and here's what I'm going to do with it...`, tags: [ `blog`, `housekeeping`, `announcement` ] };
 
 /** Association between Post id and and its previous and next post. */
 export const PostAdjacency = [];

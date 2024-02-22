@@ -56,7 +56,7 @@ export const NavigationMenus = [
 	]),
 	new NavigationMenu('Blog', InfoCircleOutline, [
 		new NavigationMenuItem('Latest Post', BuildUrlForPost(GetLatestPostId()), null, false),
-		new NavigationMenuItem('All Posts', '/blog/all', null, true),
+		new NavigationMenuItem('All Posts', '/blog/all', null, false),
 		new NavigationMenuItem('Search Posts', '/blog/search', null, true)
 	]),
 	new NavigationMenu('Renovations', HomeOutline, [
