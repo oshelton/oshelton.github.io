@@ -13,8 +13,7 @@ tags: [blog, housekeeping, announcement]
 -->
 
 <script>
-	import { Alert, P } from 'flowbite-svelte';
-	import { InfoCircleSolid } from 'flowbite-svelte-icons';
+	import { P } from 'flowbite-svelte';
 </script>
 
 <P class="mb-4">
@@ -35,4 +34,7 @@ tags: [blog, housekeeping, announcement]
 	with only a single Post.
 </P>
 
-<P class="mb-4">A future post will also cover the technical details off how everything works.</P>
+<P class="mb-4"
+	>A future post will also cover the technical details of how everything works and expand the
+	available features for posts.</P
+>

@@ -19,7 +19,7 @@
 		<strong> - Last Modified:</strong>
 		{postMetadata.lastModified}
 	{/if}
-	<br/>
+	<br />
 	<strong>Tags:</strong>
 	{#each postMetadata.tags as tag}<Badge color="green" rounded class="ml-2">{tag}</Badge>{/each}
 </P>
