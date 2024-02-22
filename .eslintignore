@@ -14,3 +14,9 @@ yarn.lock
 
 # Ignore non-application files.
 README.md
+
+# Ignore generated blogging files.
+Posts.js
+SearchData.js
+
+tools
