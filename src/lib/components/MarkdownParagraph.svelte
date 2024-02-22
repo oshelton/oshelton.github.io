@@ -12,9 +12,11 @@
 
 	/** @type {string} Markdown content to display. */
 	export let source;
+	/** @type {string} Classes to apply to the markdown container.*/
+	export let markdownClass;
 </script>
 
-<div class="markdown">
+<div class={markdownClass}>
 	<SvelteMarkdown
 		{source}
 		options={{ breaks: true }}
