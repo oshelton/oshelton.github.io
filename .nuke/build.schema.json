@@ -8,7 +8,7 @@
       "properties": {
         "Configuration": {
           "type": "string",
-          "description": "Configuration to build - Default is 'Debug' (local) or 'Release' (server)",
+          "description": "Configuration to build - Default is 'Debug'",
           "enum": [
             "Debug",
             "Release"
@@ -72,9 +72,7 @@
           "items": {
             "type": "string",
             "enum": [
-              "Clean",
-              "Compile",
-              "Restore"
+              "GenerateBlogData"
             ]
           }
         },
@@ -84,9 +82,7 @@
           "items": {
             "type": "string",
             "enum": [
-              "Clean",
-              "Compile",
-              "Restore"
+              "GenerateBlogData"
             ]
           }
         },
