@@ -20,7 +20,7 @@
 	import { NavigationMenus } from '$lib/navigation.js';
 	import { CountNavigationAction } from '$lib/visitor';
 
-	$: activeUrl = $page.url.pathname;
+	$: activeUrl = $page.url.pathname + $page.url.search;
 
 	/**
 	 * Handle an item being clicked
