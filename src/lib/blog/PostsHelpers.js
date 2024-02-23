@@ -33,7 +33,7 @@ export function GetComponentForPost(postId) {
 	if (!foundComponent) {
 		throw new Error(`No Post metadata found with Post Id '${postId}'`);
 	}
-	return foundComponent;
+	return foundComponent();
 }
 
 /**

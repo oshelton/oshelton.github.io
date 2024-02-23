@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { P, Badge } from 'flowbite-svelte';
+	import { P, Badge, Spinner } from 'flowbite-svelte';
 
 	import { GetMetadataForPost, GetComponentForPost } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
@@ -30,4 +30,12 @@
 	{/if}
 </P>
 
-<svelte:component this={postComponent} />
+{#await postComponent}
+	<div class="flex items-center gap-2">
+		<Spinner size="4" /> Loading...
+	</div>
+{:then component}
+	<svelte:component this={component.default} />
+{:catch error}
+	{error}
+{/await}
