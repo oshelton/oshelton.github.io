@@ -3,9 +3,13 @@ import Enumerable from 'linq';
 import { Posts, PostMetadata, LatestPostId } from '$lib/blog/Posts';
 
 /**
+ * @typedef {import('$lib/types').PostMetadata} PostMetadata
+ */
+
+/**
  * Get the Metadata for a Post
  * @param {string} postId - The Id of the post whose metadata we want to retrieve.
- * @returns The metadata for the Post with the given Id.
+ * @returns {PostMetadata} The metadata for the Post with the given Id.
  */
 export function GetMetadataForPost(postId) {
 	if (!postId) {
@@ -22,7 +26,7 @@ export function GetMetadataForPost(postId) {
 /**
  * Get the Svelte Component for a Post.
  * @param {string} postId - The Id of the post to retrieve.
- * @returns The Svelte component to use for the Post with the given Id.
+ * @returns {import('svelte').SvelteComponent} The Svelte component to use for the Post with the given Id.
  */
 export function GetComponentForPost(postId) {
 	if (!postId) {
@@ -38,7 +42,7 @@ export function GetComponentForPost(postId) {
 
 /**
  * Get the Id of the latest post.
- * @returns The Id of the latest post.
+ * @returns {string} The Id of the latest post.
  */
 export function GetLatestPostId() {
 	return LatestPostId;
@@ -46,8 +50,8 @@ export function GetLatestPostId() {
 
 /**
  * Build a URL for a Post with a specific id.
- * @param {*string} postId - The Id of the post to retrieve a URL for.
- * @returns The relative URL to the Post page with the Id as a search param.
+ * @param {string} postId - The Id of the post to retrieve a URL for.
+ * @returns {string} The relative URL to the Post page with the Id as a search param.
  */
 export function BuildUrlForPost(postId) {
 	if (!postId) {
@@ -63,7 +67,7 @@ export function BuildUrlForPost(postId) {
 
 /**
  * Get all post metadata.
- * @returns All post metadata ordered most recent to furthest back.
+ * @returns {PostMetadata[]} All post metadata ordered most recent to furthest back.
  */
 export function GetAllPostMetadata() {
 	return Enumerable.from(Object.values(PostMetadata))
@@ -74,7 +78,7 @@ export function GetAllPostMetadata() {
 /**
  * Get metadata for the most recent posts.
  * @param {number} mostRecentCount - Number of most recent posts to retrieve, must be 1 or greater.
- * @returns Array of metadata corresponding to the most recent posts.
+ * @returns {PostMetadata[]} Array of metadata corresponding to the most recent posts.
  */
 export function GetMetdataForMostRecentPosts(mostRecentCount) {
 	if (!mostRecentCount) {

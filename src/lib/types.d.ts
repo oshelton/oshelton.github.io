@@ -21,3 +21,23 @@ export type NavigationMenu = {
 	icon: SvelteComponent;
 	items: NavigationMenuItem[];
 };
+
+/**
+ * Type for Blog Post Metadata.
+ */
+export type PostMetadata = {
+	title: string;
+	id: string;
+	posted: string;
+	lastModified: string?;
+	summary: string;
+	tags: string[];
+};
+
+/**
+ * Type for post adjacency info.
+ */
+export type PostAdjacency = {
+	previous: string;
+	next: string;
+};
