@@ -160,7 +160,7 @@ export const NavigationMenus = [
 /**
  * Get the NavigationMenuItem corresponding to the passed url.
  * @param {string} url - The url to retrieve an item for, must be provided.
- * @returns {NavigationMenuItem}
+ * @returns {NavigationMenuItem} Navigation menu item corresponding to the given URL.
  */
 export function GetItemForUrl(url) {
 	if (!url) {
