@@ -41,3 +41,11 @@ export type PostAdjacency = {
 	previous: string;
 	next: string;
 };
+
+/**
+ * Type for searching posts preferences.
+ */
+export type SearchPostPreferences = {
+	searchTags: boolean;
+	selectedSearchTags: string[];
+};

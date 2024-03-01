@@ -76,7 +76,7 @@ export const NavigationMenus = [
 				title: 'Search Posts',
 				url: '/blog/search',
 				target: null,
-				underConstruction: true,
+				underConstruction: false,
 				countClick: false
 			}
 		]
@@ -165,6 +165,10 @@ export const NavigationMenus = [
 export function GetItemForUrl(url) {
 	if (!url) {
 		throw new Error('url must be non-null and defined');
+	}
+
+	if (url.endsWith('/')) {
+		url = url.slice(0, -1);
 	}
 
 	return Enumerable.from(NavigationMenus)
