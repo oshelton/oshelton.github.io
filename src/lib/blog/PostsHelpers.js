@@ -24,6 +24,18 @@ export function GetMetadataForPost(postId) {
 }
 
 /**
+ * Get all possts for a given set of post ids.
+ * @param {string[]} postIds - Array of post ids to return metadata for.
+ */
+export function GetMetadatasForPostIds(postIds) {
+	if (!postIds) {
+		throw new Error('postIds must exist');
+	}
+
+	return Enumerable.from(Object.values(PostMetadata)).where((x) => postIds.includes(x.id));
+}
+
+/**
  * Get the Svelte Component for a Post.
  * @param {string} postId - The Id of the post to retrieve.
  * @returns {import('svelte').SvelteComponent} The Svelte component to use for the Post with the given Id.

@@ -5,9 +5,14 @@
  * @type {string[]}
  */
 export const AllTags = [
-	'announcement',
-	'blog',
-	'housekeeping',
+	'Announcement',
 ];
+
+/**
+ * All distinct tags with the associated posts.
+ * @type {string[][]}
+ */
+export const TagsToPostIds = [];
+TagsToPostIds['Announcement'] = ['86f85de2-571b-4df4-9b39-140907351b5d'];
 
 // TODO: This file is incomplete!

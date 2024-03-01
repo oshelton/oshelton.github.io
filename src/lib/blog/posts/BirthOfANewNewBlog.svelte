@@ -2,9 +2,9 @@
 title: Birth of a new blog!
 id: 86F85DE2-571B-4DF4-9B39-140907351B5D
 posted: 2/22/2024
-lastModified: 2/22/2024
+lastModified: 3/1/2024
 summary: So I created a simple blogging platform for my portfolio site and here's what I'm going to do with it...
-tags: [blog, housekeeping, announcement]
+tags: [Announcement]
 -->
 
 <!--
