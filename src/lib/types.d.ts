@@ -2,9 +2,7 @@
 
 import type { SvelteComponent } from 'svelte';
 
-/**
- * Type for an item from a navigation menu.
- */
+// Type for an item from a navigation menu.
 export type NavigationMenuItem = {
 	title: string;
 	url: string;
@@ -13,18 +11,14 @@ export type NavigationMenuItem = {
 	countClick: boolean;
 };
 
-/**
- * Type representing a high level navigation menu.
- */
+// Type representing a high level navigation menu.
 export type NavigationMenu = {
 	title: string;
 	icon: SvelteComponent;
 	items: NavigationMenuItem[];
 };
 
-/**
- * Type for Blog Post Metadata.
- */
+// Type for Blog Post Metadata.
 export type PostMetadata = {
 	title: string;
 	id: string;
@@ -34,18 +28,24 @@ export type PostMetadata = {
 	tags: string[];
 };
 
-/**
- * Type for post adjacency info.
- */
+// Type for post adjacency info.
 export type PostAdjacency = {
 	previous: string;
 	next: string;
 };
 
-/**
- * Type for searching posts preferences.
- */
+// Post Id and Posted Date object.
+export type PostIdAndPostedDate = {
+	id: string;
+	posted: Date;
+};
+
+// Type for searching posts preferences.
 export type SearchPostPreferences = {
+	searchAtLeastPostedBy: boolean;
+	searchAtLeastPostedByDate: Date;
+	searchNoLaterPostedBy: boolean;
+	searchNoLaterPostedByDate: Date;
 	searchTags: boolean;
 	selectedSearchTags: string[];
 };
