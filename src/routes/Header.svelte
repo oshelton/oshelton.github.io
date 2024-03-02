@@ -18,8 +18,8 @@
 	import { page } from '$app/stores';
 
 	import logo from '$lib/images/site-logo.jpg';
-	import { NavigationMenus } from '$lib/navigation.js';
-	import { CountNavigationAction } from '$lib/visitor';
+	import { NavigationMenus } from '$lib/Navigation.js';
+	import { CountNavigationAction } from '$lib/Visitor';
 
 	$: activeUrl = $page.url.pathname + (browser && $page.url.search);
 

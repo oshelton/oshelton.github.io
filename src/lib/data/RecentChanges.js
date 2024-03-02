@@ -1,6 +1,6 @@
 import Enumerable from 'linq';
 
-import { GetItemForUrl } from '$lib/navigation';
+import { GetItemForUrl } from '$lib/Navigation';
 
 /** Class representing a group of changes to one or more changes. */
 class RecentChange {

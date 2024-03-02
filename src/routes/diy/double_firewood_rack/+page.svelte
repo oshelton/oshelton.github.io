@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 
-	import { GetItemForUrl } from '$lib/navigation';
+	import { GetItemForUrl } from '$lib/Navigation';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import UnderConstructionSign from '$lib/components/UnderConstructionSign.svelte';
 

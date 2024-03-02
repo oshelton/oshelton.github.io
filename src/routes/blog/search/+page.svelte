@@ -11,9 +11,9 @@
 	import { A, Badge, Button, Checkbox, Input, Modal, Toggle, P } from 'flowbite-svelte';
 	import SveltyPicker from 'svelty-picker';
 
-	import { GetItemForUrl } from '$lib/navigation';
+	import { GetItemForUrl } from '$lib/Navigation';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
-	import { CountPageVisit } from '$lib/visitor';
+	import { CountPageVisit } from '$lib/Visitor';
 	import { AllTags } from '$lib/blog/SearchData';
 	import {
 		GetPostsPostedOnOrAfter,

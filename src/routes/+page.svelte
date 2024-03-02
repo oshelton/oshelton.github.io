@@ -4,8 +4,8 @@
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
 
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
-	import { CountPageVisit } from '$lib/visitor';
-	import { NavigationMenus } from '$lib/navigation.js';
+	import { CountPageVisit } from '$lib/Visitor';
+	import { NavigationMenus } from '$lib/Navigation.js';
 	import { AllRecentChanges } from '$lib/data/RecentChanges';
 
 	CountPageVisit();

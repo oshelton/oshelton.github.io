@@ -3,10 +3,10 @@
 	import { P, A, Badge, Span } from 'flowbite-svelte';
 	import { ArrowRightSolid } from 'flowbite-svelte-icons';
 
-	import { GetItemForUrl } from '$lib/navigation';
+	import { GetItemForUrl } from '$lib/Navigation';
 	import { BuildUrlForPost, GetAllPostMetadata } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
-	import { CountPageVisit } from '$lib/visitor';
+	import { CountPageVisit } from '$lib/Visitor';
 
 	CountPageVisit();
 

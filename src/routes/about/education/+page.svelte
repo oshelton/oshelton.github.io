@@ -11,8 +11,8 @@
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 
-	import { CountPageVisit } from '$lib/visitor';
-	import { GetItemForUrl } from '$lib/navigation.js';
+	import { CountPageVisit } from '$lib/Visitor';
+	import { GetItemForUrl } from '$lib/Navigation.js';
 
 	CountPageVisit();
 

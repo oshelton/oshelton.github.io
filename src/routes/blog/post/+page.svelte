@@ -5,7 +5,7 @@
 
 	import { GetMetadataForPost, GetComponentForPost } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
-	import { CountPageVisit } from '$lib/visitor';
+	import { CountPageVisit } from '$lib/Visitor';
 
 	CountPageVisit();
 
