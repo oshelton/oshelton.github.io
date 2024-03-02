@@ -6,7 +6,7 @@
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 	import { CountPageVisit } from '$lib/visitor';
 	import { NavigationMenus } from '$lib/navigation.js';
-	import { AllRecentChanges } from '$lib/data/recent-changes';
+	import { AllRecentChanges } from '$lib/data/RecentChanges';
 
 	CountPageVisit();
 

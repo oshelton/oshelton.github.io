@@ -28,6 +28,9 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange('Add basic date and tag blog post searching support.', new Date(2024, 3, 2), [
+		'/blog/search'
+	]),
 	new RecentChange(
 		'Added support for loading blog post content dynamically.',
 		new Date(2024, 1, 26),
