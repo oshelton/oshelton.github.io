@@ -8,7 +8,7 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { A, Badge, Button, Checkbox, Input, Modal, Toggle, P } from 'flowbite-svelte';
+	import { Badge, Button, Checkbox, Input, Modal, Toggle, P } from 'flowbite-svelte';
 	import SveltyPicker from 'svelty-picker';
 
 	import { GetItemForUrl } from '$lib/Navigation';
@@ -21,7 +21,7 @@
 		GetPostsPostedOnOrBefore,
 		GetPostIdsForTags
 	} from '$lib/blog/SearchHelpers';
-	import { BuildUrlForPost, GetMetadatasForPostIds } from '$lib/blog/PostsHelpers';
+	import { GetMetadatasForPostIds } from '$lib/blog/PostsHelpers';
 
 	CountPageVisit();
 

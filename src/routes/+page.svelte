@@ -1,5 +1,5 @@
 <script>
-	import { A, Badge, Button, Card, Heading, Hr, P, Span, Tooltip } from 'flowbite-svelte';
+	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
 	import { ArrowRightSolid } from 'flowbite-svelte-icons';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
@@ -8,7 +8,7 @@
 	import PostMetadataBlock from '$lib/components/PostMetadataBlock.svelte';
 	import { CountPageVisit } from '$lib/Visitor';
 	import { NavigationMenus } from '$lib/Navigation.js';
-	import { BuildUrlForPost, GetMetdataForMostRecentPosts } from '$lib/blog/PostsHelpers';
+	import { GetMetdataForMostRecentPosts } from '$lib/blog/PostsHelpers';
 	import { AllRecentChanges } from '$lib/data/RecentChanges';
 
 	CountPageVisit();

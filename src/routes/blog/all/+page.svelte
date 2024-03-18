@@ -1,10 +1,8 @@
 <script>
 	import { page } from '$app/stores';
-	import { P, A, Badge, Span } from 'flowbite-svelte';
-	import { ArrowRightSolid } from 'flowbite-svelte-icons';
 
 	import { GetItemForUrl } from '$lib/Navigation';
-	import { BuildUrlForPost, GetAllPostMetadata } from '$lib/blog/PostsHelpers';
+	import { GetAllPostMetadata } from '$lib/blog/PostsHelpers';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PostMetadataBlock from '$lib/components/PostMetadataBlock.svelte';
 	import { CountPageVisit } from '$lib/Visitor';
