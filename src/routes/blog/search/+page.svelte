@@ -13,6 +13,7 @@
 
 	import { GetItemForUrl } from '$lib/Navigation';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
+	import PostMetadataBlock from '$lib/components/PostMetadataBlock.svelte';
 	import { CountPageVisit } from '$lib/Visitor';
 	import { AllTags } from '$lib/blog/SearchData';
 	import {
@@ -239,22 +240,7 @@
 {:else}
 	<div class="flex flex-col gap-3 mt-12">
 		{#each foundPostMetadata as metadata}
-			<div class="flex flex-col">
-				<A href={BuildUrlForPost(metadata.id)}>
-					<b>{metadata.posted} - </b>
-					{metadata.title}
-				</A>
-
-				<P class="ml-8 dark:text-gray-400 text-gray-500">
-					{metadata.summary}
-				</P>
-
-				<div class="flex gap-2 ml-8 mt-2">
-					{#each metadata.tags as tag}
-						<Badge color="green">{tag}</Badge>
-					{/each}
-				</div>
-			</div>
+			<PostMetadataBlock {metadata} />
 		{/each}
 	</div>
 {/if}

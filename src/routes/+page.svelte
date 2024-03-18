@@ -1,14 +1,19 @@
 <script>
-	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
+	import { A, Badge, Button, Card, Heading, Hr, P, Span, Tooltip } from 'flowbite-svelte';
+	import { ArrowRightSolid } from 'flowbite-svelte-icons';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
 
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
+	import PostMetadataBlock from '$lib/components/PostMetadataBlock.svelte';
 	import { CountPageVisit } from '$lib/Visitor';
 	import { NavigationMenus } from '$lib/Navigation.js';
+	import { BuildUrlForPost, GetMetdataForMostRecentPosts } from '$lib/blog/PostsHelpers';
 	import { AllRecentChanges } from '$lib/data/RecentChanges';
 
 	CountPageVisit();
+
+	const mostRecentPosts = GetMetdataForMostRecentPosts(5);
 
 	function getDescriptionForItem(menu) {
 		if (menu.title === 'About') {
@@ -94,23 +99,44 @@ These projects also come plans included.`;
 
 <Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
 
-<Heading tag="h2" class="mb-8 text-2xl lg:text-3xl flex flex-row flex-wrap">Recent Changes</Heading>
+<div class="grid md:grid-cols-2 sm:grid-cols-1 gap-3">
+	<div class="flex flex-col gap-3 mb-6">
+		<Heading tag="h4" class="mb-4">Recent Posts</Heading>
 
-<div class="grid grid-cols-2 gap-4">
-	{#each AllRecentChanges as change}
-		<P>{change.title}</P>
-		<P>{change.date.toDateString()}</P>
+		{#each mostRecentPosts as post}
+			<PostMetadataBlock metadata={post} />
+		{/each}
+	</div>
 
-		{#if change.changedPageItems && change.changedPageItems.length > 0}
-			<div class="ml-12 col-span-2 flex gap-4 flex-wrap">
-				{#each change.changedPageItems as pageItem}
-					<Button class="p-2" color="alternative" href={pageItem.url} target={pageItem.target} pill>
-						<span class="flex gap-1">
-							{pageItem.title}
-						</span>
-					</Button>
-				{/each}
+	<div class="flex flex-col gap-3 mb-6">
+		<Heading tag="h4" class="mb-4">Recent Changes:</Heading>
+
+		{#each AllRecentChanges as change}
+			<div class="flex flex-col gap-1">
+				<div class="flex gap-3">
+					<P><strong>{change.date.toLocaleDateString()}</strong></P>
+					<P><ArrowRightSolid class="w-3 mt-0.5 self-center" /></P>
+					<P>{change.title}</P>
+				</div>
+
+				{#if change.changedPageItems && change.changedPageItems.length > 0}
+					<div class="ml-12 col-span-2 flex gap-4 flex-wrap">
+						{#each change.changedPageItems as pageItem}
+							<Button
+								class="p-2"
+								color="alternative"
+								href={pageItem.url}
+								target={pageItem.target}
+								pill
+							>
+								<span class="flex gap-1">
+									{pageItem.title}
+								</span>
+							</Button>
+						{/each}
+					</div>
+				{/if}
 			</div>
-		{/if}
-	{/each}
+		{/each}
+	</div>
 </div>

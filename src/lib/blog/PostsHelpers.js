@@ -100,7 +100,7 @@ export function GetMetdataForMostRecentPosts(mostRecentCount) {
 		throw new Error('mostRecentCount must be >= 1.');
 	}
 
-	return Enumerable.from(PostMetadata.slice(-1 * mostRecentCount))
+	return Enumerable.from(Object.values(PostMetadata).slice(-1 * mostRecentCount))
 		.reverse()
 		.toArray();
 }
