@@ -7,7 +7,7 @@ import {
 } from 'flowbite-svelte-icons';
 import Enumerable from 'linq';
 
-import { GetLatestPostId, BuildUrlForPost } from './blog/PostsHelpers';
+import { GetLatestPostId, BuildUrlForPost, GetMetadataForPost } from './blog/PostsHelpers';
 import resumeFile from '$lib/files/generic_resume.pdf';
 
 /**
@@ -171,7 +171,24 @@ export function GetItemForUrl(url) {
 		url = url.slice(0, -1);
 	}
 
-	return Enumerable.from(NavigationMenus)
+	let foundItem = Enumerable.from(NavigationMenus)
 		.selectMany((x) => x.items)
-		.first((x) => x.url === url);
+		.firstOrDefault((x) => x.url === url);
+
+	// Must be a Blog post link.
+	if (!foundItem) {
+		const idFragment = "id=";
+		const indexOfId = url.indexOf(idFragment);
+		const id = url.substring(indexOfId + idFragment.length);
+		const metadata = GetMetadataForPost(id);
+		foundItem = {
+			title: metadata.title,
+			url: BuildUrlForPost(id),
+			target: null,
+			underConstruction: false,
+			countClick: false
+		}
+	}
+
+	return foundItem;
 }
