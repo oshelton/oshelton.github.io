@@ -177,7 +177,7 @@ export function GetItemForUrl(url) {
 
 	// Must be a Blog post link.
 	if (!foundItem) {
-		const idFragment = "id=";
+		const idFragment = 'id=';
 		const indexOfId = url.indexOf(idFragment);
 		const id = url.substring(indexOfId + idFragment.length);
 		const metadata = GetMetadataForPost(id);
@@ -187,7 +187,7 @@ export function GetItemForUrl(url) {
 			target: null,
 			underConstruction: false,
 			countClick: false
-		}
+		};
 	}
 
 	return foundItem;

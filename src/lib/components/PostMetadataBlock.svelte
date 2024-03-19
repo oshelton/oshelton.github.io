@@ -32,7 +32,7 @@
 
 		<div class="flex flex-wrap items-stretch gap-2">
 			<A class="mr-1" href={BuildUrlForPost(metadata.id)}>Read More...</A>
-			
+
 			{#each metadata.tags as tag}
 				<Badge color="green" rounded>{tag}</Badge>
 			{/each}
