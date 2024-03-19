@@ -13,9 +13,14 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 -->
 
 <script>
-	import { P } from 'flowbite-svelte';
+	import { List, P } from 'flowbite-svelte';
 </script>
 
 <P class="mb-4">
-	I promised a blog ost about how this blogging thing I've built works and here it is.
+	I promised a blog post about how this blogging thing I've built works and here it is.
+</P>
+
+<P class="mb-4">
+    The blog on this site consists of three parts:
+    <List tag="ul"
 </P>

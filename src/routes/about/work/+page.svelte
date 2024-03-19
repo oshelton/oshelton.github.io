@@ -12,6 +12,7 @@
 	import { GetItemForUrl } from '$lib/Navigation';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
+	import UnorderedList from '$lib/components/UnorderedList.svelte';
 
 	CountPageVisit();
 
@@ -20,7 +21,6 @@
 	const pageDescription = `This page covers my work history and links to some of the projects I have worked on in my career.`;
 
 	const timelineItemContainerClasses = 'flex flex-col gap-4';
-	const commonListClasses = 'list-outside ml-4';
 	const badgeContainerClasses = 'flex gap-2 flex-wrap';
 </script>
 
@@ -70,7 +70,7 @@
 
 				<Heading tag="h6">Responsibilities:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li>Review PRs from teammates and assist them as needed.</Li>
 					<Li>Check schedule for any meetings that are upcoming and I need to prepare for.</Li>
 					<Li
@@ -78,11 +78,11 @@
 						needed.</Li
 					>
 					<Li>Work on sprint work and other items that require my attention.</Li>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Key Takeaways:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li
 						>I don't implement as much as an individual contributor as I used to and I have learned
 						that there is much greater joy and accomplishment to be found in enabling and equipping
@@ -98,7 +98,7 @@
 							href="https://obsidian.md/">Obsidian</A
 						>.
 					</Li>
-				</List>
+				</UnorderedList>
 
 				<div class={badgeContainerClasses}>
 					<Badge color="indigo" rounded>Lead</Badge>
@@ -155,7 +155,7 @@
 
 				<Heading tag="h6">Responsibilities:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li
 						>Create the backend code in SQL and C# for the services that wind up running in azure
 						for a new feature or bug fix.</Li
@@ -173,11 +173,11 @@
 						>And lastly, I Test and ship the changes end to end; a process involving Terraform,
 						Github Actions, and maybe Jenkins.</Li
 					>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Key Takeaways:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li
 						>React can be very annoying, and it's not my first choice for a web frontend framework.</Li
 					>
@@ -199,7 +199,7 @@
 						can also be used to do anything that can be implemented in code. The limitations are
 						only those of your imagination.
 					</Li>
-				</List>
+				</UnorderedList>
 
 				<div class={badgeContainerClasses}>
 					<Badge color="indigo" rounded>Full Stack</Badge>
@@ -258,7 +258,7 @@
 
 				<Heading tag="h6">Responsibilities:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li
 						>Work in the Logos Desktop Mac and Windows code bases to fix issues, implement new
 						features, and enhance existing features.</Li
@@ -272,11 +272,11 @@
 						Make improvements to the shared infrastructure that other teams use to interact with
 						Logos.
 					</Li>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Key Takeaways:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li>A well refined long lived C#/WPF codebase can be a really cool thing to see.</Li>
 					<Li
 						>Objective-C can take a lot of getting used to, but it is an extremely powerful object
@@ -293,7 +293,7 @@
 						me a lot of opportunities and chances to succeed that forced me to grow, and I really
 						appreciate it. Trust your engineers, even junior ones.
 					</Li>
-				</List>
+				</UnorderedList>
 
 				<div class={badgeContainerClasses}>
 					<Badge rounded>Desktop</Badge>
@@ -348,7 +348,7 @@
 
 				<Heading tag="h6">Responsibilities:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li
 						>Improve, update, and maintain the tooling and desktop application that manages the data
 						backing all of Drake's conversions.</Li
@@ -357,18 +357,18 @@
 					<Li>Map data between other applications and Drake Software's data model.</Li>
 					<Li>Work on projects for other teams as time allows and there are needs.</Li>
 					<Li>During tax season answer support questions from Drake Software customers.</Li>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Key Takeaways:</Heading>
 
-				<List tag="ul" class={commonListClasses}>
+				<UnorderedList>
 					<Li
 						>Code can be data, and generating code for data can be a perfectly viable way to ship
 						data to customers without needing to worry about the format to deliver it in or any
 						runtime issues.</Li
 					>
 					<Li>Reverse engineering file formats can be very fun.</Li>
-				</List>
+				</UnorderedList>
 
 				<div class={badgeContainerClasses}>
 					<Badge color="indigo" rounded>Lead</Badge>

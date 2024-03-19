@@ -5,6 +5,7 @@
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PopupImage from '$lib/components/PopupImage.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
+	import UnorderedList from '$lib/components/UnorderedList.svelte';
 
 	import { CountPageVisit } from '$lib/Visitor';
 	import { GetItemForUrl } from '$lib/Navigation.js';
@@ -150,7 +151,7 @@
 		last few years.
 	</P>
 
-	<List tag="ul">
+	<UnorderedList>
 		<Li
 			><A href="https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d7500.html"
 				>Nikon D7500</A
@@ -171,7 +172,7 @@
 			><A href="https://www.tamron-usa.com/product/lenses/a035.html">Tamron 100-400mm f/4.5-6.3</A
 			></Li
 		>
-	</List>
+	</UnorderedList>
 
 	<Heading id="hiking" tag="h4">Hiking</Heading>
 

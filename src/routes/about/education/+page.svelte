@@ -10,6 +10,7 @@
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
+	import UnorderedList from '$lib/components/UnorderedList.svelte';
 
 	import { CountPageVisit } from '$lib/Visitor';
 	import { GetItemForUrl } from '$lib/Navigation.js';
@@ -79,7 +80,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 
 				<Heading tag="h6">Awards and Honors:</Heading>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li>UGA Department of Computer Science Outstanding Teaching Assistant, Spring 2012</Li>
 					<Li
 						>I published <A href="https://ieeexplore.ieee.org/abstract/document/6209169"
@@ -87,16 +88,16 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 						>
 						during my studies</Li
 					>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Activities:</Heading>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li
 						>Participated regularly in an interfaith community discussing beliefs and holding
 						community activities</Li
 					>
-				</List>
+				</UnorderedList>
 			</div>
 		</TimelineItem>
 	</span>
@@ -128,7 +129,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 					field:
 				</P>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li
 						>I worked a semester as a Quality assurance analyst (software tester) for a local
 						software company. This was an extremely valuable experience and really gave me my first
@@ -138,24 +139,24 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 						>I also worked several semesters as a teaching assisstant; evaluating and grading other
 						students code and assisting with lab sessions with limited teaching duties.</Li
 					>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Awards and Honors:</Heading>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li>Honors Graduate, 3.8 GPA</Li>
 					<Li>VSU Department of Computer Science Outstanding Senior, Spring 2010</Li>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Activities:</Heading>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li>Vice President Valdosta State University chapter of the ACM (2009-2010)</Li>
 					<Li
 						>I was highly active in VSU's chapter of the Baptist Collegiate Ministry, including
 						community activities and mission trips.</Li
 					>
-				</List>
+				</UnorderedList>
 			</div>
 		</TimelineItem>
 	</span>
@@ -202,15 +203,15 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 
 				<Heading tag="h6">Awards and Honors:</Heading>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li>Salutatorian of my class.</Li>
 					<Li>Received the John Phillip Sousa Marching Band award.</Li>
 					<Li>Boy Scout Eagle Scout</Li>
-				</List>
+				</UnorderedList>
 
 				<Heading tag="h6">Activities:</Heading>
 
-				<List tag="ul" class="list-outside ml-4">
+				<UnorderedList>
 					<Li
 						>Extremely active in my high school band, and played in both marching and orchestral
 						bands year round. I was a very skilled tuba player back in the day.</Li
@@ -219,7 +220,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 						>I was also very active in my local Boy Scout troop, regularly going camping, and
 						participating in many other community activities.</Li
 					>
-				</List>
+				</UnorderedList>
 			</div>
 		</TimelineItem>
 	</span>
