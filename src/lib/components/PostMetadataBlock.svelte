@@ -30,13 +30,12 @@
 
 		<P class="ml-4 dark:text-gray-400 text-gray-500">{metadata.summary}</P>
 
-		<div class="md:columns-2 sm:columns-1 gap-2">
-			<A href={BuildUrlForPost(metadata.id)}>Read More...</A>
-			<Span class="flex gap-2">
-				{#each metadata.tags as tag}
-					<Badge color="green" rounded>{tag}</Badge>
-				{/each}
-			</Span>
+		<div class="flex flex-wrap items-stretch gap-2">
+			<A class="mr-1" href={BuildUrlForPost(metadata.id)}>Read More...</A>
+			
+			{#each metadata.tags as tag}
+				<Badge color="green" rounded>{tag}</Badge>
+			{/each}
 		</div>
 	</div>
 {:else}
