@@ -82,15 +82,15 @@
 	function searchForPosts() {
 		let postIdsToFetch = [];
 		if (searchAtLeastPostedBy && searchAtLeastPostedByDate) {
-			postIdsToFetch.push(GetPostsPostedOnOrAfter(searchAtLeastPostedByDate));
+			postIdsToFetch.push(...GetPostsPostedOnOrAfter(searchAtLeastPostedByDate));
 		}
 
 		if (searchNoLaterPostedBy && searchNoLaterPostedByDate) {
-			postIdsToFetch.push(GetPostsPostedOnOrBefore(searchNoLaterPostedByDate));
+			postIdsToFetch.push(...GetPostsPostedOnOrBefore(searchNoLaterPostedByDate));
 		}
 
 		if (searchTags && selectedSearchTags && selectedSearchTags.length > 0) {
-			postIdsToFetch.push(GetPostIdsForTags(selectedSearchTags));
+			postIdsToFetch.push(...GetPostIdsForTags(selectedSearchTags));
 		}
 
 		/** @type {Object.<string, number>} */
