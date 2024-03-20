@@ -24,4 +24,4 @@
 	{title}
 </Heading>
 
-<MarkdownParagraph markdownClass="mb-4" source={markdown} />
+<MarkdownParagraph class="mb-4" source={markdown} />

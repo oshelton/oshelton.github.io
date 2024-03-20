@@ -4,7 +4,7 @@
 -->
 
 <script>
-	import { A, Heading, List, Li, P, Timeline, TimelineItem } from 'flowbite-svelte';
+	import { A, Heading, Li, P, Timeline, TimelineItem } from 'flowbite-svelte';
 
 	import { page } from '$app/stores';
 

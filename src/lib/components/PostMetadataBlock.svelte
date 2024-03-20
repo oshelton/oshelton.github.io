@@ -4,7 +4,7 @@
 -->
 
 <script>
-	import { A, Badge, P, Span } from 'flowbite-svelte';
+	import { A, Badge, P } from 'flowbite-svelte';
 	import { ArrowRightSolid } from 'flowbite-svelte-icons';
 
 	import { BuildUrlForPost } from '$lib/blog/PostsHelpers';
@@ -13,10 +13,7 @@
 	 * @typedef {import('$lib/types').PostMetadata} PostMetadata
 	 */
 
-	/**
-	 * Blog Post Metadata to display information for.
-	 * @type {PostMetadata}
-	 */
+	/** @type {PostMetadata} Blog Post Metadata to display information for. */
 	export let metadata = null;
 </script>
 

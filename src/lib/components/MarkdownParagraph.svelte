@@ -11,9 +11,10 @@
 	import BlockQuote from '$lib/components/markdownRenderers/BlockQuote.svelte';
 
 	/** @type {string} Markdown content to display. */
-	export let source;
+	export let source = '';
 	/** @type {string} Classes to apply to the markdown container.*/
-	export let markdownClass;
+	let markdownClass = '';
+	export { markdownClass as class };
 </script>
 
 <div class={markdownClass}>

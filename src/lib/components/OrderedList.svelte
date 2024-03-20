@@ -10,9 +10,14 @@
 	export let start = null;
 
 	/** @type {string} Additional classes to apply to the List. */
-	export let additionalClasses = '';
+	let additionalClasses = '';
+	export { additionalClasses as class };
 </script>
 
-<List tag="ol" class={`list-outside ml-4 ${additionalClasses}`} {start}>
+<List
+	tag="ol"
+	class={`list-outside ml-4 text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal ${additionalClasses}`}
+	{start}
+>
 	<slot />
 </List>

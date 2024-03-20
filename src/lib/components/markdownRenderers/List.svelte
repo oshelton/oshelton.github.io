@@ -4,8 +4,6 @@
 -->
 
 <script>
-	import { List } from 'flowbite-svelte';
-
 	import UnorderedList from '../UnorderedList.svelte';
 	import OrderedList from '../OrderedList.svelte';
 
@@ -16,7 +14,7 @@
 </script>
 
 {#if ordered}
-	<OrderedList {start}><slot /></OrderedList>
+	<OrderedList class="mb-4" {start}><slot /></OrderedList>
 {:else}
-	<UnorderedList><slot /></UnorderedList>
+	<UnorderedList class="mb-4"><slot /></UnorderedList>
 {/if}
