@@ -13,7 +13,7 @@
 
 <List
 	tag="ul"
-	class={`list-outside ml-4 text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal ${additionalClasses}`}
+	class={`list-outside ml-7 text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal ${additionalClasses}`}
 >
 	<slot />
 </List>
