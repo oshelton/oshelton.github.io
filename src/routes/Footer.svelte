@@ -16,7 +16,12 @@
 	class="bg-slate-200 border-t border-slate-500 dark:border-gray-600 dark:bg-gray-800"
 >
 	<div class="sm:flex sm:items-center sm:justify-between">
-		<FooterCopyright aClass="text-primary-600 dark:text-primary-500 hover:underline" by="Owen Shelton" year={2023} href="mailto://jowenshelton@gmail.com" />
+		<FooterCopyright
+			aClass="text-primary-600 dark:text-primary-500 hover:underline"
+			by="Owen Shelton"
+			year={2023}
+			href="mailto://jowenshelton@gmail.com"
+		/>
 
 		<FooterLinkGroup>
 			<FooterLink
