@@ -13,28 +13,28 @@ tags: [Announcement]
 -->
 
 <script>
-	import { P } from 'flowbite-svelte';
+	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 </script>
 
-<P class="mb-4">
+<ContentParagraph>
 	I've never been much of a blogger, but I have found value in reading other people's blog posts and
 	articles over the years, and so I've decided to start my own to capture some of my thoughts on
 	things. Both to have a record for myself and for others who may find my ramblings potentially
 	useful, edifying, or educational.
-</P>
+</ContentParagraph>
 
-<P class="mb-4">
+<ContentParagraph>
 	This blog will be dedicated to my technical musings and projects I'm working on; outside of
 	technological flame wars and arguments over tool brands there should be very little drama here.
-</P>
+</ContentParagraph>
 
-<P class="mb-4">
+<ContentParagraph>
 	This is a simple first Post just to demonstrate that, well, <em>most</em> things work as expected.
 	Searching posts isn't a thing yet, and some of the post viewing features can't really be exercised
 	with only a single Post.
-</P>
+</ContentParagraph>
 
-<P class="mb-4"
+<ContentParagraph
 	>A future post will also cover the technical details of how everything works and expand the
-	available features for posts.</P
+	available features for posts.</ContentParagraph
 >

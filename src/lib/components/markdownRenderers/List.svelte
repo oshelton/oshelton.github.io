@@ -14,7 +14,7 @@
 </script>
 
 {#if ordered}
-	<OrderedList class="mb-4" {start}><slot /></OrderedList>
+	<OrderedList {start}><slot /></OrderedList>
 {:else}
-	<UnorderedList class="mb-4"><slot /></UnorderedList>
+	<UnorderedList><slot /></UnorderedList>
 {/if}

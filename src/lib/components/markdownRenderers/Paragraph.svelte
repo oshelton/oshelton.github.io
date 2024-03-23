@@ -4,7 +4,7 @@
 -->
 
 <script>
-	import { P } from 'flowbite-svelte';
+	import ContentParagraph from '../ContentParagraph.svelte';
 </script>
 
-<P class="mb-4"><slot /></P>
+<ContentParagraph><slot /></ContentParagraph>
