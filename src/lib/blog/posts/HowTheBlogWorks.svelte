@@ -85,7 +85,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 <ContentParagraph>
 	My goals really were to make something that made sense to me and didn't require me to write a ton
 	of JavaScript, require a server to enable things like searching, and was generally performant to
-	work with in a static site context.
+	work within a static site context.
 </ContentParagraph>
 
 <ContentParagraph>I'm convinced it achieves those goals very well.</ContentParagraph>
@@ -106,8 +106,8 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	The general idea was to take a page from the markdown world and create something that works very
 	similar to <A
 		href="https://dpericich.medium.com/what-is-front-matter-and-how-is-it-used-to-create-dynamic-webpages-9d8dc053b457"
-		>markdown front matter where posts define their own metadata in an outside the content manner.</A
-	>.
+		>markdown front matter</A
+	> where posts define their own metadata in an outside the content manner.
 </ContentParagraph>
 
 <ContentParagraph>In general a post winds up looking something like this:</ContentParagraph>
@@ -115,9 +115,9 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 <Prism language="svelte" source={PostExample} />
 
 <ContentParagraph>
-	The front matter metadata is defined as yaml inside an html comment block with 'metadata' on the
-	same line as the comment opening sequence. This is necessary to identify the front matter block
-	from other comment blocks that may be present in the file.
+	The post metadata is defined as yaml inside an html comment block with 'metadata' on the same line
+	as the comment opening sequence. This is necessary to identify the metadata block from other
+	comment blocks that may be present in the file.
 </ContentParagraph>
 
 <ContentParagraph>
@@ -133,11 +133,11 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	<Li class="ml-5"
 		>This post uses a <A href="https://github.com/jakobrosenberg/svelte-prism?tab=readme-ov-file"
 			>Svelte wrapper around Prism</A
-		> for example.</Li
+		> for example for displaying the above example.</Li
 	>
 	<Li
 		>Posts are not restricted to the set of features available in the specific flavor of markdown
-		supported by the tooling or the run time markdown viewer being processor.</Li
+		supported by the tooling or the run time markdown viewer.</Li
 	>
 	<Li
 		>All of the existing Svelte tooling and styling capabilities can be used resulting in a lot more
@@ -167,7 +167,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 
 <ContentParagraph>
 	I implemented a simple application using <A href="https://nuke.build/">Nuke Build</A> that generates
-	the Glue that links the posts with the rest of the site. It winds up generating a pair of files:
+	the glue that links the posts with the rest of the site. It winds up generating a pair of files:
 </ContentParagraph>
 
 <UnorderedList>
@@ -185,8 +185,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 </UnorderedList>
 
 <ContentParagraph>
-	I elected not to implement the tooling used by the blogging system in JavaScript for the following
-	reasons:
+	I elected not to implement the tooling in JavaScript for the following reasons:
 </ContentParagraph>
 
 <UnorderedList>
@@ -210,7 +209,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	>
 </UnorderedList>
 
-<ContentParagraph>The tools can be ran two different ways:</ContentParagraph>
+<ContentParagraph>The post generation tool can be ran two different ways:</ContentParagraph>
 
 <OrderedList>
 	<Li
