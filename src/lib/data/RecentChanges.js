@@ -28,6 +28,11 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange(
+		'Added How the Blog Works Post and addressed a number of styling issues.',
+		new Date(2024, 2, 23),
+		['/blog/post/?id=124520dd-56cd-4b13-808f-7e54e885925a']
+	),
 	new RecentChange('Add recent blog posts to home page.', new Date(2024, 2, 18), []),
 	new RecentChange('Add basic date and tag blog post searching support.', new Date(2024, 2, 2), [
 		'/blog/search'
