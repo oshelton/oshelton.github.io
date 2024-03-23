@@ -173,7 +173,7 @@ export function GetItemForUrl(url) {
 
 	let foundItem = Enumerable.from(NavigationMenus)
 		.selectMany((x) => x.items)
-		.firstOrDefault((x) => x.url === url);
+		.firstOrDefault((x) => x.url === url && x.title !== 'Latest Post');
 
 	// Must be a Blog post link.
 	if (!foundItem) {

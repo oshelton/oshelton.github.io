@@ -70,6 +70,8 @@ export function BuildUrlForPost(postId) {
 		throw new Error('Provided postId must exist');
 	}
 
+	postId = postId.toLowerCase();
+
 	const foundMetadata = PostMetadata[postId];
 	if (!foundMetadata) {
 		throw new Error(`No Post exists with Id '${postId}'`);

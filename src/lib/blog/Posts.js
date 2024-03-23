@@ -20,7 +20,7 @@ Posts['124520dd-56cd-4b13-808f-7e54e885925a'] = () => import ('$lib/blog/posts/H
  */
 export const PostMetadata = [];
 PostMetadata['86f85de2-571b-4df4-9b39-140907351b5d'] = { title: `Birth of a new blog!`, id: '86f85de2-571b-4df4-9b39-140907351b5d', posted: '2/22/2024', lastModified: '3/1/2024', summary: `So I created a simple blogging platform for my portfolio site and here's what I'm going to do with it...`, tags: [ `Announcement` ] };
-PostMetadata['124520dd-56cd-4b13-808f-7e54e885925a'] = { title: `How the Blog Works`, id: '124520dd-56cd-4b13-808f-7e54e885925a', posted: '3/19/2024', lastModified: '3/19/2024', summary: `All about how this blog of mine is currently working.`, tags: [ `C#`, `Code Generation`, `JS`, `Nuke`, `Software Engineering`, `Svelte` ] };
+PostMetadata['124520dd-56cd-4b13-808f-7e54e885925a'] = { title: `How the Blog Works`, id: '124520dd-56cd-4b13-808f-7e54e885925a', posted: '3/23/2024', lastModified: '3/23/2024', summary: `All about how this blog of mine is currently working.`, tags: [ `C#`, `Code Generation`, `JS`, `Nuke`, `Software Engineering`, `Svelte` ] };
 
 /**
  * Association between Post id and and its previous and next post.

@@ -1,9 +1,10 @@
 <script>
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { P, Badge, Spinner } from 'flowbite-svelte';
+	import { Badge, Spinner } from 'flowbite-svelte';
 
 	import { GetMetadataForPost, GetComponentForPost } from '$lib/blog/PostsHelpers';
+	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import { CountPageVisit } from '$lib/Visitor';
 
@@ -14,13 +15,15 @@
 	const postComponent = browser && GetComponentForPost(postId);
 </script>
 
-<PageTitleBlock
-	title={postMetadata.title}
-	metaDescription={postMetadata.summary}
-	markdown={postMetadata.summary}
-/>
+<span id="title">
+	<PageTitleBlock
+		title={postMetadata.title}
+		metaDescription={postMetadata.summary}
+		markdown={postMetadata.summary}
+	/>
+</span>
 
-<P class="mb-4">
+<ContentParagraph>
 	<strong>Published:</strong>
 	{postMetadata.posted}
 	{#if postMetadata.lastModified && postMetadata.lastModified !== postMetadata.posted}
@@ -32,7 +35,7 @@
 	{#if browser}
 		{#each postMetadata.tags as tag}<Badge color="green" rounded class="ml-2">{tag}</Badge>{/each}
 	{/if}
-</P>
+</ContentParagraph>
 
 {#await postComponent}
 	<div class="flex items-center gap-2">

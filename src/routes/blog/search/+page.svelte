@@ -60,8 +60,6 @@
 	// Save Preferences.
 	onMount(() => {
 		return () => {
-			console.log('unmounting');
-
 			localStorage.setItem(
 				'SearchPreferences',
 				JSON.stringify({
