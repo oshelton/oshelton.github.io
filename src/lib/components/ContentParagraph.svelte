@@ -6,7 +6,7 @@
 <script>
 	import { P } from 'flowbite-svelte';
 
-	/** @type {string} Classes to apply to the markdown container.*/
+	/** @type {string} Classes to apply to the Paragraph.*/
 	let pClass = '';
 	export { pClass as class };
 </script>

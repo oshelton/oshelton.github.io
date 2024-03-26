@@ -2,7 +2,7 @@
 title: How the Blog Works
 id: 124520DD-56CD-4B13-808F-7E54E885925A
 posted: 3/23/2024
-lastModified: 3/23/2024
+lastModified: 3/26/2024
 summary: All about how this blog of mine is currently working.
 tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 -->
@@ -19,6 +19,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	import { BuildUrlForPost } from '../PostsHelpers';
 	import { GetItemForUrl } from '$lib/Navigation.js';
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
+	import HeadingLink from '$lib/components/HeadingLink.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 	import OrderedList from '$lib/components/OrderedList.svelte';
@@ -31,8 +32,8 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 <PageToc
 	item={navItem}
 	contents={[
-		{ title: 'Summary', url: url + '#title' },
-		{ title: 'Anatomy of a Blog Post', url: url + '#post' },
+		{ title: 'Title', url: url + '#title' },
+		{ title: 'Anatomy of a Blog Post', url: '#post' },
 		{ title: 'The C# Tooling', url: url + '#tooling' },
 		{ title: 'JS Helpers', url: url + '#helpers' }
 	]}
@@ -95,7 +96,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	will see.
 </ContentParagraph>
 
-<Heading id="post" tag="h4">Anatomy of a Blog Post</Heading>
+<HeadingLink id="post">Anatomy of a Blog Post</HeadingLink>
 
 <ContentParagraph>
 	The posts themselves make up the core of the blogging platform and are basically <em>just</em> Svelte
@@ -163,7 +164,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	>.
 </ContentParagraph>
 
-<Heading id="tooling" tag="h4">The C# Tooling</Heading>
+<HeadingLink id="tooling" tag="h4">The C# Tooling</HeadingLink>
 
 <ContentParagraph>
 	I implemented a simple application using <A href="https://nuke.build/">Nuke Build</A> that generates
@@ -221,7 +222,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	</Li>
 </OrderedList>
 
-<Heading id="helpers" tag="h4">JS Helpers</Heading>
+<HeadingLink id="helpers" tag="h4">JS Helpers</HeadingLink>
 
 <ContentParagraph>
 	The final piece of the puzzle are the helper functions and the associated components that take

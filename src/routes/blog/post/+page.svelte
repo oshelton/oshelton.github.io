@@ -15,13 +15,11 @@
 	const postComponent = browser && GetComponentForPost(postId);
 </script>
 
-<span id="title">
-	<PageTitleBlock
-		title={postMetadata.title}
-		metaDescription={postMetadata.summary}
-		markdown={postMetadata.summary}
-	/>
-</span>
+<PageTitleBlock
+	title={postMetadata.title}
+	metaDescription={postMetadata.summary}
+	markdown={postMetadata.summary}
+/>
 
 <ContentParagraph>
 	<strong>Published:</strong>

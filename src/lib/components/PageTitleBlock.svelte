@@ -5,6 +5,7 @@
 
 <script>
 	import { Heading } from 'flowbite-svelte';
+	import HeadingLink from './HeadingLink.svelte';
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 
 	/** @type {string} Title of the page. */
@@ -20,8 +21,8 @@
 	<meta name="description" content={metaDescription} />
 </svelte:head>
 
-<Heading tag="h1" class="mb-8 text-2xl lg:text-3xl flex flex-row flex-wrap">
+<HeadingLink id="title" tag="h2">
 	{title}
-</Heading>
+</HeadingLink>
 
 <MarkdownParagraph class="mb-4" source={markdown} />
