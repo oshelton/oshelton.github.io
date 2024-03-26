@@ -33,6 +33,7 @@
 <PageToc
 	item={navItem}
 	contents={[
+		{ title: 'Title', url: '#title' },
 		{ title: 'Simpson Strong-Tie', url: url + '#simpson' },
 		{ title: 'Logos Sermon Tools', url: url + '#logos-sermons' },
 		{ title: 'Logos Desktop', url: url + '#logos' },

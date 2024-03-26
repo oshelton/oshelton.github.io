@@ -9,6 +9,7 @@
 	import { page } from '$app/stores';
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
+	import HeadingLink from '$lib/components/HeadingLink.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
 
@@ -37,9 +38,10 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 <PageToc
 	item={navItem}
 	contents={[
-		{ title: 'Graduate School', url: url + '#graduate' },
-		{ title: 'Undergraduate College', url: url + '#undergraduate' },
-		{ title: 'High School', url: url + '#high-school' }
+		{ title: 'Title', url: '#title' },
+		{ title: 'Graduate School', url: '#graduate' },
+		{ title: 'Undergraduate College', url: '#undergraduate' },
+		{ title: 'High School', url: '#high-school' }
 	]}
 />
 

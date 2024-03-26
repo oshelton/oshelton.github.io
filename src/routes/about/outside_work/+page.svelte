@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
+	import HeadingLink from '$lib/components/HeadingLink.svelte';
 	import PopupImage from '$lib/components/PopupImage.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
@@ -52,6 +53,7 @@
 <PageToc
 	item={navItem}
 	contents={[
+		{ title: 'Title', url: '#title' },
 		{ title: 'Faith', url: url + '#faith' },
 		{ title: 'Photography', url: url + '#photography' },
 		{ title: 'Hiking', url: url + '#hiking' }
@@ -59,7 +61,7 @@
 />
 
 <span class=" flex flex-col gap-4 pb-4">
-	<Heading id="faith" tag="h4">Faith</Heading>
+	<HeadingLink id="faith">Faith</HeadingLink>
 
 	<P>
 		A critically important of mine and my family's life is our faith. My wife and I are members of <A
@@ -83,7 +85,7 @@
 		community and elsewhere.
 	</P>
 
-	<Heading id="photography" tag="h4">Photography</Heading>
+	<HeadingLink id="photography">Photography</HeadingLink>
 
 	<P>
 		Photography has been an important part of my life for a very long time. My dad had been a
@@ -174,7 +176,7 @@
 		>
 	</UnorderedList>
 
-	<Heading id="hiking" tag="h4">Hiking</Heading>
+	<HeadingLink id="hiking">Hiking</HeadingLink>
 
 	<P>
 		I live in the mountains of western North Carolina, definitely one of the most beautiful places
