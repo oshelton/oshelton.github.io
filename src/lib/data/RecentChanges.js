@@ -28,6 +28,7 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange('Updated many headings to be links.', new Date(2024, 2, 26), []),
 	new RecentChange(
 		'Added How the Blog Works Post and addressed a number of styling issues.',
 		new Date(2024, 2, 23),
@@ -45,10 +46,5 @@ export const AllRecentChanges = [
 	new RecentChange('Added initial Blog Support.', new Date(2024, 1, 22), [
 		'/blog/all',
 		'/blog/post?id=86f85de2-571b-4df4-9b39-140907351b5d'
-	]),
-	new RecentChange(
-		'Added initial GoatCounter analytics support for completed pages.',
-		new Date(2024, 0, 26),
-		[]
-	)
+	])
 ];
