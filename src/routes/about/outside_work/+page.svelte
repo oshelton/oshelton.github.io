@@ -1,5 +1,5 @@
 <script>
-	import { A, Heading, P, Li } from 'flowbite-svelte';
+	import { A, P, Li } from 'flowbite-svelte';
 	import { page } from '$app/stores';
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';

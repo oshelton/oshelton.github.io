@@ -4,7 +4,6 @@
 -->
 
 <script>
-	import { Heading } from 'flowbite-svelte';
 	import HeadingLink from './HeadingLink.svelte';
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
 

@@ -9,7 +9,6 @@
 	import { page } from '$app/stores';
 
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
-	import HeadingLink from '$lib/components/HeadingLink.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
 

@@ -13,7 +13,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 -->
 
 <script>
-	import { A, Heading, Li } from 'flowbite-svelte';
+	import { A, Li } from 'flowbite-svelte';
 	import Prism from 'svelte-prism';
 
 	import { BuildUrlForPost } from '../PostsHelpers';
