@@ -9,7 +9,7 @@
 
 	/** @type {string} Title of the page to display in the TOC.*/
 	export let item;
-	/** @type {{url: string, title: string}[]} Content items to display in the TOC. */
+	/** @type {{url: string, title: string, level: number}[]} Content items to display in the TOC. */
 	export let contents;
 </script>
 
@@ -37,7 +37,8 @@
 		class="ml-2 z-50"
 	>
 		{#each contents as content}
-			<P><A href={content.url}>{content.title}</A></P>
+			{@const indentationClass = content.level && content.level > 1 ? `ml-${content.level + 1}` : ''}
+			<P class={indentationClass}><A href={content.url}>{content.title}</A></P>
 		{/each}
 	</Popover>
 </span>
