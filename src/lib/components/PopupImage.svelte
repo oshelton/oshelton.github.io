@@ -30,8 +30,8 @@
 
 <Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl" autoclose outsideclose>
 	{#if fullSrc}
-		<Img src={fullSrc} size="max-w" />
+		<Img src={fullSrc} size="max-w" imgClass="mx-auto" />
 	{:else}
-		<Img {src} size="max-w" />
+		<Img {src} size="max-w" imgClass="mx-auto" />
 	{/if}
 </Modal>
