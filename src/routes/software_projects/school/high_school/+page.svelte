@@ -120,15 +120,16 @@
 		</ContentParagraph>
 
 		<ContentParagraph>
-			This application was my first real foray into Graphics programming, C, and graphics creation in <A href="https://www.gimp.org/">Gimp</A>. The code is <em
-				>very</em
-			>
+			This application was my first real foray into Graphics programming, C, and graphics creation
+			in <A href="https://www.gimp.org/">Gimp</A>. The code is <em>very</em>
 			primitive as you might imagine, with all of it in one 650ish line file. I definitely
 			<em>would not</em> write it the same way now.
 		</ContentParagraph>
 
 		<ContentParagraph>
-			The binary still runs even on a modern Windows 11 machine and the Readme.txt file in the binaries zip contains a bit of a time capsule into what I was thinking and where I was taking the project.  Even back then I was planning out my projects.
+			The binary still runs even on a modern Windows 11 machine and the Readme.txt file in the
+			binaries zip contains a bit of a time capsule into what I was thinking and where I was taking
+			the project. Even back then I was planning out my projects.
 		</ContentParagraph>
 
 		<ContentParagraph>
@@ -147,7 +148,8 @@
 		</UnorderedList>
 
 		<ContentParagraph>
-			I remember being very pleased with myself showing this off to my classmates, and I also remember them being equal parts baffled, confused, and not very impressed.
+			I remember being very pleased with myself showing this off to my classmates, and I also
+			remember them being equal parts baffled, confused, and not very impressed.
 		</ContentParagraph>
 	</div>
 
@@ -165,38 +167,61 @@
 		<HeadingLink tag="h5" id="shooter">Space Shooter</HeadingLink>
 
 		<ContentParagraph>
-			Basic Allegro Version - <A href="/files/software_projects/high_school/space-shooter-binary.zip">Windows Binary</A> - <A href="/files/software_projects/high_school/space-shooter-source-standard.zip">Source Code</A><br />
-			Allegro Open Layer Version - <A href="/files/software_projects/high_school/space-shooter-advanced-binary.zip">Windows Binary</A> - <A href="/files/software_projects/high_school/space-shooter-source-open-layer.zip">Source Code</A>
+			Basic Allegro Version - <A
+				href="/files/software_projects/high_school/space-shooter-binary.zip">Windows Binary</A
+			> - <A href="/files/software_projects/high_school/space-shooter-source-standard.zip"
+				>Source Code</A
+			><br />
+			Allegro Open Layer Version - <A
+				href="/files/software_projects/high_school/space-shooter-advanced-binary.zip"
+				>Windows Binary</A
+			> - <A href="/files/software_projects/high_school/space-shooter-source-open-layer.zip"
+				>Source Code</A
+			>
 		</ContentParagraph>
 
 		<Alert border color="yellow" class="mb-4">
 			<InfoCircleSolid slot="icon" class="w-4 h-4" />
-			
+
 			<ContentParagraph>
-				The Basic Allegro Version was built with its logic tied to the its framerate, and it doesn't use VSync so I <strong>don't</strong> recommend going past the menus.
+				The Basic Allegro Version was built with its logic tied to the its framerate, and it doesn't
+				use VSync so I <strong>don't</strong> recommend going past the menus.
 			</ContentParagraph>
 
 			<ContentParagraph class="mb-0">
-				The Open Layer version runs better on modern hardware but has some audio glitches that result in unpleasant sound behavior. 
+				The Open Layer version runs better on modern hardware but has some audio glitches that
+				result in unpleasant sound behavior.
 			</ContentParagraph>
 		</Alert>
 
 		<ContentParagraph>
-			I grew up in the age of the <A href="https://en.wikipedia.org/wiki/Shoot_'em_up">SHMUP</A>; from various versions of <A href="https://en.wikipedia.org/wiki/Raiden_(series)">Raiden</A> in the arcades to many gaming sessions with friends playing <A href="https://en.wikipedia.org/wiki/Captain_Skyhawk">Captain Skyhawk</A> on the NES and eventually the SNES port of <A href="https://en.wikipedia.org/wiki/Strike_Gunner_S.T.G.">Strike Gunner</A>.
-			So I decided I wanted to make my own SHMUP.
+			I grew up in the age of the <A href="https://en.wikipedia.org/wiki/Shoot_'em_up">SHMUP</A>;
+			from various versions of <A href="https://en.wikipedia.org/wiki/Raiden_(series)">Raiden</A> in
+			the arcades to many gaming sessions with friends playing <A
+				href="https://en.wikipedia.org/wiki/Captain_Skyhawk">Captain Skyhawk</A
+			> on the NES and eventually the SNES port of <A
+				href="https://en.wikipedia.org/wiki/Strike_Gunner_S.T.G.">Strike Gunner</A
+			>. So I decided I wanted to make my own SHMUP.
 		</ContentParagraph>
 
 		<ContentParagraph>
-			I created two versions of this application; one using standard <A href="https://liballeg.org/">Allegro</A> which is software rendered (which I knew wouldn't scale well at all) and one using <A href="https://sourceforge.net/projects/openlayer/">Open Layer</A> which provides 2d hardware accelerated rendering capabilities on top of normal Allegro (the advanced version).  A significant portion of the graphics in this version are procedurally generated resulting in smooth explosions and other nicer effects. 
+			I created two versions of this application; one using standard <A href="https://liballeg.org/"
+				>Allegro</A
+			> which is software rendered (which I knew wouldn't scale well at all) and one using <A
+				href="https://sourceforge.net/projects/openlayer/">Open Layer</A
+			> which provides 2d hardware accelerated rendering capabilities on top of normal Allegro (the advanced
+			version). A significant portion of the graphics in this version are procedurally generated resulting
+			in smooth explosions and other nicer effects.
 		</ContentParagraph>
 
 		<ContentParagraph>
-			These applications were also my first foray into 3d graphics creation with <A href="https://www.blender.org/">Blender</A>.  The spaceship on the title screen and the player spaceship sprite were both created in Blender.
+			These applications were also my first foray into 3d graphics creation with <A
+				href="https://www.blender.org/">Blender</A
+			>. The spaceship on the title screen and the player spaceship sprite were both created in
+			Blender.
 		</ContentParagraph>
 
-		<ContentParagraph>
-			A few more high points:
-		</ContentParagraph>
+		<ContentParagraph>A few more high points:</ContentParagraph>
 
 		<UnorderedList>
 			<Li>Some actual architecture; code is divided amongst features across multiple files.</Li>

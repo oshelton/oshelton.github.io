@@ -37,7 +37,8 @@
 		class="ml-2 z-50"
 	>
 		{#each contents as content}
-			{@const indentationClass = content.level && content.level > 1 ? `ml-${content.level + 1}` : ''}
+			{@const indentationClass =
+				content.level && content.level > 1 ? `ml-${content.level + 1}` : ''}
 			<P class={indentationClass}><A href={content.url}>{content.title}</A></P>
 		{/each}
 	</Popover>
