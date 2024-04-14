@@ -127,10 +127,24 @@ export const NavigationMenus = [
 				countClick: false
 			},
 			{
-				title: 'School',
-				url: '/software_projects/school',
+				title: 'Graduate School',
+				url: '/software_projects/school/graduate',
 				target: null,
 				underConstruction: true,
+				countClick: false
+			},
+			{
+				title: 'College',
+				url: '/software_projects/school/college',
+				target: null,
+				underConstruction: true,
+				countClick: false
+			},
+			{
+				title: 'High School',
+				url: '/software_projects/school/high_school',
+				target: null,
+				underConstruction: false,
 				countClick: false
 			}
 		]
