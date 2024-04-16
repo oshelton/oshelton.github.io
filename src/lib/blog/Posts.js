@@ -13,6 +13,7 @@
 export const Posts = [];
 Posts['86f85de2-571b-4df4-9b39-140907351b5d'] = () => import ('$lib/blog/posts/BirthOfANewNewBlog.svelte');
 Posts['124520dd-56cd-4b13-808f-7e54e885925a'] = () => import ('$lib/blog/posts/HowTheBlogWorks.svelte');
+Posts['11de95a1-7be0-4eec-a75b-70c3fe911a4f'] = () => import ('$lib/blog/posts/BackInMyDay.svelte');
 
 /**
  * Association between Post id and its metadata.
@@ -21,6 +22,7 @@ Posts['124520dd-56cd-4b13-808f-7e54e885925a'] = () => import ('$lib/blog/posts/H
 export const PostMetadata = [];
 PostMetadata['86f85de2-571b-4df4-9b39-140907351b5d'] = { title: `Birth of a new blog!`, id: '86f85de2-571b-4df4-9b39-140907351b5d', posted: '2/22/2024', lastModified: '3/1/2024', summary: `So I created a simple blogging platform for my portfolio site and here's what I'm going to do with it...`, tags: [ `Announcement` ] };
 PostMetadata['124520dd-56cd-4b13-808f-7e54e885925a'] = { title: `How the Blog Works`, id: '124520dd-56cd-4b13-808f-7e54e885925a', posted: '3/23/2024', lastModified: '3/26/2024', summary: `All about how this blog of mine is currently working.`, tags: [ `C#`, `Code Generation`, `JS`, `Nuke`, `Software Engineering`, `Svelte` ] };
+PostMetadata['11de95a1-7be0-4eec-a75b-70c3fe911a4f'] = { title: `Back in my Day`, id: '11de95a1-7be0-4eec-a75b-70c3fe911a4f', posted: '4/15/2024', lastModified: '4/15/2024', summary: `Some of my earliest programming projects.`, tags: [ `C`, `C++`, `High School`, `School` ] };
 
 /**
  * Association between Post id and and its previous and next post.
@@ -28,10 +30,11 @@ PostMetadata['124520dd-56cd-4b13-808f-7e54e885925a'] = { title: `How the Blog Wo
  */
 export const PostAdjacency = [];
 PostAdjacency['86f85de2-571b-4df4-9b39-140907351b5d'] = { previous: null, next: '124520dd-56cd-4b13-808f-7e54e885925a' };
-PostAdjacency['124520dd-56cd-4b13-808f-7e54e885925a'] = { previous: '86f85de2-571b-4df4-9b39-140907351b5d', next: null };
+PostAdjacency['124520dd-56cd-4b13-808f-7e54e885925a'] = { previous: '86f85de2-571b-4df4-9b39-140907351b5d', next: '11de95a1-7be0-4eec-a75b-70c3fe911a4f' };
+PostAdjacency['11de95a1-7be0-4eec-a75b-70c3fe911a4f'] = { previous: '124520dd-56cd-4b13-808f-7e54e885925a', next: null };
 
 /**
  * Latest Post Id.
  * @type {string}
  */
-export const LatestPostId = '124520dd-56cd-4b13-808f-7e54e885925a';
+export const LatestPostId = '11de95a1-7be0-4eec-a75b-70c3fe911a4f';

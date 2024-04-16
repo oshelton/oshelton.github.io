@@ -10,10 +10,14 @@
  */
 export const AllTags = [
 	'Announcement',
+	'C',
 	'C#',
+	'C++',
 	'Code Generation',
+	'High School',
 	'JS',
 	'Nuke',
+	'School',
 	'Software Engineering',
 	'Svelte',
 ];
@@ -24,10 +28,14 @@ export const AllTags = [
  */
 export const TagsToPostIds = [];
 TagsToPostIds['Announcement'] = ['86f85de2-571b-4df4-9b39-140907351b5d'];
+TagsToPostIds['C'] = ['11de95a1-7be0-4eec-a75b-70c3fe911a4f'];
 TagsToPostIds['C#'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
+TagsToPostIds['C++'] = ['11de95a1-7be0-4eec-a75b-70c3fe911a4f'];
 TagsToPostIds['Code Generation'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
+TagsToPostIds['High School'] = ['11de95a1-7be0-4eec-a75b-70c3fe911a4f'];
 TagsToPostIds['JS'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
 TagsToPostIds['Nuke'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
+TagsToPostIds['School'] = ['11de95a1-7be0-4eec-a75b-70c3fe911a4f'];
 TagsToPostIds['Software Engineering'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
 TagsToPostIds['Svelte'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
 
@@ -38,6 +46,7 @@ TagsToPostIds['Svelte'] = ['124520dd-56cd-4b13-808f-7e54e885925a'];
 export const PostIdsAndPostedDate = [
 	{ id: '86f85de2-571b-4df4-9b39-140907351b5d', posted: new Date(2024, 1, 22) },
 	{ id: '124520dd-56cd-4b13-808f-7e54e885925a', posted: new Date(2024, 2, 23) },
+	{ id: '11de95a1-7be0-4eec-a75b-70c3fe911a4f', posted: new Date(2024, 3, 15) },
 ];
 
 // TODO: This file is incomplete!
