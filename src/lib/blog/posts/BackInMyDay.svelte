@@ -13,7 +13,7 @@ tags: [C, C++, "High School", School]
 -->
 
 <script>
-	import { A, Blockquote, Li } from 'flowbite-svelte';
+	import { A, Blockquote } from 'flowbite-svelte';
 
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 </script>
