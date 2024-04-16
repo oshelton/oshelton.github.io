@@ -55,45 +55,50 @@ tags: [C, C++, "High School", School]
 	> on the <A href="/software_projects/school/high_school">high school projects page</A>):
 </ContentParagraph>
 
-<Blockquote border bg class="whitespace-break-spaces p-4 mb-4">
-Tank Chaser Release 1 Readme
+<Blockquote border bg class="p-4 mb-4">
+	Tank Chaser Release 1 Readme<br />
+	<br />
+	Your country's enemies are preparing to launch a nuclear attack on your homeland! you must stop them!
+	The enemy's silos are buried in the ground and even your tank's mighty cannon can not harm them. You
+	must drive over the silos and deploy your troops to stop them from launching. Beware, though, the enemy
+	has many silos and you must keep on your toes in order to stop them.<br />
+	<br />
+	Controls-<br />
+	Arrow keys - control tank movement and menu selections.<br />
+	Enter - make menu selections.<br />
+	Space - restarts the program after you have won.<br />
+	Escape - Returns to the main menu, no matter where you are.<br />
+	<br />
+	Game Info-<br />
+	There are 2 game types, TO 10 and Time attack.<br />
+	In To 10, you are required to stop 10 missles from launching as quickly as possible.<br />
+	In Time Attack, you are required to stop as many missles from launching as possible within 45 seconds.<br
+	/>
+	<br />
+	Log- Sept. 29, 2005<br />
+	<br />
+	-Implemented Time Attack<br />
+	-Fixed main game loop, all keys are game now.<br />
+	-Added boxes for the timer in time attack and victory boxes.<br />
+	<br />
+	Log- Sept. 28, 2005<br />
+	<br />
+	- Added collision detection to prevent you from driving off the screen.<br />
+	- Nothing but a single datafile for the graphics, which is much easier to handle.<br />
+	- Lots of little things, ESC now works.<br />
+	<br />
+	Log- Sept. 27, 2005<br />
 
-Your country's enemies are preparing to launch a nuclear attack on your homeland! you must stop them!  The enemy's silos are buried in the ground and even your tank's mighty cannon can not harm them.  You must drive over the silos and deploy your troops to stop them from launching.  Beware, though, the enemy has many silos and you must keep on your toes in order to stop them.
-
-Controls-
-	Arrow keys - control tank movement and menu selections.
-	Enter - make menu selections.
-	Space - restarts the program after you have won.
-	Escape - Returns to the main menu, no matter where you are.
-
-Game Info-
-	There are 2 game types, TO 10 and Time attack.
-	In To 10, you are required to stop 10 missles from launching as quickly as possible.
-	In Time Attack, you are required to stop as many missles from launching as possible within 45 seconds.
-
-Log- Sept. 29, 2005
-
--Implemented Time Attack
--Fixed main game loop, all keys are game now.
--Added boxes for the timer in time attack and victory boxes.
-
-Log- Sept. 28, 2005
-
-- Added collision detection to prevent you from driving off the screen.
-- Nothing but a single datafile for the graphics, which is much easier to handle.
-- Lots of little things, ESC now works.
-
-Log- Sept. 27, 2005
-
--This program and its source is yours to do what you wish with it. Just give credit where its due.
-
-To Do-
-	-only the desert and rusty backgrounds work.
-	-time attack needs to be implemented.
-	-datafiles need to be looked into further.
-	-some kind of high score system.
-
-Owen Shelton, September 2005 
+	-This program and its source is yours to do what you wish with it. Just give credit where its due.<br
+	/>
+	<br />
+	To Do-<br />
+	-only the desert and rusty backgrounds work.<br />
+	-time attack needs to be implemented.<br />
+	-datafiles need to be looked into further.<br />
+	-some kind of high score system.<br />
+	<br />
+	Owen Shelton, September 2005
 </Blockquote>
 
 <ContentParagraph>
