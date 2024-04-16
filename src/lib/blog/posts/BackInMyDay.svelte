@@ -19,28 +19,40 @@ tags: [C, C++, "High School", School]
 </script>
 
 <ContentParagraph>
-	I've been programming for a while now; going back all the way to 2005.  I've spent some time looking back and writing up some details about my <A href="/software_projects/school/high_school">earliest programming projects</A>.
+	I've been programming for a while now; going back all the way to 2005. I've spent some time
+	looking back and writing up some details about my <A href="/software_projects/school/high_school"
+		>earliest programming projects</A
+	>.
 </ContentParagraph>
 
-<ContentParagraph>
-	Amazingly I have binaries for some of them that still run.
-</ContentParagraph>
+<ContentParagraph>Amazingly I have binaries for some of them that still run.</ContentParagraph>
 
 <ContentParagraph>
-	It was quite an experience looking over some of my old code and giving the old applications a run.  Very nostalgic, but also a bit frustrating.  It brings to mind a particular running joke in software development:
+	It was quite an experience looking over some of my old code and giving the old applications a run.
+	Very nostalgic, but also a bit frustrating. It brings to mind a particular running joke in
+	software development:
 </ContentParagraph>
 
 <Blockquote border bg class="p-4 mb-4">
-	there is an ongoing joke that the worst code you ever wrote is the code you wrote six months ago.<br/>
-	<A href="https://www.bennadel.com/blog/3013-the-worst-code-i-ever-wrote-was-the-code-i-wrote-six-months-ago.htm">Ben Nadel's blog</A>
+	there is an ongoing joke that the worst code you ever wrote is the code you wrote six months ago.<br
+	/>
+	<A
+		href="https://www.bennadel.com/blog/3013-the-worst-code-i-ever-wrote-was-the-code-i-wrote-six-months-ago.htm"
+		>Ben Nadel's blog</A
+	>
 </Blockquote>
 
 <ContentParagraph>
-	And I wrote this code many, <em>many</em> months ago.  So many that it honestly may as well have been written by someone else.  But it's got my name on it, and in spite of everything I do recognize some of myself in it.
+	And I wrote this code many, <em>many</em> months ago. So many that it honestly may as well have been
+	written by someone else. But it's got my name on it, and in spite of everything I do recognize some
+	of myself in it.
 </ContentParagraph>
 
 <ContentParagraph>
-	Less so in the code itself and more in the readme for one of my earliest applications (from the <A href="http://localhost:5173/software_projects/school/high_school#chaser">Tank Chaser windows binary zip</A> on the <A href="/software_projects/school/high_school">high school projects page</A>):
+	Less so in the code itself and more in the readme for one of my earliest applications (from the <A
+		href="http://localhost:5173/software_projects/school/high_school#chaser"
+		>Tank Chaser windows binary zip</A
+	> on the <A href="/software_projects/school/high_school">high school projects page</A>):
 </ContentParagraph>
 
 <Blockquote border bg class="whitespace-break-spaces p-4 mb-4">
@@ -85,9 +97,12 @@ Owen Shelton, September 2005
 </Blockquote>
 
 <ContentParagraph>
-	What do I see here but some of the earliest beginnings of documentation and Project Planning and management, and I appreciate that even back then I was starting to think of that kind fo stuff.
+	What do I see here but some of the earliest beginnings of documentation and Project Planning and
+	management, and I appreciate that even back then I was starting to think of that kind fo stuff.
 </ContentParagraph>
 
 <ContentParagraph>
-	This was an amazing trip down memory lane, and finding that some of my oldest projects still <em>run</em> (for certain definitions of the word) was a lot of fun.
+	This was an amazing trip down memory lane, and finding that some of my oldest projects still <em
+		>run</em
+	> (for certain definitions of the word) was a lot of fun.
 </ContentParagraph>

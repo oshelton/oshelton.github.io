@@ -28,9 +28,11 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
-	new RecentChange('Filled in High School Projects page and created a post.', new Date(2024, 2, 26), [
-		'/software_projects/school/high_school'
-	]),
+	new RecentChange(
+		'Filled in High School Projects page and created a post.',
+		new Date(2024, 2, 26),
+		['/software_projects/school/high_school']
+	),
 	new RecentChange('Updated many headings to be links.', new Date(2024, 2, 26), []),
 	new RecentChange(
 		'Added How the Blog Works Post and addressed a number of styling issues.',
