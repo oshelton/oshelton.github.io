@@ -4,7 +4,7 @@
 -->
 
 <script>
-	import { A, Badge, Heading, Li, P, Timeline, TimelineItem } from 'flowbite-svelte';
+	import { A, Badge, Heading, Img, Li, P, Timeline, TimelineItem } from 'flowbite-svelte';
 
 	import { page } from '$app/stores';
 
@@ -13,6 +13,10 @@
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
+
+	import SimpsonLogo from '$lib/images/work/simpson.webp';
+	import LogosLogo from '$lib/images/work/logos.svg';
+	import DrakeLogo from '$lib/images/work/drake-software.webp';
 
 	CountPageVisit();
 
@@ -34,7 +38,8 @@
 	item={navItem}
 	contents={[
 		{ title: 'Title', url: '#title' },
-		{ title: 'Simpson Strong-Tie', url: url + '#simpson' },
+		{ title: 'Simpson Strong-Tie Lead Engineer', url: url + '#simpson-lead' },
+		{ title: 'Simpson Strong-Tie Senior Engineer', url: url + '#simpson' },
 		{ title: 'Logos Sermon Tools', url: url + '#logos-sermons' },
 		{ title: 'Logos Desktop', url: url + '#logos' },
 		{ title: 'Drake Software', url: url + '#drake' }
@@ -42,11 +47,95 @@
 />
 
 <Timeline order="vertical">
+	<span id="simpson-lead">
+		<TimelineItem
+			title="Simpson Strong-Tie: Lead Software Engineer CS Director Team"
+			date="May 2024 - Present"
+		>
+			<svelte:fragment slot="icon">
+				<Img src={SimpsonLogo} class="h-12" />
+			</svelte:fragment>
+
+			<div class={timelineItemContainerClasses}>
+				<P>
+					In May of 2024 I was promoted to the role of Lead Software Engineer of the <A
+						href="https://www.strongtie.com/">Simpson Strong-Tie</A
+					>
+					<A href="https://www.strongtie.com/products/connectors/ics/component-solutions-software"
+						>CS Director</A
+					> team.
+				</P>
+
+				<P>
+					As the lead engineer of my team my role moved further towards leadership and supporting my
+					team in a bigger picture capacity than I had previously.
+				</P>
+
+				<P>
+					This includes a shift to keeping a bigger picture eye on my team, participating in higher
+					level planning and direction efforts with both my team and others, and taking on a larger
+					role as a mentor, guide, and partner to the engineers on the team.
+				</P>
+
+				<Heading tag="h6">Responsibilities:</Heading>
+
+				<UnorderedList>
+					<Li
+						>Organize, plan for, and when ready delegate projects to the engineers on the team as
+						project leads.</Li
+					>
+					<Li
+						>Support and partner with project leads on the team and make sure they are equipped to
+						complete their projects and support them in whatever capacity they need.</Li
+					>
+					<Li>Create Proof of Concepts and initial architecture work for upcoming projects.</Li>
+					<Li
+						>Mentor and facilitate training for the engineers on the team as necessary and work
+						towards improving our internal processes and skills.</Li
+					>
+					<Li
+						>Serve as technical point of contact for stakeholders outside the team about how our
+						projects are going, and as the development representative for new projects.</Li
+					>
+					<Li
+						>Coordinate with the Product and UX teams to ensure any upcoming work is adequately
+						documented and ready for the team to estimate and work on.</Li
+					>
+					<Li
+						>Participate in higher level cross-team architecture, planning, and software direction
+						meetings.</Li
+					>
+				</UnorderedList>
+
+				<Heading tag="h6">Key Takeaways:</Heading>
+
+				<UnorderedList>
+					<Li
+						>I won't be able to take complete project ownership or contribute as much in an
+						individual capacity as I have been able to in the past.</Li
+					>
+					<Li
+						>This does mark a shift in my role fundamentally towards leadership and support and away
+						from what I can do as an individual.</Li
+					>
+					<Li
+						>I'm <em>really</em> excited about this shift and am looking forward to serving my team in
+						this capacity.</Li
+					>
+				</UnorderedList>
+			</div>
+		</TimelineItem>
+	</span>
+
 	<span id="simpson">
 		<TimelineItem
 			title="Simpson Strong-Tie: Senior Software Engineer/Technical Lead CS Director Team"
-			date="December 2022 - Present"
+			date="December 2022 - May 2024"
 		>
+			<svelte:fragment slot="icon">
+				<Img src={SimpsonLogo} class="h-12" />
+			</svelte:fragment>
+
 			<div class={timelineItemContainerClasses}>
 				<P>
 					At <A href="https://www.strongtie.com/">Simpson Strong-Tie</A> I serve as a senior software
@@ -123,6 +212,10 @@
 			title="Logos/Faithlife: Software Engineer II Sermon Tools Team"
 			date="~2020 - December 2022"
 		>
+			<svelte:fragment slot="icon">
+				<Img src={LogosLogo} class="h-11" />
+			</svelte:fragment>
+
 			<div class={timelineItemContainerClasses}>
 				<P>
 					I ended my time at <A href="https://www.logos.com/">Logos</A> as a software engineer level
@@ -233,6 +326,10 @@
 			title="Logos/Faithlife: Software Engineer II Logos Desktop Team"
 			date="~2018 - ~2020"
 		>
+			<svelte:fragment slot="icon">
+				<Img src={LogosLogo} class="h-11" />
+			</svelte:fragment>
+
 			<div class={timelineItemContainerClasses}>
 				<P>
 					I began my time at <A href="https://www.logos.com/">Logos</A> as a software engineer level
@@ -318,6 +415,10 @@
 			title="Drake Software: Lead Programmer Data Conversions"
 			date="August 2013 - ~May 2018"
 		>
+			<svelte:fragment slot="icon">
+				<Img src={DrakeLogo} class="h-11" />
+			</svelte:fragment>
+
 			<div class={timelineItemContainerClasses}>
 				<P>
 					At Drake Software I lead the software development efforts of the <A
