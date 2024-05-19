@@ -28,6 +28,9 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange('Add entry for new Lead Engineer role at Simpson.', new Date(2024, 4, 19), [
+		'/about/work'
+	]),
 	new RecentChange(
 		'Filled in High School Projects page and created a post.',
 		new Date(2024, 2, 26),
