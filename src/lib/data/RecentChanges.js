@@ -28,6 +28,11 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange(
+		'Add entry for LTF and UGA jobs and add expansion support to work page.',
+		new Date(2024, 5, 4),
+		['/about/work']
+	),
 	new RecentChange('Add entry for new Lead Engineer role at Simpson.', new Date(2024, 4, 19), [
 		'/about/work'
 	]),
@@ -45,10 +50,5 @@ export const AllRecentChanges = [
 	new RecentChange('Add recent blog posts to home page.', new Date(2024, 2, 18), []),
 	new RecentChange('Add basic date and tag blog post searching support.', new Date(2024, 2, 2), [
 		'/blog/search'
-	]),
-	new RecentChange(
-		'Added support for loading blog post content dynamically.',
-		new Date(2024, 1, 26),
-		[]
-	)
+	])
 ];
