@@ -137,7 +137,7 @@
 								project leads.</Li
 							>
 							<Li
-								>Support and partner with project leads on the team to see projectss through to
+								>Support and partner with project leads on the team to see projects through to
 								completion.</Li
 							>
 							<Li>Create Proof of Concepts and initial architecture work for upcoming projects.</Li>
@@ -355,21 +355,24 @@
 
 						<UnorderedList>
 							<Li
-								>Create the backend code in SQL and C# for the services that wind up running in
-								azure for a new feature or bug fix.</Li
+								>Create the backend code in <strong>SQL</strong> and <strong>C#</strong> for the services
+								that wind up running in azure for a new feature or bug fix.</Li
 							>
 							<Li
-								>Add support for new backend features or bugfixes in C# WPF, objective-c, swift, and
-								typescript in each of the applications that expose the Sermon Builder or Manager
-								(depending on which tool the work is for).</Li
+								>Add support for new backend features or bugfixes in <strong>C# WPF</strong>,
+								<strong>objective-c</strong>, <strong>swift</strong>, and
+								<strong>typescript</strong> in each of the applications that expose the Sermon Builder
+								or Manager (depending on which tool the work is for).</Li
 							>
 							<Li
-								>Add the typescript and react code necessary to the appropriate component for users
-								to interact with the new feature or bug fix.</Li
+								>Add the <strong>typescript</strong> and <strong>react</strong> code necessary to the
+								appropriate component for users to interact with the new feature or bug fix.</Li
 							>
 							<Li
-								>And lastly, I Test and ship the changes end to end; a process involving Terraform,
-								Github Actions, and maybe Jenkins.</Li
+								>And lastly, I Test and ship the changes end to end; a process involving <strong
+									>Terraform</strong
+								>,
+								<strong>Github Actions</strong>, and maybe <strong>Jenkins</strong>.</Li
 							>
 						</UnorderedList>
 
@@ -377,16 +380,17 @@
 
 						<UnorderedList>
 							<Li
-								>React can be very annoying, and it's not my first choice for a web frontend
-								framework.</Li
+								><strong>React</strong> can be very annoying, and it's not my first choice for a web
+								frontend framework.</Li
 							>
 							<Li
 								>Rich Text Editors are really <em>really</em> complicated. Adding IME and RTL text to
 								the mix just makes things even more complicated.</Li
 							>
 							<Li>
-								Sharing UI between desktop, mobile, and web applications is a really neat solution
-								to reducing code duplication between applications, but it isn't simple to set up.
+								Sharing UI between <strong>desktop</strong>, <strong>mobile</strong>, and
+								<strong>web</strong> applications is a really neat solution to reducing code duplication
+								between applications, but it isn't simple to set up.
 							</Li>
 							<Li>
 								Robust distributed data synchronization between local customer housed data stores
@@ -477,8 +481,8 @@
 
 						<UnorderedList>
 							<Li
-								>Work in the Logos Desktop Mac and Windows code bases to fix issues, implement new
-								features, and enhance existing features.</Li
+								>Work in the Logos Desktop <strong>Mac</strong> and <strong>Windows</strong> code bases
+								to fix issues, implement new features, and enhance existing features.</Li
 							>
 							<Li
 								>Participate in meetings regarding new upcoming features and improvement work
@@ -494,11 +498,14 @@
 						<Heading tag="h6">Key Takeaways:</Heading>
 
 						<UnorderedList>
-							<Li>A well refined long lived C#/WPF codebase can be a really cool thing to see.</Li>
 							<Li
-								>Objective-C can take a lot of getting used to, but it is an extremely powerful
-								object oriented language and almost certainly underrated and held back by being tied
-								to the Apple ecosystem.</Li
+								>A well refined long lived <strong>C#/WPF</strong> codebase can be a really cool thing
+								to see.</Li
+							>
+							<Li
+								><strong>Objective-C</strong> can take a lot of getting used to, but it is an extremely
+								powerful object oriented language and almost certainly underrated and held back by being
+								tied to the Apple ecosystem.</Li
 							>
 							<Li>
 								Having UI/UX support readily available on a team is invaluable when creating new UI
@@ -584,14 +591,20 @@
 
 						<UnorderedList>
 							<Li
-								>Improve, update, and maintain the tooling and desktop application that manages the
-								data backing all of Drake's conversions.</Li
+								>Improve, update, and maintain the <strong>WPF</strong> tooling and desktop application
+								that manages the data backing all of Drake's conversions.</Li
 							>
 							<Li
-								>Improve, update, and maintain each of the Drake Software conversion applications.</Li
+								>Improve, update, and maintain each of the <strong>C++</strong> Drake Software conversion
+								applications.</Li
 							>
 							<Li>Map data between other applications and Drake Software's data model.</Li>
-							<Li>Work on projects for other teams as time allows and there are needs.</Li>
+							<Li
+								>Assist other teams with their projects as needed and available (<strong
+									>Winforms</strong
+								>
+								and <strong>Angular</strong>)</Li
+							>
 							<Li>During tax season answer support questions from Drake Software customers.</Li>
 						</UnorderedList>
 
@@ -603,7 +616,7 @@
 								ship data to customers without needing to worry about the format to deliver it in or
 								any runtime issues.</Li
 							>
-							<Li>Reverse engineering file formats can be very fun.</Li>
+							<Li>Reverse engineering undocumented file formats can be very fun.</Li>
 						</UnorderedList>
 					</div>
 				</AccordionItem>
@@ -646,8 +659,8 @@
 				>
 					<span slot="header" class="mb-4">
 						<Heading tag="h6"
-							><A href="https://www.lewistaylorfarms.com/">Lewis Taylor Farms</A>: The Tech Guy
-							(part time)</Heading
+							><A href="https://www.lewistaylorfarms.com/">Lewis Taylor Farms</A>: Software Engineer
+							and System Maintainer (part time)</Heading
 						>
 						<P>Part Time: May 2011 - August 2015</P>
 					</span>
@@ -661,8 +674,8 @@
 
 						<P>
 							A couple of years before I came along a University of Georgia graduate student created
-							a .NET/WPF based inventory and greenhouse management application for LTF to use to
-							manage their growing business. This student moved on and I was hired to continue
+							a <strong>.NET/WPF</strong> based inventory and greenhouse management application for LTF
+							to use to manage their growing business. This student moved on and I was hired to continue
 							working on and maintaining the application.
 						</P>
 
@@ -672,8 +685,9 @@
 						</P>
 
 						<P>
-							The application used a WPF client on individual user machines backed by an on-premises
-							MySQL database for storing data.
+							The application used a <strong>WPF</strong> client on individual user machines backed
+							by an on-premises
+							<strong>MySQL</strong> database for storing data.
 						</P>
 
 						<P>
