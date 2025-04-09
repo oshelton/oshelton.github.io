@@ -45,6 +45,7 @@
 	const pageDescription = `This page covers my work history and links to some of the projects I have worked on in my career.`;
 
 	// Ids of various sections for use with navigation.
+	const renewedVisionId = 'renewed-vision';
 	const simpsonLeadId = 'simpson-lead';
 	const simpsonId = 'simpson';
 	const logosSermonsId = 'logos-sermons';
@@ -67,6 +68,7 @@
 	item={navItem}
 	contents={[
 		{ title: 'Title', url: '#title' },
+		{ title: 'Renewed Vision', url: `#${renewedVisionId}` },
 		{ title: 'Simpson Strong-Tie Lead Engineer', url: `#${simpsonLeadId}` },
 		{ title: 'Simpson Strong-Tie Senior Engineer', url: `#${simpsonId}` },
 		{ title: 'Logos Sermon Tools', url: `#${logosSermonsId}` },
@@ -78,6 +80,61 @@
 />
 
 <Timeline order="vertical">
+	<span id={renewedVisionId}>
+		<TimelineItem>
+			<svelte:fragment slot="icon">
+				<span />
+			</svelte:fragment>
+
+			<Accordion flush>
+				<AccordionItem
+					paddingFlush="0"
+					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
+				>
+					<span slot="header" class="mb-4">
+						<Heading tag="h6"
+							><A href="https://www.renewedvision.com/">Renewed Vision</A>: Senior Software Engineer
+							ProPresenter Windows Team</Heading
+						>
+						<P>Full Time: September 2024 - Present</P>
+					</span>
+
+					<div class={timelineItemContainerClasses}>
+						<P>
+							As a senior software engineer on the Windows ProPresenter team I am responsible for a
+							host of tasks on our core product.
+						</P>
+
+						<Heading tag="h6">Responsibilities:</Heading>
+
+						<UnorderedList>
+							<Li>Fix bugs, create features, and lead projects from my team's perspective.</Li>
+							<Li>Coordinate with other teams on cross-platform and cross-product projects.</Li>
+							<Li
+								>Review teammate work, mentor, and advocate for improvements to our internal
+								processes.</Li
+							>
+						</UnorderedList>
+					</div>
+				</AccordionItem>
+			</Accordion>
+
+			<div class={badgeContainerClasses}>
+				<Badge color="indigo" rounded>Management and Planning</Badge>
+				<Badge rounded>Desktop</Badge>
+				<Badge color="yellow" rounded>C#</Badge>
+				<Badge color="yellow" rounded>Rust</Badge>
+				<Badge color="yellow" rounded>C++</Badge>
+				<Badge
+					color="yellow"
+					rounded
+					href="https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0"
+					>WPF</Badge
+				>
+			</div>
+		</TimelineItem>
+	</span>
+
 	<span id={simpsonLeadId}>
 		<TimelineItem>
 			<svelte:fragment slot="icon">
@@ -95,7 +152,7 @@
 								href="https://www.strongtie.com/products/connectors/ics">CS Director</A
 							> Team</Heading
 						>
-						<P>Full Time: May 2024 - Present</P>
+						<P>Full Time: May 2024 - August 2024</P>
 					</span>
 
 					<div class={timelineItemContainerClasses}>
