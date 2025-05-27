@@ -1,9 +1,10 @@
 import Enumerable from 'linq';
 
-import { Posts, PostMetadata, LatestPostId } from '$lib/blog/Posts';
+import { Posts, PostMetadata, LatestPostId, PostAdjacency } from '$lib/blog/Posts';
 
 /**
  * @typedef {import('$lib/types').PostMetadata} PostMetadata
+ * @typedef {import('$lib/types').PostAdjacency} PostAdjacency
  */
 
 /**
@@ -105,4 +106,22 @@ export function GetMetdataForMostRecentPosts(mostRecentCount) {
 	return Enumerable.from(Object.values(PostMetadata).slice(-1 * mostRecentCount))
 		.reverse()
 		.toArray();
+}
+
+/**
+ * Get the post adjacency info for the given post id.
+ * @param {string} postId - Id of the post to retrieve adjacency info for.
+ * @returns {PostAdjacency} Adjacency info for the given post. 
+ */
+export function GetAdjacencyInfoForPost(postId) {
+	if (!postId) {
+		throw new Error('postId must be provided.');
+	}
+
+	const adjacency = PostAdjacency[postId];
+	if (!adjacency) {
+		throw new Error(`No adjacency info found for post with Id '${postId}'`);
+	}
+
+	return adjacency;
 }
