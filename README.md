@@ -6,6 +6,8 @@ This repo contains the source and assets needed by my [profile web site](https:/
 
 - Node.js and NPM
   - On Windows, [NVM for Windows](https://github.com/coreybutler/nvm-windows) is still a good option for managing node installations on Windows, even if a successor is in the works.
+- Node.js and npm v21.1.0
+  - Other versions may work but this is what things are tested on.
 
 ## Developing
 
