@@ -3,7 +3,11 @@
 	import { page } from '$app/stores';
 	import { Badge, Spinner } from 'flowbite-svelte';
 
-	import { GetMetadataForPost, GetComponentForPost } from '$lib/blog/PostsHelpers';
+	import {
+		GetMetadataForPost,
+		GetComponentForPost,
+		GetAdjacencyInfoForPost
+	} from '$lib/blog/PostsHelpers';
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 	import PageTitleBlock from '$lib/components/PageTitleBlock.svelte';
 	import { CountPageVisit } from '$lib/Visitor';
@@ -13,12 +17,14 @@
 	const postId = browser && $page.url.searchParams.get('id');
 	const postMetadata = browser && GetMetadataForPost(postId);
 	const postComponent = browser && GetComponentForPost(postId);
+	const postAdjacency = browser && GetAdjacencyInfoForPost(postId);
 </script>
 
 <PageTitleBlock
 	title={postMetadata.title}
 	metaDescription={postMetadata.summary}
 	markdown={postMetadata.summary}
+	postAdjacencyInfo={postAdjacency}
 />
 
 <ContentParagraph>
