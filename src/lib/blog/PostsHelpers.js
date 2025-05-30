@@ -111,7 +111,7 @@ export function GetMetdataForMostRecentPosts(mostRecentCount) {
 /**
  * Get the post adjacency info for the given post id.
  * @param {string} postId - Id of the post to retrieve adjacency info for.
- * @returns {PostAdjacency} Adjacency info for the given post. 
+ * @returns {PostAdjacency} Adjacency info for the given post.
  */
 export function GetAdjacencyInfoForPost(postId) {
 	if (!postId) {

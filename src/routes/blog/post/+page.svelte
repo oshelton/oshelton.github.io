@@ -24,6 +24,7 @@
 	title={postMetadata.title}
 	metaDescription={postMetadata.summary}
 	markdown={postMetadata.summary}
+	postAdjacencyInfo={postAdjacency}
 />
 
 <ContentParagraph>
