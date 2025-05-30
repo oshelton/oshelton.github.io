@@ -1,1 +1,0 @@
-import{j as o}from"./singletons.64e460ed.js";const a=o("after_navigate");function c(){return a(()=>{try{window.goatcounter.count({path:location.pathname+location.search+location.hash})}catch{console.debug("Error sending analytics")}})}function i(t){try{window.goatcounter.count({path:t})}catch{console.debug("Error sending analytics for action")}}export{i as C,c as a};
