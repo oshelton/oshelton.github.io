@@ -9,6 +9,8 @@
 
 	/** @type {string} Title of the page to display in the TOC.*/
 	export let item;
+	/** @type {string} Root of the url to apply to all links.*/
+	export let urlRoot = '';
 	/** @type {{url: string, title: string, level: number}[]} Content items to display in the TOC. */
 	export let contents;
 </script>
@@ -39,7 +41,7 @@
 		{#each contents as content}
 			{@const indentationClass =
 				content.level && content.level > 1 ? `ml-${content.level + 1}` : ''}
-			<P class={indentationClass}><A href={content.url}>{content.title}</A></P>
+			<P class={indentationClass}><A href={urlRoot + content.url}>{content.title}</A></P>
 		{/each}
 	</Popover>
 </span>
