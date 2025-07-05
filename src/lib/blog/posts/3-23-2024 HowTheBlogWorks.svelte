@@ -23,7 +23,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
 	import PageToc from '$lib/components/PageToc.svelte';
 	import OrderedList from '$lib/components/OrderedList.svelte';
-	import { PostExample } from './HowTheBlogWorks';
+	import { PostExample } from './3-23-2024 HowTheBlogWorks';
 
 	const url = BuildUrlForPost('124520DD-56CD-4B13-808F-7E54E885925A');
 	const navItem = GetItemForUrl(url);
