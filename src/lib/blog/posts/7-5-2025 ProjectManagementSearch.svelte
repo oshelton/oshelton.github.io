@@ -1,8 +1,8 @@
 <!-- metadata
 title: A Self Hosted Project Management Search
 id: ff268e17-e13a-4d79-8b71-0336f6cb1e41
-posted: 4/15/2024
-lastModified: 4/15/2024
+posted: 7/5/2025
+lastModified: 7/5/2025
 summary: I went on the hunt for a customizable free self hosted project management solution.  Here's what I found.
 tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains]
 -->
@@ -23,8 +23,8 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	import PopupImage from '$lib/components/PopupImage.svelte';
     import PageToc from '$lib/components/PageToc.svelte';
 
-	import YouTrackAutomotiveIssue from '$lib/blog/posts/ProjectManagementSearch/youtrack-automotive-issue.png';
-	import YouTrackHomelabBoard from '$lib/blog/posts/ProjectManagementSearch/youtrack-homelab-board.png';
+	import YouTrackAutomotiveIssue from '$lib/blog/posts/7-5-2025 ProjectManagementSearch/youtrack-automotive-issue.png';
+	import YouTrackHomelabBoard from '$lib/blog/posts/7-5-2025 ProjectManagementSearch/youtrack-homelab-board.png';
 
     const url = BuildUrlForPost('ff268e17-e13a-4d79-8b71-0336f6cb1e41');
 	const navItem = GetItemForUrl(url);
@@ -150,8 +150,8 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 <A href="https://www.openproject.org">Homepage</A>
 
 <ContentParagraph>
-	I had high hopes upon installing OpenProject as it really seemed to cover a lot of my requirments,
-	but the experience quickly soured when I started noticing more and more advertisements and upsells
+	I had high hopes upon installing OpenProject as it really seemed to cover a lot of my requirements,
+	but the experience quickly soured when I started noticing more and more advertisements and up-sells
 	in the community edition for the paid edition, with no way to turn them off.
 </ContentParagraph>
 
@@ -298,6 +298,6 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 </ContentParagraph>
 
 <ContentParagraph>
-	I'm sure there are many applications out there that I missed, but for now, I'm pretty happy where
+	I'm sure there are many applications out there that I missed, but for now I'm pretty happy where
 	I landed.
 </ContentParagraph>

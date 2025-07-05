@@ -14,7 +14,7 @@ export const Posts = [];
 Posts['86f85de2-571b-4df4-9b39-140907351b5d'] = () => import ('$lib/blog/posts/2-22-2024 BirthOfANewNewBlog.svelte');
 Posts['124520dd-56cd-4b13-808f-7e54e885925a'] = () => import ('$lib/blog/posts/3-23-2024 HowTheBlogWorks.svelte');
 Posts['11de95a1-7be0-4eec-a75b-70c3fe911a4f'] = () => import ('$lib/blog/posts/4-15-2024 BackInMyDay.svelte');
-Posts['ff268e17-e13a-4d79-8b71-0336f6cb1e41'] = () => import ('$lib/blog/posts/ProjectManagementSearch.svelte');
+Posts['ff268e17-e13a-4d79-8b71-0336f6cb1e41'] = () => import ('$lib/blog/posts/7-5-2025 ProjectManagementSearch.svelte');
 
 /**
  * Association between Post id and its metadata.
@@ -24,7 +24,7 @@ export const PostMetadata = [];
 PostMetadata['86f85de2-571b-4df4-9b39-140907351b5d'] = { title: `Birth of a new blog!`, id: '86f85de2-571b-4df4-9b39-140907351b5d', posted: '2/22/2024', lastModified: '3/1/2024', summary: `So I created a simple blogging platform for my portfolio site and here's what I'm going to do with it...`, tags: [ `Announcement` ] };
 PostMetadata['124520dd-56cd-4b13-808f-7e54e885925a'] = { title: `How the Blog Works`, id: '124520dd-56cd-4b13-808f-7e54e885925a', posted: '3/23/2024', lastModified: '3/26/2024', summary: `All about how this blog of mine is currently working.`, tags: [ `C#`, `Code Generation`, `JS`, `Nuke`, `Software Engineering`, `Svelte` ] };
 PostMetadata['11de95a1-7be0-4eec-a75b-70c3fe911a4f'] = { title: `Back in my Day`, id: '11de95a1-7be0-4eec-a75b-70c3fe911a4f', posted: '4/15/2024', lastModified: '4/15/2024', summary: `Some of my earliest programming projects.`, tags: [ `C`, `C++`, `High School`, `School` ] };
-PostMetadata['ff268e17-e13a-4d79-8b71-0336f6cb1e41'] = { title: `A Self Hosted Project Management Search`, id: 'ff268e17-e13a-4d79-8b71-0336f6cb1e41', posted: '4/15/2024', lastModified: '4/15/2024', summary: `I went on the hunt for a customizable free self hosted project management solution.  Here's what I found.`, tags: [ `Self Hosting`, `Project Management`, `Open Source`, `YouTrack`, `JetBrains` ] };
+PostMetadata['ff268e17-e13a-4d79-8b71-0336f6cb1e41'] = { title: `A Self Hosted Project Management Search`, id: 'ff268e17-e13a-4d79-8b71-0336f6cb1e41', posted: '7/5/2025', lastModified: '7/5/2025', summary: `I went on the hunt for a customizable free self hosted project management solution.  Here's what I found.`, tags: [ `Self Hosting`, `Project Management`, `Open Source`, `YouTrack`, `JetBrains` ] };
 
 /**
  * Association between Post id and and its previous and next post.
