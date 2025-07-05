@@ -4,7 +4,7 @@
 -->
 
 <script>
-	import { Img, Modal, Tooltip } from 'flowbite-svelte';
+	import { Img, Modal, Tooltip, Span } from 'flowbite-svelte';
 
 	/** @type {string} Classes to apply to the image preview. */
 	export let imgClass = 'rounded-lg';
@@ -20,13 +20,15 @@
 	let isFullPreviewOpen = false;
 </script>
 
-<button on:click={() => (isFullPreviewOpen = true)}>
-	<Img {src} alt={tooltip} size={imgSize} class={imgClass} />
-</button>
+<Span>
+	<button on:click={() => (isFullPreviewOpen = true)}>
+		<Img {src} alt={tooltip} size={imgSize} class={imgClass} />
+	</button>
 
-{#if tooltip}
-	<Tooltip>{tooltip}</Tooltip>
-{/if}
+	{#if tooltip}
+		<Tooltip>{tooltip}</Tooltip>
+	{/if}
+</Span>
 
 <Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl" autoclose outsideclose>
 	{#if fullSrc}
