@@ -15,14 +15,36 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 <script>
 	import { A, Li } from 'flowbite-svelte';
 
+    import { BuildUrlForPost } from '../PostsHelpers';
+    import { GetItemForUrl } from '$lib/Navigation.js';
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 	import HeadingLink from '$lib/components/HeadingLink.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
 	import PopupImage from '$lib/components/PopupImage.svelte';
+    import PageToc from '$lib/components/PageToc.svelte';
 
 	import YouTrackAutomotiveIssue from '$lib/blog/posts/ProjectManagementSearch/youtrack-automotive-issue.png';
 	import YouTrackHomelabBoard from '$lib/blog/posts/ProjectManagementSearch/youtrack-homelab-board.png';
+
+    const url = BuildUrlForPost('ff268e17-e13a-4d79-8b71-0336f6cb1e41');
+	const navItem = GetItemForUrl(url);
 </script>
+
+<PageToc
+	item={navItem}
+    urlRoot={url}
+	contents={[
+		{ title: 'Title', url: '#title' },
+		{ title: 'Requirements', url: '#requirements' },
+        { title: 'Evaluations', url: '#evaluations' },
+        { title: 'Vikunja', url: '#vikunja', level: 2 },
+        { title: 'OpenProject', url: '#open', level: 2 },
+        { title: 'Leantime', url: '#lean', level: 2 },
+        { title: 'Plane', url: '#plane', level: 2 },
+        { title: 'YouTrack', url: '#youtrack', level: 2 },
+        { title: 'Conclusions', url: '#conclusions' },
+	]}
+/>
 
 <ContentParagraph>
 	In my day job as a Software Engineer I spend quite a bit of time working in what is probably the
@@ -42,7 +64,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	this sent me down quite the rabbit hole.
 </ContentParagraph>
 
-<HeadingLink tag="h1">Requirements</HeadingLink>
+<HeadingLink tag="h1" id="requirments">Requirements</HeadingLink>
 
 <ContentParagraph>
 	I was looking for something that could meet the following requirements:
@@ -76,13 +98,13 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	quite an adventure finding something that met them all.
 </ContentParagraph>
 
-<HeadingLink tag="h1">Evaluations</HeadingLink>
+<HeadingLink tag="h1" id="evaluations">Evaluations</HeadingLink>
 
 <ContentParagraph>
 	I tried out quite a few options and the following are my findings.
 </ContentParagraph>
 
-<HeadingLink tag="h2">Vikunja</HeadingLink>
+<HeadingLink tag="h2" id="vikunja">Vikunja</HeadingLink>
 <A href="https://vikunja.io">Homepage</A>
 
 <ContentParagraph>
@@ -124,7 +146,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	capabilities built into GitHub or Forgejo.
 </ContentParagraph>
 
-<HeadingLink tag="h2">Open Project</HeadingLink>
+<HeadingLink tag="h2" id="open">OpenProject</HeadingLink>
 <A href="https://www.openproject.org">Homepage</A>
 
 <ContentParagraph>
@@ -172,7 +194,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	than actually were.
 </ContentParagraph>
 
-<HeadingLink tag="h2">Leantime</HeadingLink>
+<HeadingLink tag="h2" id="lean">Leantime</HeadingLink>
 <A href="https://leantime.io">Homepage</A>
 
 <ContentParagraph>
@@ -186,7 +208,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	My mistake, and a lesson I took to heart when evaluating the next application, Plane.
 </ContentParagraph>
 
-<HeadingLink tag="h2">Plane</HeadingLink>
+<HeadingLink tag="h2" id="plane">Plane</HeadingLink>
 <A href="https://plane.so">Homepage</A>
 
 <ContentParagraph>
@@ -200,7 +222,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	information I quickly passed on to the next option without spending too much time on Plane.
 </ContentParagraph>
 
-<HeadingLink tag="h2">YouTrack</HeadingLink>
+<HeadingLink tag="h2" id="youtrack">YouTrack</HeadingLink>
 <A href="https://www.jetbrains.com/youtrack/">Homepage</A>
 
 <ContentParagraph>
@@ -263,7 +285,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 
 <PopupImage src={YouTrackHomelabBoard} tooltip="A kanban board for upcoming Homelab work." />
 
-<HeadingLink tag="h1">Conclusions</HeadingLink>
+<HeadingLink tag="h1" id="conclusions">Conclusions</HeadingLink>
 
 <ContentParagraph>
 	I was quit surprised at how hard a time I had finding a fully open source and free self hosted
