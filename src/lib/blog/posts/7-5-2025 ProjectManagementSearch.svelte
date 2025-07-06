@@ -15,34 +15,34 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 <script>
 	import { A, Li } from 'flowbite-svelte';
 
-    import { BuildUrlForPost } from '../PostsHelpers';
-    import { GetItemForUrl } from '$lib/Navigation.js';
+	import { BuildUrlForPost } from '../PostsHelpers';
+	import { GetItemForUrl } from '$lib/Navigation.js';
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 	import HeadingLink from '$lib/components/HeadingLink.svelte';
 	import UnorderedList from '$lib/components/UnorderedList.svelte';
 	import PopupImage from '$lib/components/PopupImage.svelte';
-    import PageToc from '$lib/components/PageToc.svelte';
+	import PageToc from '$lib/components/PageToc.svelte';
 
 	import YouTrackAutomotiveIssue from '$lib/blog/posts/7-5-2025 ProjectManagementSearch/youtrack-automotive-issue.png';
 	import YouTrackHomelabBoard from '$lib/blog/posts/7-5-2025 ProjectManagementSearch/youtrack-homelab-board.png';
 
-    const url = BuildUrlForPost('ff268e17-e13a-4d79-8b71-0336f6cb1e41');
+	const url = BuildUrlForPost('ff268e17-e13a-4d79-8b71-0336f6cb1e41');
 	const navItem = GetItemForUrl(url);
 </script>
 
 <PageToc
 	item={navItem}
-    urlRoot={url}
+	urlRoot={url}
 	contents={[
 		{ title: 'Title', url: '#title' },
 		{ title: 'Requirements', url: '#requirements' },
-        { title: 'Evaluations', url: '#evaluations' },
-        { title: 'Vikunja', url: '#vikunja', level: 2 },
-        { title: 'OpenProject', url: '#open', level: 2 },
-        { title: 'Leantime', url: '#lean', level: 2 },
-        { title: 'Plane', url: '#plane', level: 2 },
-        { title: 'YouTrack', url: '#youtrack', level: 2 },
-        { title: 'Conclusions', url: '#conclusions' },
+		{ title: 'Evaluations', url: '#evaluations' },
+		{ title: 'Vikunja', url: '#vikunja', level: 2 },
+		{ title: 'OpenProject', url: '#open', level: 2 },
+		{ title: 'Leantime', url: '#lean', level: 2 },
+		{ title: 'Plane', url: '#plane', level: 2 },
+		{ title: 'YouTrack', url: '#youtrack', level: 2 },
+		{ title: 'Conclusions', url: '#conclusions' }
 	]}
 />
 
@@ -150,9 +150,10 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 <A href="https://www.openproject.org">Homepage</A>
 
 <ContentParagraph>
-	I had high hopes upon installing OpenProject as it really seemed to cover a lot of my requirements,
-	but the experience quickly soured when I started noticing more and more advertisements and up-sells
-	in the community edition for the paid edition, with no way to turn them off.
+	I had high hopes upon installing OpenProject as it really seemed to cover a lot of my
+	requirements, but the experience quickly soured when I started noticing more and more
+	advertisements and up-sells in the community edition for the paid edition, with no way to turn
+	them off.
 </ContentParagraph>
 
 <ContentParagraph>
@@ -170,8 +171,8 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 
 <UnorderedList>
 	<Li
-		>Lots of up-sales and advertisements, to the point I had a tough time figuring out which features
-		were available in the community edition and which ones weren't.</Li
+		>Lots of up-sales and advertisements, to the point I had a tough time figuring out which
+		features were available in the community edition and which ones weren't.</Li
 	>
 	<Li
 		>No support for Kanban boards in community edition, and it took a bit to figure out that was the
@@ -298,6 +299,6 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 </ContentParagraph>
 
 <ContentParagraph>
-	I'm sure there are many applications out there that I missed, but for now I'm pretty happy where
-	I landed.
+	I'm sure there are many applications out there that I missed, but for now I'm pretty happy where I
+	landed.
 </ContentParagraph>
