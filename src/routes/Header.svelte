@@ -47,7 +47,10 @@
 
 		<div class="flex md:order-2">
 			<NavHamburger />
-			<DarkMode />
+			<!-- flowbite-svelte 0.44.24 dropped the focus ring from DarkMode's default
+			     btnClass, leaving the button with no visible keyboard focus indicator.
+			     Restore the classes it used to ship with. -->
+			<DarkMode class="focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700" />
 		</div>
 
 		<NavUl {activeUrl}>
