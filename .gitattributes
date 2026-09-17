@@ -1,0 +1,16 @@
+# Keep the working tree LF on every platform.
+#
+# Prettier's endOfLine defaults to "lf", so without this a clone on a default
+# Windows Git setup (core.autocrlf=true) checks every text file out as CRLF and
+# `npm run lint` immediately fails on all of them - which also fails the build,
+# since build runs lint first.
+* text=auto eol=lf
+
+# Assets git must never convert.
+*.png binary
+*.jpg binary
+*.webp binary
+*.pdf binary
+*.zip binary
+*.woff binary
+*.woff2 binary
