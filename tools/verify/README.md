@@ -48,6 +48,21 @@ being captured in advance:
 git stash push -u docs && node tools/verify/fingerprint.js docs all > /tmp/before.txt && git stash pop
 ```
 
+## Caveat since Vite 5 / SvelteKit 2
+
+Vite 4 emitted `chunks/Badge.a1b2c3d4.js`. Vite 5 emits base64url hashes and
+SvelteKit 2 drops the readable name, so the same chunk is now `chunks/0OVp9TQR.js`.
+Normalizing the hash therefore collapses every chunk to one name, and
+**per-chunk comparison by filename is no longer meaningful**.
+
+From Phase 3 onward the authoritative check is the prerendered HTML: compare
+each page's rendered text (tags stripped, whitespace collapsed) and its `<body>`
+markup with asset URLs normalized. Chunk boundaries are free to move; what must
+not change is what the page renders.
+
+Note asset hashes appear on images, fonts and PDFs too, so normalize those
+extensions as well, not just `.js` and `.css`.
+
 ## When a JS chunk differs
 
 A differing chunk usually is not a real change. Rollup reallocates single-letter
