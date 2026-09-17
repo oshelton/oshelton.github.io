@@ -38,7 +38,7 @@
 		title="{item.title} Contents"
 		class="ml-2 z-50"
 	>
-		{#each contents as content}
+		{#each contents as content (content.url)}
 			{@const indentationClass =
 				content.level && content.level > 1 ? `ml-${content.level + 1}` : ''}
 			<P class={indentationClass}><A href={urlRoot + content.url}>{content.title}</A></P>

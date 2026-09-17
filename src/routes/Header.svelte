@@ -56,14 +56,14 @@
 		<NavUl {activeUrl}>
 			<NavLi href="/">Home</NavLi>
 
-			{#each NavigationMenus as menu}
+			{#each NavigationMenus as menu (menu.title)}
 				<NavLi class="cursor-pointer">
 					{menu.title}<ChevronDownOutline
 						class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
 					/>
 				</NavLi>
 				<Dropdown {activeUrl} class="z-20">
-					{#each menu.items as item}
+					{#each menu.items as item (item.url)}
 						<DropdownItem href={item.url} target={item.target} on:click={() => itemIsClicked(item)}>
 							{#if item.underConstruction}
 								<span class="flex gap-2">

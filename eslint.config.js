@@ -35,17 +35,6 @@ export default [
 		}
 	},
 
-	{
-		rules: {
-			// New in eslint-plugin-svelte 3's recommended set; 14 hits across the
-			// site. Keying an each block changes how Svelte reconciles the list,
-			// and a duplicate key throws at runtime, so this is an application
-			// change rather than a lint-toolchain one. Deferred deliberately, not
-			// dismissed - turn this back on and fix the blocks in their own change.
-			'svelte/require-each-key': 'off'
-		}
-	},
-
 	// Must come last so formatting rules are switched off rather than back on.
 	prettier,
 	...svelte.configs.prettier

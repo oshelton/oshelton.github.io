@@ -65,7 +65,7 @@ These projects also come plans included.`;
 <Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
 
 <div class="py-4 gap-4 columns-1 lg:columns-2 md:columns-2">
-	{#each NavigationMenus as menu}
+	{#each NavigationMenus as menu (menu.title)}
 		<Card class="mb-4 max-w-full break-inside-avoid-column">
 			<Heading tag="h6" class="flex mb-4 align-middle">
 				<svelte:component this={menu.icon} class="w-5 h-5 mr-2 my-auto" />
@@ -75,7 +75,7 @@ These projects also come plans included.`;
 			<MarkdownParagraph source={getDescriptionForItem(menu)} />
 
 			<div class="flex flex-wrap gap-2">
-				{#each menu.items as item}
+				{#each menu.items as item (item.url)}
 					{#if item.underConstruction}
 						<Button class="p-2" color="alternative" href={item.url} target={item.target} pill>
 							<span class="flex gap-1">
@@ -102,7 +102,7 @@ These projects also come plans included.`;
 	<div class="flex flex-col gap-3 mb-6">
 		<Heading tag="h4" class="mb-4">Recent Posts</Heading>
 
-		{#each mostRecentPosts as post}
+		{#each mostRecentPosts as post (post.id)}
 			<PostMetadataBlock metadata={post} />
 		{/each}
 	</div>
@@ -110,7 +110,7 @@ These projects also come plans included.`;
 	<div class="flex flex-col gap-3 mb-6">
 		<Heading tag="h4" class="mb-4">Recent Changes:</Heading>
 
-		{#each AllRecentChanges as change}
+		{#each AllRecentChanges as change (change.title)}
 			<div class="flex flex-col gap-1">
 				<div class="flex gap-3">
 					<P><strong>{change.date.toLocaleDateString()}</strong></P>
@@ -120,7 +120,7 @@ These projects also come plans included.`;
 
 				{#if change.changedPageItems && change.changedPageItems.length > 0}
 					<div class="ml-12 col-span-2 flex gap-4 flex-wrap">
-						{#each change.changedPageItems as pageItem}
+						{#each change.changedPageItems as pageItem (pageItem.url)}
 							<Button
 								class="p-2"
 								color="alternative"

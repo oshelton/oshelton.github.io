@@ -37,7 +37,8 @@
 	<br />
 	<strong>Tags:</strong>
 	{#if browser}
-		{#each postMetadata.tags as tag}<Badge color="green" rounded class="ml-2">{tag}</Badge>{/each}
+		{#each postMetadata.tags as tag (tag)}<Badge color="green" rounded class="ml-2">{tag}</Badge
+			>{/each}
 	{/if}
 </ContentParagraph>
 

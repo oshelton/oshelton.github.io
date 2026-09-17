@@ -193,7 +193,7 @@
 	<Toggle bind:checked={searchTags}>Tags</Toggle>
 
 	<div class="hidden gap-3 flex-wrap sm:flex">
-		{#each selectedSearchTags as tag}
+		{#each selectedSearchTags as tag (tag)}
 			<Badge color="green">{tag}</Badge>
 		{/each}
 	</div>
@@ -212,7 +212,7 @@
 		outsideclose
 	>
 		<div class="flex flex-col flex-wrap gap-2 max-h-96">
-			{#each AllTags as tag}
+			{#each AllTags as tag (tag)}
 				<Checkbox bind:group={selectedSearchTags} value={tag}>
 					{tag}
 				</Checkbox>
@@ -237,7 +237,7 @@
 	<P class="mt-16 mx-0 place-self-center">- No Posts Found -</P>
 {:else}
 	<div class="flex flex-col gap-3 mt-12">
-		{#each foundPostMetadata as metadata}
+		{#each foundPostMetadata as metadata (metadata.id)}
 			<PostMetadataBlock {metadata} />
 		{/each}
 	</div>
