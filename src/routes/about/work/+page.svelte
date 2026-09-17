@@ -437,8 +437,8 @@
 
 						<UnorderedList>
 							<Li
-								><strong>React</strong> can be very annoying, and it's not my first choice for a web
-								frontend framework.</Li
+								><strong>React</strong> can be very annoying, and it's not my first choice for a web frontend
+								framework.</Li
 							>
 							<Li
 								>Rich Text Editors are really <em>really</em> complicated. Adding IME and RTL text to

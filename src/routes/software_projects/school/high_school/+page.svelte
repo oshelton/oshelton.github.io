@@ -196,8 +196,8 @@
 
 		<ContentParagraph>
 			I grew up in the age of the <A href="https://en.wikipedia.org/wiki/Shoot_'em_up">SHMUP</A>;
-			from various versions of <A href="https://en.wikipedia.org/wiki/Raiden_(series)">Raiden</A> in
-			the arcades to many gaming sessions with friends playing <A
+			from various versions of <A href="https://en.wikipedia.org/wiki/Raiden_(series)">Raiden</A> in the
+			arcades to many gaming sessions with friends playing <A
 				href="https://en.wikipedia.org/wiki/Captain_Skyhawk">Captain Skyhawk</A
 			> on the NES and eventually the SNES port of <A
 				href="https://en.wikipedia.org/wiki/Strike_Gunner_S.T.G.">Strike Gunner</A

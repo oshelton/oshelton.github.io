@@ -84,8 +84,8 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	<Li
 		><strong>Kanban Support</strong> - I find <A href="https://en.wikipedia.org/wiki/Kanban_board"
 			>Kanban boards</A
-		> to be an excellent way to visually progress and solid support for them was very important, but
-		not quite required.</Li
+		> to be an excellent way to visually progress and solid support for them was very important, but not
+		quite required.</Li
 	>
 	<Li
 		><strong>Wiki Support</strong> - Some kind of integrated wiki support was desirable to allow documentation

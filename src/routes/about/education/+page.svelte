@@ -168,8 +168,8 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 				<P>
 					High school at <A href="https://www.clinchcounty.com/domain/13"
 						>Clinch County High School in Homerville Georgia</A
-					> was a curious time for me full of ups and downs. I made a lot of friends and was able to
-					participate in a lot of activities and learned a lot.
+					> was a curious time for me full of ups and downs. I made a lot of friends and was able to participate
+					in a lot of activities and learned a lot.
 				</P>
 
 				<P>
