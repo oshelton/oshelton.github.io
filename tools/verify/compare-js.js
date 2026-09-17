@@ -76,6 +76,16 @@ function shape(file) {
 			return;
 		}
 
+		// TemplateElement.value is a plain {raw, cooked} object, not a node, so
+		// walk() would skip it and every template literal's text would be
+		// invisible. Svelte compiles markup text into template literals, so
+		// that blind spot hides real content changes in this codebase.
+		if (node.type === 'TemplateElement') {
+			tokens.push('TemplateElement', JSON.stringify(node.value?.cooked ?? node.value?.raw));
+			tokens.push(`tail=${node.tail}`);
+			return;
+		}
+
 		// Same normalization as specifiers above: acorn reuses one node for a
 		// shorthand property, so `{a}` and `{a: b}` would otherwise compare as
 		// different shapes even though minification only renamed the local.

@@ -15,11 +15,13 @@ const TOOL = fileURLToPath(new URL('compare-js.js', import.meta.url));
 const BASE = `
 const config = { url: buildUrl("https://example.com/first"), retries: 3, opts: { deep: true } };
 const list = [1, 2, 3];
+const label = \`some text and \${config.retries} more text\`;
+const re = /^ab+c$/i;
 function check(leftSide, rightSide) {
 	if (leftSide > rightSide) { return leftSide.toFixed(2); }
 	return rightSide;
 }
-export { config as settings, check, list };
+export { config as settings, check, list, label, re };
 `;
 
 // [name, mutated source, expectedIdentical, note]
@@ -43,6 +45,11 @@ const CASES = [
 	['member access changed', BASE.replace('toFixed', 'toPrecision'), false],
 	['export name changed', BASE.replace('config as settings', 'config as options'), false],
 	['parameter dropped', BASE.replace('leftSide, rightSide', 'leftSide'), false],
+	// Svelte compiles markup text into template literals, so these two matter
+	// more here than they look
+	['template literal text changed', BASE.replace('some text and', 'some OTHER text and'), false],
+	['template literal whitespace moved', BASE.replace('text and ${', 'text and  ${'), false],
+	['regex literal changed', BASE.replace('/^ab+c$/i', '/^xy*z$/g'), false],
 
 	// KNOWN LIMITATION: free/global identifiers are alpha-renamed like locals,
 	// so swapping one undeclared name for another is invisible. A minifier
