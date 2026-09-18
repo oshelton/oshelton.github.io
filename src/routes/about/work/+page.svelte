@@ -82,22 +82,24 @@
 <Timeline order="vertical">
 	<span id={renewedVisionId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.renewedvision.com/">Renewed Vision</A>: Senior Software Engineer
-							ProPresenter Windows Team</Heading
-						>
-						<P>Full Time: September 2024 - Present</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.renewedvision.com/">Renewed Vision</A>: Senior Software
+								Engineer ProPresenter Windows Team</Heading
+							>
+							<P>Full Time: September 2024 - Present</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -137,23 +139,25 @@
 
 	<span id={simpsonLeadId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonLeadId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Lead Software Engineer <A
-								href="https://www.strongtie.com/products/connectors/ics">CS Director</A
-							> Team</Heading
-						>
-						<P>Full Time: May 2024 - August 2024</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Lead Software Engineer <A
+									href="https://www.strongtie.com/products/connectors/ics">CS Director</A
+								> Team</Heading
+							>
+							<P>Full Time: May 2024 - August 2024</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -257,24 +261,26 @@
 
 	<span id={simpsonId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6">
-							<A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Senior Software
-							Engineer/Tech Lead <A href="https://www.strongtie.com/products/connectors/ics"
-								>CS Director</A
-							> Team
-						</Heading>
-						<P>Full Time: December 2022 - May 2024</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6">
+								<A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Senior Software
+								Engineer/Tech Lead <A href="https://www.strongtie.com/products/connectors/ics"
+									>CS Director</A
+								> Team
+							</Heading>
+							<P>Full Time: December 2022 - May 2024</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -356,23 +362,25 @@
 
 	<span id={logosSermonsId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${logosSermonsId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
-								href="https://www.logos.com/features/sermon-builder">Sermon Tools</A
-							> Team</Heading
-						>
-						<P>Full Time: ~2020 - December 2022</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
+									href="https://www.logos.com/features/sermon-builder">Sermon Tools</A
+								> Team</Heading
+							>
+							<P>Full Time: ~2020 - December 2022</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -492,23 +500,25 @@
 
 	<span id={logosId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${logosId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
-								href="https://www.logos.com/grow/what-is-logos-bible-study/">Logos Desktop</A
-							> Team</Heading
-						>
-						<P>Full Time: May 2018 - ~2020</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
+									href="https://www.logos.com/grow/what-is-logos-bible-study/">Logos Desktop</A
+								> Team</Heading
+							>
+							<P>Full Time: May 2018 - ~2020</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -597,23 +607,25 @@
 
 	<span id={drakeId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${drakeId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.drakesoftware.com/">Drake Software</A>: Lead Programmer <A
-								href="https://www.drakesoftware.com/products/conversions/">Data Conversions</A
-							></Heading
-						>
-						<P>Full Time: August 2013 - May 2018</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.drakesoftware.com/">Drake Software</A>: Lead Programmer <A
+									href="https://www.drakesoftware.com/products/conversions/">Data Conversions</A
+								></Heading
+							>
+							<P>Full Time: August 2013 - May 2018</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -705,22 +717,24 @@
 
 	<span id={ltfId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${ltfId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.lewistaylorfarms.com/">Lewis Taylor Farms</A>: Software Engineer
-							and System Maintainer (part time)</Heading
-						>
-						<P>Part Time: May 2011 - August 2015</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.lewistaylorfarms.com/">Lewis Taylor Farms</A>: Software
+								Engineer and System Maintainer (part time)</Heading
+							>
+							<P>Part Time: May 2011 - August 2015</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -817,21 +831,23 @@
 
 	<span id={ugaId}>
 		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
+			{#snippet orientationSlot()}
+				<span></span>
+			{/snippet}
 
-			<Accordion flush>
+			<Accordion flush transitionType="none">
 				<AccordionItem
 					paddingFlush="0"
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.uga.edu/">University of Georgia</A>: Instructor</Heading
-						>
-						<P>Part Time: August 2011 - May 2013</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.uga.edu/">University of Georgia</A>: Instructor</Heading
+							>
+							<P>Part Time: August 2011 - May 2013</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>

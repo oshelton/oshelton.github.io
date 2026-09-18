@@ -3,7 +3,7 @@ import {
 	FolderDuplicateOutline,
 	HomeOutline,
 	DesktopPcOutline,
-	RuleCombinedOutline
+	RulerCombinedOutline
 } from 'flowbite-svelte-icons';
 import Enumerable from 'linq';
 
@@ -151,7 +151,7 @@ export const NavigationMenus = [
 	},
 	{
 		title: 'DIY/Woodworking',
-		icon: RuleCombinedOutline,
+		icon: RulerCombinedOutline,
 		items: [
 			{
 				title: 'Double Stack Firewood Rack',

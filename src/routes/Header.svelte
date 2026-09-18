@@ -13,8 +13,8 @@
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { DarkMode } from 'flowbite-svelte';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
+	import { Icon } from 'svelte-icons-pack';
+	import { BsConeStriped } from 'svelte-icons-pack/bs';
 	import { page } from '$app/stores';
 
 	import logo from '$lib/images/site-logo.jpg';
@@ -34,7 +34,7 @@
 	}
 </script>
 
-<header class="w-full flex z-20 top-0 left-0">
+<header class="w-full z-20 top-0 left-0">
 	<Navbar
 		class="px-2 sm:px-4 py-2.5 bg-slate-200 border-b border-slate-500 dark:border-gray-600 dark:bg-gray-800"
 	>
@@ -64,10 +64,10 @@
 				</NavLi>
 				<Dropdown {activeUrl} class="z-20">
 					{#each menu.items as item (item.url)}
-						<DropdownItem href={item.url} target={item.target} on:click={() => itemIsClicked(item)}>
+						<DropdownItem href={item.url} target={item.target} onclick={() => itemIsClicked(item)}>
 							{#if item.underConstruction}
 								<span class="flex gap-2">
-									<Icon size="16" src={ConeStriped} />
+									<Icon size="16" src={BsConeStriped} />
 									<Tooltip>This page is under construction.</Tooltip>
 									{item.title}
 								</span>

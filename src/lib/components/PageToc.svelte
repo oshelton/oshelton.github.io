@@ -5,7 +5,7 @@
 
 <script>
 	import { A, Button, Popover, P, Tooltip } from 'flowbite-svelte';
-	import { BarsSolid } from 'flowbite-svelte-icons';
+	import { BarsOutline } from 'flowbite-svelte-icons';
 
 	/** @type {string} Title of the page to display in the TOC.*/
 	export let item;
@@ -23,7 +23,7 @@
 	size="md"
 	class="absolute overflow-hidden !p-2 ml-[-2.5rem] z-50"
 >
-	<BarsSolid class="w-3 h-3" />
+	<BarsOutline class="w-3 h-3" />
 </Button>
 
 <span class="overflow-hidden">

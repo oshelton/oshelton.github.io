@@ -181,7 +181,9 @@
 		</ContentParagraph>
 
 		<Alert border color="yellow" class="mb-4">
-			<InfoCircleSolid slot="icon" class="w-4 h-4" />
+			{#snippet icon()}
+				<InfoCircleSolid class="w-4 h-4" />
+			{/snippet}
 
 			<ContentParagraph>
 				The Basic Allegro Version was built with its logic tied to the its framerate, and it doesn't
@@ -238,4 +240,4 @@
 	</div>
 </div>
 
-<div class="gap-4 flex flex-row flex-wrap" />
+<div class="gap-4 flex flex-row flex-wrap"></div>

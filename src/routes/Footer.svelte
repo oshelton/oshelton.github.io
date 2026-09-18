@@ -28,7 +28,7 @@
 				href="https://svelte.dev/"
 				target="_blank"
 				aClass="flex align-center space-between-4 text-primary-600 dark:text-primary-500 hover:underline"
-				>Powered by Svelte <Img src={svelte} size="w-6 h-6" imgClass="ml-1" /></FooterLink
+				>Powered by Svelte <Img src={svelte} class="ml-1 w-6 h-6" alt="" /></FooterLink
 			>
 		</FooterLinkGroup>
 

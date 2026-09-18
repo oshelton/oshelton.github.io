@@ -1,8 +1,8 @@
 <script>
 	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
-	import { ArrowRightSolid } from 'flowbite-svelte-icons';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
+	import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	import { Icon } from 'svelte-icons-pack';
+	import { BsConeStriped } from 'svelte-icons-pack/bs';
 
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
@@ -62,7 +62,7 @@ These projects also come plans included.`;
 	giving folks a better picture of who I am and what I am up to.
 </ContentParagraph>
 
-<Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
+<Hr classHr="w-[90%] min-h-px mx-auto my-2" />
 
 <div class="py-4 gap-4 columns-1 lg:columns-2 md:columns-2">
 	{#each NavigationMenus as menu (menu.title)}
@@ -79,7 +79,7 @@ These projects also come plans included.`;
 					{#if item.underConstruction}
 						<Button class="p-2" color="alternative" href={item.url} target={item.target} pill>
 							<span class="flex gap-1">
-								<Icon size="16" className="my-auto" src={ConeStriped} />
+								<Icon size="16" className="my-auto" src={BsConeStriped} />
 								{item.title}
 							</span>
 						</Button>
@@ -96,7 +96,7 @@ These projects also come plans included.`;
 	{/each}
 </div>
 
-<Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
+<Hr classHr="w-[90%] min-h-px mx-auto my-2" />
 
 <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-3">
 	<div class="flex flex-col gap-3 mb-6">
@@ -114,7 +114,7 @@ These projects also come plans included.`;
 			<div class="flex flex-col gap-1">
 				<div class="flex gap-3">
 					<P><strong>{change.date.toLocaleDateString()}</strong></P>
-					<P><ArrowRightSolid class="w-3 mt-0.5 self-center" /></P>
+					<P><ArrowRightOutline class="w-3 mt-0.5 self-center" /></P>
 					<P>{change.title}</P>
 				</div>
 

@@ -22,7 +22,7 @@
 
 <Span>
 	<button on:click={() => (isFullPreviewOpen = true)}>
-		<Img {src} alt={tooltip} size={imgSize} class={imgClass} />
+		<Img {src} alt={tooltip} class={`${imgSize} ${imgClass}`} />
 	</button>
 
 	{#if tooltip}
@@ -30,10 +30,12 @@
 	{/if}
 </Span>
 
-<Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl" autoclose outsideclose>
+<!-- autoclose/outsideclose were removed in flowbite-svelte 1.x; the modal's
+     own dismiss button and backdrop handle closing. -->
+<Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl">
 	{#if fullSrc}
-		<Img src={fullSrc} size="max-w" imgClass="mx-auto" />
+		<Img src={fullSrc} alt={tooltip} class="max-w-full mx-auto" />
 	{:else}
-		<Img {src} size="max-w" imgClass="mx-auto" />
+		<Img {src} alt={tooltip} class="max-w-full mx-auto" />
 	{/if}
 </Modal>

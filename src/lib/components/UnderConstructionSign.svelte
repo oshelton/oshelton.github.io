@@ -5,8 +5,8 @@
 
 <script>
 	import { Hr } from 'flowbite-svelte';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
+	import { Icon } from 'svelte-icons-pack';
+	import { BsConeStriped } from 'svelte-icons-pack/bs';
 	import { Heading } from 'flowbite-svelte';
 
 	export let iconSize = '48';
@@ -20,15 +20,15 @@
 </script>
 
 <div class="flex flex-col items-center mx-auto">
-	<Hr classHr="w-[100%] min-h-[1px] mx-auto my-4" />
+	<Hr classHr="w-[100%] min-h-px mx-auto my-4" />
 
 	<div class="flex mb-4">
-		<Icon size={iconSize} src={ConeStriped} />
-		<Icon size={iconSize} src={ConeStriped} />
-		<Icon size={iconSize} src={ConeStriped} />
+		<Icon size={iconSize} src={BsConeStriped} />
+		<Icon size={iconSize} src={BsConeStriped} />
+		<Icon size={iconSize} src={BsConeStriped} />
 	</div>
 
 	<Heading tag={headingTag} class={headingClass}>{headingContent}</Heading>
 
-	<Hr classHr="w-[100%] min-h-[1px] mx-auto my-4" />
+	<Hr classHr="w-[100%] min-h-px mx-auto my-4" />
 </div>
