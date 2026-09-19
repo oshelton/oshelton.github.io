@@ -15,11 +15,11 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@fontsource/fira-mono": "^4.5.10",
+		"@fontsource/fira-mono": "^5.3.0",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.70.3",
-		"@sveltejs/vite-plugin-svelte": "^3.1.2",
-		"@tailwindcss/postcss": "^4.3.3",
+		"@sveltejs/vite-plugin-svelte": "^7.3.0",
+		"@tailwindcss/vite": "^4.3.3",
 		"eslint": "^10.10.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.23.0",
@@ -27,8 +27,6 @@
 		"flowbite-svelte-icons": "3.1.0",
 		"globals": "^17.12.0",
 		"linq": "^4.0.2",
-		"postcss": "^8.4.24",
-		"postcss-load-config": "^4.0.1",
 		"prettier": "^3.9.7",
 		"prettier-plugin-svelte": "^4.1.1",
 		"svelte": "^5.57.0",
@@ -39,7 +37,7 @@
 		"svelty-picker": "^6.1.6",
 		"tailwindcss": "^4.3.3",
 		"typescript": "^5.2.2",
-		"vite": "^5.4.21",
-		"vitest": "^3.2.7"
+		"vite": "^8.3.0",
+		"vitest": "^4.1.11"
 	}
 }
