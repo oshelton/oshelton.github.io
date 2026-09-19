@@ -1,1 +1,0 @@
-import{s as e}from"./DVR72Upa.js";const o=!0,r=()=>{const s=e;return{page:{subscribe:s.page.subscribe},navigating:{subscribe:s.navigating.subscribe},updated:s.updated}},a={subscribe(s){return r().page.subscribe(s)}};export{o as b,a as p};
