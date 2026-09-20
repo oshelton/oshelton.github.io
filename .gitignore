@@ -14,3 +14,6 @@ vite.config.ts.timestamp-*
 .vs
 bin
 obj
+
+# eslint --cache writes this at the repo root (prettier's lives in node_modules/.cache)
+.eslintcache

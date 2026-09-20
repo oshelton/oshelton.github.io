@@ -17,6 +17,14 @@
 
 	CountPageVisit();
 
+	/**
+	 * flowbite-svelte 1.x indents a vertical TimelineItem's title and date by 16px
+	 * so they clear the marker's ring, but leaves the item's children at the edge
+	 * of the <li> - 6px off the connector and out of line with their own headers.
+	 * Match the indent the theme gives the header.
+	 */
+	const timelineItemContainerClasses = 'flex flex-col gap-4 ml-4';
+
 	const url = $page.url.pathname;
 	const navItem = GetItemForUrl(url);
 	const pageDescription = `My educational history can be divided into three phases (one phase more than most):
@@ -47,7 +55,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 <Timeline order="vertical">
 	<span id="graduate">
 		<TimelineItem title="Graduate School - University of Georgia" date="2010-2013">
-			<div class="flex flex-col gap-4">
+			<div class={timelineItemContainerClasses}>
 				<P>
 					Graduate school at the <A href="https://www.uga.edu/">University of Georgia</A> was an incredible
 					time. The experiences I had there, and a lot of the struggles I had have helped shape me into
@@ -61,7 +69,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 				<P>There's a story there, and I may write up a blog post about it at some point.</P>
 
 				<P>
-					In grad school I was blesssed to be able to interact and work with people from radically
+					In grad school I was blessed to be able to interact and work with people from radically
 					different backgrounds, cultures, and beliefs than my own. I was introduced to Indian and
 					Middle Eastern cuisine and was able to just hang out and work with people from all over
 					the world and get to know them and establish friendships with them.
@@ -105,7 +113,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 
 	<span id="undergraduate">
 		<TimelineItem title="Undergraduate College - Valdosta State University" date="2006-2010">
-			<div class="flex flex-col gap-4">
+			<div class={timelineItemContainerClasses}>
 				<P
 					>College for me at <A href="https://www.valdosta.edu/">Valdosta State University</A> probably
 					wasn't as exciting as it was for a lot of people.</P
@@ -137,7 +145,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 						taste of what working in the field could be like.</Li
 					>
 					<Li
-						>I also worked several semesters as a teaching assisstant; evaluating and grading other
+						>I also worked several semesters as a teaching assistant; evaluating and grading other
 						students code and assisting with lab sessions with limited teaching duties.</Li
 					>
 				</UnorderedList>
@@ -163,13 +171,13 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 	</span>
 
 	<span id="high-school">
-		<TimelineItem title="High School - Clinch County High School" date="2002-2006">
-			<div class="flex flex-col gap-4">
+		<TimelineItem title="High School - Clinch County High School" date="2002-2006" isLast>
+			<div class={timelineItemContainerClasses}>
 				<P>
 					High school at <A href="https://www.clinchcounty.com/domain/13"
 						>Clinch County High School in Homerville Georgia</A
-					> was a curious time for me full of ups and downs. I made a lot of friends and was able to
-					participate in a lot of activities and learned a lot.
+					> was a curious time for me full of ups and downs. I made a lot of friends and was able to participate
+					in a lot of activities and learned a lot.
 				</P>
 
 				<P>

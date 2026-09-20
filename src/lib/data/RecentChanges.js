@@ -28,6 +28,7 @@ class RecentChange {
  * @todo This list will need to be regularly pruned on some basis.
  */
 export const AllRecentChanges = [
+	new RecentChange('Updated dependencies to latest available.', new Date(2026, 8, 20), []),
 	new RecentChange(
 		'Add entry for LTF and UGA jobs and add expansion support to work page.',
 		new Date(2024, 5, 4),

@@ -3,12 +3,33 @@
 	Component for rendering a collection of markdown as one or more paragraphs.
 -->
 
+<script module>
+	import { Li } from 'flowbite-svelte';
+	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
+	import OrderedList from '$lib/components/OrderedList.svelte';
+	import UnorderedList from '$lib/components/UnorderedList.svelte';
+	import MarkdownBlockQuote from '$lib/components/MarkdownBlockQuote.svelte';
+
+	// svelte-exmarkdown maps renderers by HTML element name rather than by
+	// markdown node type, so ordered and unordered lists are separate entries
+	// and the old List/ListItem wrapper components are no longer needed.
+	//
+	// Module scope so every instance shares one array rather than rebuilding it.
+	const plugins = [
+		{
+			renderer: {
+				p: ContentParagraph,
+				ol: OrderedList,
+				ul: UnorderedList,
+				li: Li,
+				blockquote: MarkdownBlockQuote
+			}
+		}
+	];
+</script>
+
 <script>
-	import SvelteMarkdown from 'svelte-markdown';
-	import Paragraph from '$lib/components/markdownRenderers/Paragraph.svelte';
-	import List from '$lib/components/markdownRenderers/List.svelte';
-	import ListItem from '$lib/components/markdownRenderers/ListItem.svelte';
-	import BlockQuote from '$lib/components/markdownRenderers/BlockQuote.svelte';
+	import Markdown from 'svelte-exmarkdown';
 
 	/** @type {string} Markdown content to display. */
 	export let source = '';
@@ -18,9 +39,5 @@
 </script>
 
 <div class={markdownClass}>
-	<SvelteMarkdown
-		{source}
-		options={{ breaks: true }}
-		renderers={{ paragraph: Paragraph, list: List, listItem: ListItem, blockquote: BlockQuote }}
-	/>
+	<Markdown md={source} {plugins} />
 </div>

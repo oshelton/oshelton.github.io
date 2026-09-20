@@ -29,9 +29,9 @@ tags: [Announcement]
 </ContentParagraph>
 
 <ContentParagraph>
-	This is a simple first Post just to demonstrate that, well, <em>most</em> things work as expected.
-	Searching posts isn't a thing yet, and some of the post viewing features can't really be exercised
-	with only a single Post.
+	This is a simple first Post just to demonstrate that, well, <em>most</em> things work as expected. Searching
+	posts isn't a thing yet, and some of the post viewing features can't really be exercised with only a
+	single Post.
 </ContentParagraph>
 
 <ContentParagraph

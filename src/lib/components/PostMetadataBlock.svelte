@@ -5,7 +5,7 @@
 
 <script>
 	import { A, Badge, P } from 'flowbite-svelte';
-	import { ArrowRightSolid } from 'flowbite-svelte-icons';
+	import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
 	import { BuildUrlForPost } from '$lib/blog/PostsHelpers';
 
@@ -21,7 +21,7 @@
 	<div class="flex flex-col gap-1">
 		<div class="flex gap-3">
 			<P><strong>{metadata.posted}</strong></P>
-			<P><ArrowRightSolid class="w-3 mt-0.5 self-center" /></P>
+			<P><ArrowRightOutline class="w-3 mt-0.5 self-center" /></P>
 			<P>{metadata.title}</P>
 		</div>
 
@@ -30,7 +30,7 @@
 		<div class="flex flex-wrap items-stretch gap-2">
 			<A class="mr-1" href={BuildUrlForPost(metadata.id)}>Read More...</A>
 
-			{#each metadata.tags as tag}
+			{#each metadata.tags as tag (tag)}
 				<Badge color="green" rounded>{tag}</Badge>
 			{/each}
 		</div>

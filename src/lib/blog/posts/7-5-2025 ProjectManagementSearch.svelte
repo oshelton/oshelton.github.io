@@ -84,8 +84,8 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	<Li
 		><strong>Kanban Support</strong> - I find <A href="https://en.wikipedia.org/wiki/Kanban_board"
 			>Kanban boards</A
-		> to be an excellent way to visually progress and solid support for them was very important, but
-		not quite required.</Li
+		> to be an excellent way to visually track progress and solid support for them was very important,
+		but not quite required.</Li
 	>
 	<Li
 		><strong>Wiki Support</strong> - Some kind of integrated wiki support was desirable to allow documentation
@@ -171,7 +171,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 
 <UnorderedList>
 	<Li
-		>Lots of up-sales and advertisements, to the point I had a tough time figuring out which
+		>Lots of up-sells and advertisements, to the point I had a tough time figuring out which
 		features were available in the community edition and which ones weren't.</Li
 	>
 	<Li
@@ -185,7 +185,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 </UnorderedList>
 
 <ContentParagraph>
-	Besides the lack of Kanban boards in the community edition, the shear amount of ads was very
+	Besides the lack of Kanban boards in the community edition, the sheer amount of ads was very
 	disconcerting. Of all the options I tried OpenProject felt the most like an open core project that
 	really expected users to upgrade before they can have a fully functional product.
 </ContentParagraph>
@@ -199,7 +199,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 <A href="https://leantime.io">Homepage</A>
 
 <ContentParagraph>
-	I made a mistake when evaluating Leantime in that I did not take th etime to look over their
+	I made a mistake when evaluating Leantime in that I did not take the time to look over their
 	version comparison before installing it via Docker. This resulted in me spending quite a bit of
 	time with their non-trivial Docker compose instructions getting an application running whose free
 	version did not meet my needs.
@@ -261,7 +261,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 	>
 	<Li>Doesn't work great on mobile devices but is generally tolerable.</Li>
 	<Li
-		>Some odd Ui/Ux around Kanban boards and issue management, but works plenty well for my needs.</Li
+		>Some odd UI/UX around Kanban boards and issue management, but works plenty well for my needs.</Li
 	>
 </UnorderedList>
 
@@ -272,7 +272,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 
 <ContentParagraph>
 	For example, creating a project for keeping up with our automotive maintenance needs was pretty
-	simple an allows for the creation of issues like this:
+	simple and allows for the creation of issues like this:
 </ContentParagraph>
 
 <PopupImage
@@ -289,7 +289,7 @@ tags: ["Self Hosting" , "Project Management", "Open Source", YouTrack, JetBrains
 <HeadingLink tag="h1" id="conclusions">Conclusions</HeadingLink>
 
 <ContentParagraph>
-	I was quit surprised at how hard a time I had finding a fully open source and free self hosted
+	I was quite surprised at how hard a time I had finding a fully open source and free self hosted
 	Project Management solution, especially one that could work well for non-software projects.
 </ContentParagraph>
 

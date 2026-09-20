@@ -57,7 +57,7 @@
 	the later 90s and early 2000s meant I was able to interact a lot with computers when computing
 	wasn't nearly as user friendly and abstract as it is today. I had broken, and fixed, my own
 	computers on more than one occasion, and since so many people in my life seemed baffled by them it
-	felt like a good opportunity to pursue and fun.
+	felt like a good opportunity to pursue, and fun.
 </ContentParagraph>
 
 <div class="gap-4 flex flex-row flex-wrap">
@@ -92,7 +92,7 @@
 <HeadingLink id="real">First "Real" Programs</HeadingLink>
 
 <ContentParagraph>
-	My first programs on the Ti 84 were very limited and simple things, but they made me start
+	My first programs on the TI-84 were very limited and simple things, but they made me start
 	wondering what else may be possible and what else may be possible in a PC based environment (that
 	supported undo/redo for example) and with languages that were more advanced and complex.
 </ContentParagraph>
@@ -180,12 +180,24 @@
 			>
 		</ContentParagraph>
 
-		<Alert border color="yellow" class="mb-4">
-			<InfoCircleSolid slot="icon" class="w-4 h-4" />
+		<!--
+			flowbite-svelte 1.x changed the yellow Alert's dark mode from a dark
+			background to bg-yellow-200. The ContentParagraph inside supplies its own
+			dark:text-white, which left white text on pale yellow. Restore the colour
+			pair 0.44 shipped so the callout stays readable in both themes.
+		-->
+		<Alert
+			border
+			color="yellow"
+			class="mb-4 bg-yellow-50 text-yellow-800 dark:bg-gray-800 dark:text-yellow-300"
+		>
+			{#snippet icon()}
+				<InfoCircleSolid class="w-4 h-4" />
+			{/snippet}
 
 			<ContentParagraph>
-				The Basic Allegro Version was built with its logic tied to the its framerate, and it doesn't
-				use VSync so I <strong>don't</strong> recommend going past the menus.
+				The Basic Allegro Version was built with its logic tied to its framerate, and it doesn't use
+				VSync so I <strong>don't</strong> recommend going past the menus.
 			</ContentParagraph>
 
 			<ContentParagraph class="mb-0">
@@ -196,8 +208,8 @@
 
 		<ContentParagraph>
 			I grew up in the age of the <A href="https://en.wikipedia.org/wiki/Shoot_'em_up">SHMUP</A>;
-			from various versions of <A href="https://en.wikipedia.org/wiki/Raiden_(series)">Raiden</A> in
-			the arcades to many gaming sessions with friends playing <A
+			from various versions of <A href="https://en.wikipedia.org/wiki/Raiden_(series)">Raiden</A> in the
+			arcades to many gaming sessions with friends playing <A
 				href="https://en.wikipedia.org/wiki/Captain_Skyhawk">Captain Skyhawk</A
 			> on the NES and eventually the SNES port of <A
 				href="https://en.wikipedia.org/wiki/Strike_Gunner_S.T.G.">Strike Gunner</A
@@ -238,4 +250,4 @@
 	</div>
 </div>
 
-<div class="gap-4 flex flex-row flex-wrap" />
+<div class="gap-4 flex flex-row flex-wrap"></div>

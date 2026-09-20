@@ -21,7 +21,7 @@
 />
 
 <div class="flex flex-col gap-3 mb-6">
-	{#each allMetadata as post}
+	{#each allMetadata as post (post.id)}
 		<PostMetadataBlock metadata={post} />
 	{/each}
 </div>

@@ -1,8 +1,8 @@
 <script>
 	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
-	import { ArrowRightSolid } from 'flowbite-svelte-icons';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
+	import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	import { Icon } from 'svelte-icons-pack';
+	import { BsConeStriped } from 'svelte-icons-pack/bs';
 
 	import ContentParagraph from '$lib/components/ContentParagraph.svelte';
 	import MarkdownParagraph from '$lib/components/MarkdownParagraph.svelte';
@@ -62,11 +62,13 @@ These projects also come plans included.`;
 	giving folks a better picture of who I am and what I am up to.
 </ContentParagraph>
 
-<Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
+<Hr class="w-[90%] min-h-px mx-auto my-2" />
 
 <div class="py-4 gap-4 columns-1 lg:columns-2 md:columns-2">
-	{#each NavigationMenus as menu}
-		<Card class="mb-4 max-w-full break-inside-avoid-column">
+	{#each NavigationMenus as menu (menu.title)}
+		<!-- flowbite-svelte 1.x dropped Card's built-in p-4 sm:p-6, so the
+		     padding has to be supplied here. -->
+		<Card class="p-4 sm:p-6 mb-4 max-w-full break-inside-avoid-column">
 			<Heading tag="h6" class="flex mb-4 align-middle">
 				<svelte:component this={menu.icon} class="w-5 h-5 mr-2 my-auto" />
 				{menu.title}
@@ -75,11 +77,11 @@ These projects also come plans included.`;
 			<MarkdownParagraph source={getDescriptionForItem(menu)} />
 
 			<div class="flex flex-wrap gap-2">
-				{#each menu.items as item}
+				{#each menu.items as item (item.url)}
 					{#if item.underConstruction}
 						<Button class="p-2" color="alternative" href={item.url} target={item.target} pill>
 							<span class="flex gap-1">
-								<Icon size="16" className="my-auto" src={ConeStriped} />
+								<Icon size="16" className="my-auto" src={BsConeStriped} />
 								{item.title}
 							</span>
 						</Button>
@@ -96,13 +98,13 @@ These projects also come plans included.`;
 	{/each}
 </div>
 
-<Hr classHr="w-[90%] min-h-[1px] mx-auto my-2" />
+<Hr class="w-[90%] min-h-px mx-auto my-2" />
 
 <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-3">
 	<div class="flex flex-col gap-3 mb-6">
 		<Heading tag="h4" class="mb-4">Recent Posts</Heading>
 
-		{#each mostRecentPosts as post}
+		{#each mostRecentPosts as post (post.id)}
 			<PostMetadataBlock metadata={post} />
 		{/each}
 	</div>
@@ -110,17 +112,17 @@ These projects also come plans included.`;
 	<div class="flex flex-col gap-3 mb-6">
 		<Heading tag="h4" class="mb-4">Recent Changes:</Heading>
 
-		{#each AllRecentChanges as change}
+		{#each AllRecentChanges as change (change.title)}
 			<div class="flex flex-col gap-1">
 				<div class="flex gap-3">
 					<P><strong>{change.date.toLocaleDateString()}</strong></P>
-					<P><ArrowRightSolid class="w-3 mt-0.5 self-center" /></P>
+					<P><ArrowRightOutline class="w-3 mt-0.5 self-center" /></P>
 					<P>{change.title}</P>
 				</div>
 
 				{#if change.changedPageItems && change.changedPageItems.length > 0}
 					<div class="ml-12 col-span-2 flex gap-4 flex-wrap">
-						{#each change.changedPageItems as pageItem}
+						{#each change.changedPageItems as pageItem (pageItem.url)}
 							<Button
 								class="p-2"
 								color="alternative"

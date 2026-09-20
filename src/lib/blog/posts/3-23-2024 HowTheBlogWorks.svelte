@@ -73,7 +73,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 </OrderedList>
 
 <ContentParagraph>
-	Each of these play a critical role in the blogging platform and it's functionality. Before we get
+	Each of these plays a critical role in the blogging platform and its functionality. Before we get
 	too far into the weeds this platform probably isn't:
 </ContentParagraph>
 
@@ -210,7 +210,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 	>
 </UnorderedList>
 
-<ContentParagraph>The post generation tool can be ran two different ways:</ContentParagraph>
+<ContentParagraph>The post generation tool can be run two different ways:</ContentParagraph>
 
 <OrderedList>
 	<Li
@@ -233,7 +233,7 @@ tags: [C#, "Code Generation", JS, Nuke, "Software Engineering", Svelte]
 <UnorderedList>
 	<Li
 		><A href="https://github.com/oshelton/oshelton.github.io/blob/main/src/lib/blog/PostsHelpers.js"
-			>PostHelpers.js</A
+			>PostsHelpers.js</A
 		> - This file contains functions to make accessing the post data much simpler.</Li
 	>
 	<Li

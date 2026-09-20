@@ -13,8 +13,8 @@
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import { DarkMode } from 'flowbite-svelte';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import ConeStriped from 'svelte-icons-pack/bs/BsConeStriped';
+	import { Icon } from 'svelte-icons-pack';
+	import { BsConeStriped } from 'svelte-icons-pack/bs';
 	import { page } from '$app/stores';
 
 	import logo from '$lib/images/site-logo.jpg';
@@ -34,7 +34,7 @@
 	}
 </script>
 
-<header class="w-full flex z-20 top-0 left-0">
+<header class="w-full z-20 top-0 left-0">
 	<Navbar
 		class="px-2 sm:px-4 py-2.5 bg-slate-200 border-b border-slate-500 dark:border-gray-600 dark:bg-gray-800"
 	>
@@ -47,29 +47,38 @@
 
 		<div class="flex md:order-2">
 			<NavHamburger />
-			<DarkMode />
+			<!-- flowbite-svelte 0.44.24 dropped the focus ring from DarkMode's default
+			     btnClass, leaving the button with no visible keyboard focus indicator.
+			     Restore the classes it used to ship with. -->
+			<DarkMode class="focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700" />
 		</div>
 
-		<NavUl {activeUrl}>
+		<!-- flowbite-svelte 1.x dropped md:space-x-8 from NavUl and moved to
+		     md:p-2 on each NavLi, which halves the gap between nav items.
+		     space-x-4 plus that padding restores the original 32px spacing. -->
+		<NavUl {activeUrl} classes={{ ul: 'mt-4 md:mt-0 md:space-x-4' }}>
 			<NavLi href="/">Home</NavLi>
 
-			{#each NavigationMenus as menu}
+			{#each NavigationMenus as menu (menu.title)}
 				<NavLi class="cursor-pointer">
 					{menu.title}<ChevronDownOutline
 						class="w-3 h-3 ml-2 text-primary-800 dark:text-white inline"
 					/>
 				</NavLi>
 				<Dropdown {activeUrl} class="z-20">
-					{#each menu.items as item}
-						<DropdownItem href={item.url} target={item.target} on:click={() => itemIsClicked(item)}>
+					{#each menu.items as item (item.url)}
+						<DropdownItem href={item.url} target={item.target} onclick={() => itemIsClicked(item)}>
 							{#if item.underConstruction}
-								<span class="flex gap-2">
-									<Icon size="16" src={ConeStriped} />
+								<!-- The cone sits inline with the title rather than in a gutter
+								     reserved on every item, so entries without one are not
+								     indented past empty space. -->
+								<span class="flex items-center gap-2">
+									<Icon size="16" src={BsConeStriped} />
 									<Tooltip>This page is under construction.</Tooltip>
 									{item.title}
 								</span>
 							{:else}
-								<span class="ml-6">{item.title}</span>
+								{item.title}
 							{/if}
 						</DropdownItem>
 					{/each}

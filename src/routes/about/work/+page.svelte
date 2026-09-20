@@ -55,6 +55,13 @@
 	const ugaId = 'uga';
 
 	const timelineItemContainerClasses = 'flex flex-col gap-4';
+	/**
+	 * flowbite-svelte 1.x gives accordion headers py-5 and content p-5. 0.44's
+	 * paddingFlush="0" produced no padding at all, which is the look this page
+	 * was built around.
+	 */
+	const accordionItemClasses = { button: 'py-0', content: 'p-0' };
+
 	const badgeContainerClasses = 'flex mt-4 gap-2 flex-wrap';
 </script>
 
@@ -79,25 +86,35 @@
 	]}
 />
 
+{#snippet timelineMarker()}
+	<!--
+		1.x replaces the whole marker container with this snippet, where 0.44 only
+		replaced its contents. 0.44 also left the <li> static so this positioned
+		against the <ol>; 1.x makes the <li> relative, so the offset is measured
+		from the entry itself and has to clear the text rather than sit under it.
+	-->
+	<div
+		class="absolute -left-9 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+	></div>
+{/snippet}
+
 <Timeline order="vertical">
 	<span id={renewedVisionId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
-					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
+					classes={accordionItemClasses}
+					open={expandAll || (expandSpecific && expandSection === `#${renewedVisionId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.renewedvision.com/">Renewed Vision</A>: Senior Software Engineer
-							ProPresenter Windows Team</Heading
-						>
-						<P>Full Time: September 2024 - Present</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.renewedvision.com/">Renewed Vision</A>: Senior Software
+								Engineer ProPresenter Windows Team</Heading
+							>
+							<P>Full Time: September 2024 - Present</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -136,24 +153,22 @@
 	</span>
 
 	<span id={simpsonLeadId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonLeadId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Lead Software Engineer <A
-								href="https://www.strongtie.com/products/connectors/ics">CS Director</A
-							> Team</Heading
-						>
-						<P>Full Time: May 2024 - August 2024</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Lead Software Engineer <A
+									href="https://www.strongtie.com/products/connectors/ics">CS Director</A
+								> Team</Heading
+							>
+							<P>Full Time: May 2024 - August 2024</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -167,7 +182,7 @@
 						</P>
 
 						<P>
-							I lead the the Simpson Strong-Tie CS Director team from a development perspective;
+							I lead the Simpson Strong-Tie CS Director team from a development perspective;
 							including planning out and prioritizing work with Product Management and other
 							stakeholders, organizing work in our Project Management tools, partnering with
 							Engineers who own specific features and projects to ensure their success, and
@@ -182,7 +197,7 @@
 
 						<P>
 							The CS Director application is a large <strong>WPF</strong> based on-prem distributed desktop
-							application that forms the core of our customers truss manufacturing businesses and organizes
+							application that forms the core of our customers' truss manufacturing businesses and organizes
 							their production, billing, and design operations under one "roof".
 						</P>
 
@@ -256,25 +271,23 @@
 	</span>
 
 	<span id={simpsonId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6">
-							<A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Senior Software
-							Engineer/Tech Lead <A href="https://www.strongtie.com/products/connectors/ics"
-								>CS Director</A
-							> Team
-						</Heading>
-						<P>Full Time: December 2022 - May 2024</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6">
+								<A href="https://www.strongtie.com/">Simpson Strong-Tie</A>: Senior Software
+								Engineer/Tech Lead <A href="https://www.strongtie.com/products/connectors/ics"
+									>CS Director</A
+								> Team
+							</Heading>
+							<P>Full Time: December 2022 - May 2024</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -300,7 +313,7 @@
 
 						<P>
 							The CS Director application is a large <strong>WPF</strong> based on-prem distributed desktop
-							application that forms the core of our customers truss manufacturing businesses and organizes
+							application that forms the core of our customers' truss manufacturing businesses and organizes
 							their production, billing, and design operations under one "roof".
 						</P>
 
@@ -355,24 +368,22 @@
 	</span>
 
 	<span id={logosSermonsId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${logosSermonsId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
-								href="https://www.logos.com/features/sermon-builder">Sermon Tools</A
-							> Team</Heading
-						>
-						<P>Full Time: ~2020 - December 2022</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
+									href="https://www.logos.com/features/sermon-builder">Sermon Tools</A
+								> Team</Heading
+							>
+							<P>Full Time: ~2020 - December 2022</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -437,8 +448,8 @@
 
 						<UnorderedList>
 							<Li
-								><strong>React</strong> can be very annoying, and it's not my first choice for a web
-								frontend framework.</Li
+								><strong>React</strong> can be very annoying, and it's not my first choice for a web frontend
+								framework.</Li
 							>
 							<Li
 								>Rich Text Editors are really <em>really</em> complicated. Adding IME and RTL text to
@@ -455,7 +466,7 @@
 							</Li>
 							<Li>
 								A well established automated build pipeline is incredibly helpful when developing a
-								component that is consumed in many consumers and save a lot of time. That same
+								component that is consumed in many consumers and saves a lot of time. That same
 								tooling can also be used to do anything that can be implemented in code. The
 								limitations are only those of your imagination.
 							</Li>
@@ -469,7 +480,7 @@
 				<Badge color="indigo" rounded>Management and Planning</Badge>
 				<Badge rounded>Desktop</Badge>
 				<Badge rounded>Web</Badge>
-				<Badge rounded>IOS</Badge>
+				<Badge rounded>iOS</Badge>
 				<Badge rounded>MacOS</Badge>
 				<Badge color="yellow" rounded>C#</Badge>
 				<Badge color="yellow" rounded>Typescript</Badge>
@@ -491,24 +502,22 @@
 	</span>
 
 	<span id={logosId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${logosId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
-								href="https://www.logos.com/grow/what-is-logos-bible-study/">Logos Desktop</A
-							> Team</Heading
-						>
-						<P>Full Time: May 2018 - ~2020</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.logos.com/">Logos/Faithlife</A>: Software Engineer II <A
+									href="https://www.logos.com/grow/what-is-logos-bible-study/">Logos Desktop</A
+								> Team</Heading
+							>
+							<P>Full Time: May 2018 - ~2020</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -596,24 +605,22 @@
 	</span>
 
 	<span id={drakeId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${drakeId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.drakesoftware.com/">Drake Software</A>: Lead Programmer <A
-								href="https://www.drakesoftware.com/products/conversions/">Data Conversions</A
-							></Heading
-						>
-						<P>Full Time: August 2013 - May 2018</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.drakesoftware.com/">Drake Software</A>: Lead Programmer <A
+									href="https://www.drakesoftware.com/products/conversions/">Data Conversions</A
+								></Heading
+							>
+							<P>Full Time: August 2013 - May 2018</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -704,23 +711,21 @@
 	</span>
 
 	<span id={ltfId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${ltfId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.lewistaylorfarms.com/">Lewis Taylor Farms</A>: Software Engineer
-							and System Maintainer (part time)</Heading
-						>
-						<P>Part Time: May 2011 - August 2015</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.lewistaylorfarms.com/">Lewis Taylor Farms</A>: Software
+								Engineer and System Maintainer (part time)</Heading
+							>
+							<P>Part Time: May 2011 - August 2015</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -756,7 +761,7 @@
 
 						<UnorderedList>
 							<Li
-								>Improve, update, and maintain the LTF Greenshouses desktop application and
+								>Improve, update, and maintain the LTF Greenhouses desktop application and
 								infrastructure.</Li
 							>
 							<Li
@@ -816,22 +821,20 @@
 	</span>
 
 	<span id={ugaId}>
-		<TimelineItem>
-			<svelte:fragment slot="icon">
-				<span />
-			</svelte:fragment>
-
-			<Accordion flush>
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6" isLast>
+			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
-					<span slot="header" class="mb-4">
-						<Heading tag="h6"
-							><A href="https://www.uga.edu/">University of Georgia</A>: Instructor</Heading
-						>
-						<P>Part Time: August 2011 - May 2013</P>
-					</span>
+					{#snippet header()}
+						<span class="mb-4">
+							<Heading tag="h6"
+								><A href="https://www.uga.edu/">University of Georgia</A>: Instructor</Heading
+							>
+							<P>Part Time: August 2011 - May 2013</P>
+						</span>
+					{/snippet}
 
 					<div class={timelineItemContainerClasses}>
 						<P>
@@ -856,7 +859,7 @@
 
 						<UnorderedList>
 							<Li
-								>Create course work, prepare lesson plans, and lecture in class for a variety
+								>Create course work, prepare lesson plans, and lecture in class for a variety of
 								introductory computer science classes at UGA.</Li
 							>
 							<Li>Coordinate course work grading with other teaching assistants.</Li>
