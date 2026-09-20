@@ -1,0 +1,1 @@
+import{B as e,Q as t,a as n,ft as r,j as i,xt as a,z as o}from"./CIepVcb2.js";import"./xihTtKlq.js";import{d as s}from"./Bkes628O.js";function c(c,l){let u=n(l,`class`,8,``);{let n=a(()=>`mb-4 ${u()}`);s(c,{get class(){return t(n)},children:(t,n)=>{var a=e(),s=r(a);i(s,l,`default`,{},null),o(t,a)},$$slots:{default:!0}})}}export{c as t};

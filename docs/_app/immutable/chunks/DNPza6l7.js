@@ -1,8 +1,0 @@
-import{U as e,V as t,ft as n,jt as r,mt as i,z as a}from"./CIepVcb2.js";import"./xihTtKlq.js";import"./BGY1tkSb.js";import{t as o}from"./B5QCaFER.js";var s=t(`This is a simple first Post just to demonstrate that, well, <em>most</em> things work as expected. Searching
-	posts isn't a thing yet, and some of the post viewing features can't really be exercised with only a
-	single Post.`,1),c=t(`<!> <!> <!> <!>`,1);function l(t){var l=c(),u=n(l);o(u,{children:(t,n)=>{r();var i=e(`I've never been much of a blogger, but I have found value in reading other people's blog posts and
-	articles over the years, and so I've decided to start my own to capture some of my thoughts on
-	things. Both to have a record for myself and for others who may find my ramblings potentially
-	useful, edifying, or educational.`);a(t,i)},$$slots:{default:!0}});var d=i(u,2);o(d,{children:(t,n)=>{r();var i=e(`This blog will be dedicated to my technical musings and projects I'm working on; outside of
-	technological flame wars and arguments over tool brands there should be very little drama here.`);a(t,i)},$$slots:{default:!0}});var f=i(d,2);o(f,{children:(e,t)=>{r();var n=s();r(2),a(e,n)},$$slots:{default:!0}});var p=i(f,2);o(p,{children:(t,n)=>{r();var i=e(`A future post will also cover the technical details of how everything works and expand the
-	available features for posts.`);a(t,i)},$$slots:{default:!0}}),a(t,l)}export{l as default};
