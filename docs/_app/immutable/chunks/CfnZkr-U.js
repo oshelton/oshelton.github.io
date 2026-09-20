@@ -1,0 +1,1 @@
+import{t as e}from"./BknBHpzK.js";function t(){return e(()=>{try{window.goatcounter.count({path:location.pathname+location.search+location.hash})}catch{console.debug(`Error sending analytics`)}})}function n(e){try{window.goatcounter.count({path:e})}catch{console.debug(`Error sending analytics for action`)}}export{t as n,n as t};
