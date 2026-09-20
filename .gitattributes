@@ -6,6 +6,11 @@
 # since build runs lint first.
 * text=auto eol=lf
 
+# Windows batch files are the exception: cmd.exe mis-parses labels and
+# multi-line blocks when they are checked out with LF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
 # Assets git must never convert.
 *.png binary
 *.jpg binary

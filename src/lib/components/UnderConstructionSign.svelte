@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 	@component
 	Component for displaying a simple under construction block for use on pages that are still being worked on.
 -->

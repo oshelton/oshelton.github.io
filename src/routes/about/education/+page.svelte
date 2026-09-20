@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 	@component
 	Component backing the about/education page.
 -->
@@ -49,7 +49,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 		<TimelineItem
 			title="Graduate School - University of Georgia"
 			date="2010-2013"
-			timeClass="block pl-0 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+			timeClass="block pl-0 mb-2"
 		>
 			<div class="flex flex-col gap-4">
 				<P>
@@ -111,7 +111,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 		<TimelineItem
 			title="Undergraduate College - Valdosta State University"
 			date="2006-2010"
-			timeClass="block pl-0 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+			timeClass="block pl-0 mb-2"
 		>
 			<div class="flex flex-col gap-4">
 				<P
@@ -174,7 +174,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 		<TimelineItem
 			title="High School - Clinch County High School"
 			date="2002-2006"
-			timeClass="block pl-0 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+			timeClass="block pl-0 mb-2"
 		>
 			<div class="flex flex-col gap-4">
 				<P>

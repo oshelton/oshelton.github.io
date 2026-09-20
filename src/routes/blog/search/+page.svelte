@@ -2,7 +2,13 @@
   @component
 
   Component for the Search Blog Posts page.
+
+  This is the only runes-mode component on the site; everything else is still
+  legacy mode. flowbite-svelte 1.x's Checkbox mutates the array behind
+  bind:group in place, which a legacy-mode parent never observes, so the tag
+  filter silently did nothing until this file was converted.
 -->
+<svelte:options runes={true} />
 
 <script>
 	import { browser } from '$app/environment';
@@ -46,10 +52,6 @@
 	/** @type {import('$lib/types').SearchPostPreferences} */
 	const parsedPreferences = preferences && JSON.parse(preferences);
 
-	// This component is in runes mode. flowbite-svelte 1.x components are
-	// runes-based and bind:group mutates the bound array in place, which a
-	// legacy-mode parent never sees - the tags would tick but never register.
-
 	/** If searching by at least posted by date is enabled. @type {boolean} */
 	let searchAtLeastPostedBy = $state(parsedPreferences?.searchAtLeastPostedBy ?? false);
 	/** The date to at least be posted by when searching. @type {Date} */
@@ -67,10 +69,12 @@
 	/** If the tag selector dialog is open or not. @type {boolean} */
 	let isTagSelectorOpen = $state(false);
 
-	/** Array of matching post metadata. @type {import('$lib/types').PostMetadata[]} */
-	let foundPostMetadata = $state([]);
-
-	//browser && localStorage.setItem('theme', 'dark');
+	/**
+	 * Array of matching post metadata. Raw because it is only ever replaced
+	 * wholesale, never mutated - unlike selectedSearchTags above.
+	 * @type {import('$lib/types').PostMetadata[]}
+	 */
+	let foundPostMetadata = $state.raw([]);
 
 	// Save Preferences.
 	onMount(() => {
@@ -128,8 +132,6 @@
 		foundPostMetadata = GetMetadatasForPostIds(postIdsToFetch)
 			.orderByDescending((x) => x.posted)
 			.toArray();
-
-		console.log(foundPostMetadata);
 	}
 </script>
 

@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 	@component
 	Component backing the about/work page.
 -->
@@ -55,6 +55,13 @@
 	const ugaId = 'uga';
 
 	const timelineItemContainerClasses = 'flex flex-col gap-4';
+	/**
+	 * flowbite-svelte 1.x gives accordion headers py-5 and content p-5. 0.44's
+	 * paddingFlush="0" produced no padding at all, which is the look this page
+	 * was built around.
+	 */
+	const accordionItemClasses = { button: 'py-0', content: 'p-0' };
+
 	const badgeContainerClasses = 'flex mt-4 gap-2 flex-wrap';
 </script>
 
@@ -79,20 +86,24 @@
 	]}
 />
 
+{#snippet timelineMarker()}
+	<!--
+		1.x replaces the whole marker container with this snippet, where 0.44 only
+		replaced its contents. 0.44 also left the <li> static so this positioned
+		against the <ol>; 1.x makes the <li> relative, so the offset is measured
+		from the entry itself and has to clear the text rather than sit under it.
+	-->
+	<div
+		class="absolute -left-9 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+	></div>
+{/snippet}
+
 <Timeline order="vertical">
 	<span id={renewedVisionId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
 					{#snippet header()}
@@ -142,18 +153,10 @@
 	</span>
 
 	<span id={simpsonLeadId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonLeadId}`)}
 				>
 					{#snippet header()}
@@ -268,18 +271,10 @@
 	</span>
 
 	<span id={simpsonId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonId}`)}
 				>
 					{#snippet header()}
@@ -373,18 +368,10 @@
 	</span>
 
 	<span id={logosSermonsId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${logosSermonsId}`)}
 				>
 					{#snippet header()}
@@ -515,18 +502,10 @@
 	</span>
 
 	<span id={logosId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${logosId}`)}
 				>
 					{#snippet header()}
@@ -626,18 +605,10 @@
 	</span>
 
 	<span id={drakeId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${drakeId}`)}
 				>
 					{#snippet header()}
@@ -740,18 +711,10 @@
 	</span>
 
 	<span id={ltfId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${ltfId}`)}
 				>
 					{#snippet header()}
@@ -858,18 +821,10 @@
 	</span>
 
 	<span id={ugaId}>
-		<TimelineItem>
-			{#snippet orientationSlot()}
-				<!-- 1.x replaces the whole marker container with this snippet,
-				     where 0.44 only replaced its contents. -->
-				<div
-					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
-				></div>
-			{/snippet}
-
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					classes={{ button: 'py-0', content: 'p-0' }}
+					classes={accordionItemClasses}
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
 					{#snippet header()}

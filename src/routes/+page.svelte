@@ -1,4 +1,4 @@
-﻿<script>
+<script>
 	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
 	import { ArrowRightOutline } from 'flowbite-svelte-icons';
 	import { Icon } from 'svelte-icons-pack';
