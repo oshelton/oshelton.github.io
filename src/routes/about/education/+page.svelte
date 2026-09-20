@@ -65,7 +65,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 				<P>There's a story there, and I may write up a blog post about it at some point.</P>
 
 				<P>
-					In grad school I was blesssed to be able to interact and work with people from radically
+					In grad school I was blessed to be able to interact and work with people from radically
 					different backgrounds, cultures, and beliefs than my own. I was introduced to Indian and
 					Middle Eastern cuisine and was able to just hang out and work with people from all over
 					the world and get to know them and establish friendships with them.
@@ -145,7 +145,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 						taste of what working in the field could be like.</Li
 					>
 					<Li
-						>I also worked several semesters as a teaching assisstant; evaluating and grading other
+						>I also worked several semesters as a teaching assistant; evaluating and grading other
 						students code and assisting with lab sessions with limited teaching duties.</Li
 					>
 				</UnorderedList>

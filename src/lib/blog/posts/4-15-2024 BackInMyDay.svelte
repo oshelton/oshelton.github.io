@@ -103,7 +103,7 @@ tags: [C, C++, "High School", School]
 
 <ContentParagraph>
 	What do I see here but some of the earliest beginnings of documentation and Project Planning and
-	management, and I appreciate that even back then I was starting to think of that kind fo stuff.
+	management, and I appreciate that even back then I was starting to think of that kind of stuff.
 </ContentParagraph>
 
 <ContentParagraph>

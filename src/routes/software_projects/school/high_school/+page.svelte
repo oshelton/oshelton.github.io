@@ -57,7 +57,7 @@
 	the later 90s and early 2000s meant I was able to interact a lot with computers when computing
 	wasn't nearly as user friendly and abstract as it is today. I had broken, and fixed, my own
 	computers on more than one occasion, and since so many people in my life seemed baffled by them it
-	felt like a good opportunity to pursue and fun.
+	felt like a good opportunity to pursue, and fun.
 </ContentParagraph>
 
 <div class="gap-4 flex flex-row flex-wrap">
@@ -92,7 +92,7 @@
 <HeadingLink id="real">First "Real" Programs</HeadingLink>
 
 <ContentParagraph>
-	My first programs on the Ti 84 were very limited and simple things, but they made me start
+	My first programs on the TI-84 were very limited and simple things, but they made me start
 	wondering what else may be possible and what else may be possible in a PC based environment (that
 	supported undo/redo for example) and with languages that were more advanced and complex.
 </ContentParagraph>
@@ -186,8 +186,8 @@
 			{/snippet}
 
 			<ContentParagraph>
-				The Basic Allegro Version was built with its logic tied to the its framerate, and it doesn't
-				use VSync so I <strong>don't</strong> recommend going past the menus.
+				The Basic Allegro Version was built with its logic tied to its framerate, and it doesn't use
+				VSync so I <strong>don't</strong> recommend going past the menus.
 			</ContentParagraph>
 
 			<ContentParagraph class="mb-0">

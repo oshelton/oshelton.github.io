@@ -182,7 +182,7 @@
 						</P>
 
 						<P>
-							I lead the the Simpson Strong-Tie CS Director team from a development perspective;
+							I lead the Simpson Strong-Tie CS Director team from a development perspective;
 							including planning out and prioritizing work with Product Management and other
 							stakeholders, organizing work in our Project Management tools, partnering with
 							Engineers who own specific features and projects to ensure their success, and
@@ -197,7 +197,7 @@
 
 						<P>
 							The CS Director application is a large <strong>WPF</strong> based on-prem distributed desktop
-							application that forms the core of our customers truss manufacturing businesses and organizes
+							application that forms the core of our customers' truss manufacturing businesses and organizes
 							their production, billing, and design operations under one "roof".
 						</P>
 
@@ -313,7 +313,7 @@
 
 						<P>
 							The CS Director application is a large <strong>WPF</strong> based on-prem distributed desktop
-							application that forms the core of our customers truss manufacturing businesses and organizes
+							application that forms the core of our customers' truss manufacturing businesses and organizes
 							their production, billing, and design operations under one "roof".
 						</P>
 
@@ -466,7 +466,7 @@
 							</Li>
 							<Li>
 								A well established automated build pipeline is incredibly helpful when developing a
-								component that is consumed in many consumers and save a lot of time. That same
+								component that is consumed in many consumers and saves a lot of time. That same
 								tooling can also be used to do anything that can be implemented in code. The
 								limitations are only those of your imagination.
 							</Li>
@@ -480,7 +480,7 @@
 				<Badge color="indigo" rounded>Management and Planning</Badge>
 				<Badge rounded>Desktop</Badge>
 				<Badge rounded>Web</Badge>
-				<Badge rounded>IOS</Badge>
+				<Badge rounded>iOS</Badge>
 				<Badge rounded>MacOS</Badge>
 				<Badge color="yellow" rounded>C#</Badge>
 				<Badge color="yellow" rounded>Typescript</Badge>
@@ -761,7 +761,7 @@
 
 						<UnorderedList>
 							<Li
-								>Improve, update, and maintain the LTF Greenshouses desktop application and
+								>Improve, update, and maintain the LTF Greenhouses desktop application and
 								infrastructure.</Li
 							>
 							<Li
@@ -859,7 +859,7 @@
 
 						<UnorderedList>
 							<Li
-								>Create course work, prepare lesson plans, and lecture in class for a variety
+								>Create course work, prepare lesson plans, and lecture in class for a variety of
 								introductory computer science classes at UGA.</Li
 							>
 							<Li>Coordinate course work grading with other teaching assistants.</Li>

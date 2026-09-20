@@ -64,9 +64,8 @@
 	<HeadingLink id="faith">Faith</HeadingLink>
 
 	<P>
-		A critically important of mine and my family's life is our faith. My wife and I are members of <A
-			href="https://www.woodlandbaptist.org/">Woodland Baptist church</A
-		> in Waynesville North Carolina.
+		A critically important part of mine and my family's life is our faith. My wife and I are members
+		of <A href="https://www.woodlandbaptist.org/">Woodland Baptist church</A> in Waynesville North Carolina.
 	</P>
 
 	<P>
