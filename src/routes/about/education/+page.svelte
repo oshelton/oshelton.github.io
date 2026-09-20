@@ -17,6 +17,14 @@
 
 	CountPageVisit();
 
+	/**
+	 * flowbite-svelte 1.x indents a vertical TimelineItem's title and date by 16px
+	 * so they clear the marker's ring, but leaves the item's children at the edge
+	 * of the <li> - 6px off the connector and out of line with their own headers.
+	 * Match the indent the theme gives the header.
+	 */
+	const timelineItemContainerClasses = 'flex flex-col gap-4 ml-4';
+
 	const url = $page.url.pathname;
 	const navItem = GetItemForUrl(url);
 	const pageDescription = `My educational history can be divided into three phases (one phase more than most):
@@ -47,7 +55,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 <Timeline order="vertical">
 	<span id="graduate">
 		<TimelineItem title="Graduate School - University of Georgia" date="2010-2013">
-			<div class="flex flex-col gap-4">
+			<div class={timelineItemContainerClasses}>
 				<P>
 					Graduate school at the <A href="https://www.uga.edu/">University of Georgia</A> was an incredible
 					time. The experiences I had there, and a lot of the struggles I had have helped shape me into
@@ -105,7 +113,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 
 	<span id="undergraduate">
 		<TimelineItem title="Undergraduate College - Valdosta State University" date="2006-2010">
-			<div class="flex flex-col gap-4">
+			<div class={timelineItemContainerClasses}>
 				<P
 					>College for me at <A href="https://www.valdosta.edu/">Valdosta State University</A> probably
 					wasn't as exciting as it was for a lot of people.</P
@@ -164,7 +172,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 
 	<span id="high-school">
 		<TimelineItem title="High School - Clinch County High School" date="2002-2006">
-			<div class="flex flex-col gap-4">
+			<div class={timelineItemContainerClasses}>
 				<P>
 					High school at <A href="https://www.clinchcounty.com/domain/13"
 						>Clinch County High School in Homerville Georgia</A
