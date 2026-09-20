@@ -21,7 +21,7 @@
 </script>
 
 <Span>
-	<button on:click={() => (isFullPreviewOpen = true)}>
+	<button onclick={() => (isFullPreviewOpen = true)}>
 		<Img {src} alt={tooltip} class={`${imgSize} ${imgClass}`} />
 	</button>
 
@@ -30,12 +30,22 @@
 	{/if}
 </Span>
 
-<!-- autoclose/outsideclose were removed in flowbite-svelte 1.x; the modal's
-     own dismiss button and backdrop handle closing. -->
-<Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl">
-	{#if fullSrc}
-		<Img src={fullSrc} alt={tooltip} class="max-w-full mx-auto" />
-	{:else}
-		<Img {src} alt={tooltip} class="max-w-full mx-auto" />
-	{/if}
+<!--
+	flowbite-svelte 1.x removed autoclose and outsideclose, and the close button
+	Modal renders next to a title does nothing: it dismisses through a context
+	Dialog sets on itself, which Modal's children are not inside. That left the
+	preview closable only with Escape - no way out at all on a touch device.
+
+	So the X is suppressed with dismissable={false} and the image itself closes
+	the preview, which is what a lightbox should do anyway.
+-->
+<Modal title={tooltip} bind:open={isFullPreviewOpen} size="xl" dismissable={false}>
+	<button
+		type="button"
+		class="block w-full cursor-zoom-out"
+		aria-label="Close image preview"
+		onclick={() => (isFullPreviewOpen = false)}
+	>
+		<Img src={fullSrc ?? src} alt={tooltip} class="max-w-full mx-auto" />
+	</button>
 </Modal>
