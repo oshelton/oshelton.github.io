@@ -69,13 +69,16 @@
 					{#each menu.items as item (item.url)}
 						<DropdownItem href={item.url} target={item.target} onclick={() => itemIsClicked(item)}>
 							{#if item.underConstruction}
-								<span class="flex gap-2">
+								<!-- The cone sits inline with the title rather than in a gutter
+								     reserved on every item, so entries without one are not
+								     indented past empty space. -->
+								<span class="flex items-center gap-2">
 									<Icon size="16" src={BsConeStriped} />
 									<Tooltip>This page is under construction.</Tooltip>
 									{item.title}
 								</span>
 							{:else}
-								<span class="ml-6">{item.title}</span>
+								{item.title}
 							{/if}
 						</DropdownItem>
 					{/each}

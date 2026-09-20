@@ -180,7 +180,17 @@
 			>
 		</ContentParagraph>
 
-		<Alert border color="yellow" class="mb-4">
+		<!--
+			flowbite-svelte 1.x changed the yellow Alert's dark mode from a dark
+			background to bg-yellow-200. The ContentParagraph inside supplies its own
+			dark:text-white, which left white text on pale yellow. Restore the colour
+			pair 0.44 shipped so the callout stays readable in both themes.
+		-->
+		<Alert
+			border
+			color="yellow"
+			class="mb-4 bg-yellow-50 text-yellow-800 dark:bg-gray-800 dark:text-yellow-300"
+		>
 			{#snippet icon()}
 				<InfoCircleSolid class="w-4 h-4" />
 			{/snippet}
