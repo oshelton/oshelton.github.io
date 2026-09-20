@@ -171,7 +171,7 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 	</span>
 
 	<span id="high-school">
-		<TimelineItem title="High School - Clinch County High School" date="2002-2006">
+		<TimelineItem title="High School - Clinch County High School" date="2002-2006" isLast>
 			<div class={timelineItemContainerClasses}>
 				<P>
 					High school at <A href="https://www.clinchcounty.com/domain/13"

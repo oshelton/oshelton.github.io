@@ -104,7 +104,7 @@
 			<Accordion flush transitionType="none">
 				<AccordionItem
 					classes={accordionItemClasses}
-					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
+					open={expandAll || (expandSpecific && expandSection === `#${renewedVisionId}`)}
 				>
 					{#snippet header()}
 						<span class="mb-4">
@@ -821,7 +821,7 @@
 	</span>
 
 	<span id={ugaId}>
-		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6">
+		<TimelineItem orientationSlot={timelineMarker} connectorClass="-left-6" isLast>
 			<Accordion flush transitionType="none">
 				<AccordionItem
 					classes={accordionItemClasses}
