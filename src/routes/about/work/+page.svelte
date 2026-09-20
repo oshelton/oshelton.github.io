@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 	@component
 	Component backing the about/work page.
 -->
@@ -83,12 +83,16 @@
 	<span id={renewedVisionId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
 					{#snippet header()}
@@ -140,12 +144,16 @@
 	<span id={simpsonLeadId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonLeadId}`)}
 				>
 					{#snippet header()}
@@ -262,12 +270,16 @@
 	<span id={simpsonId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${simpsonId}`)}
 				>
 					{#snippet header()}
@@ -363,12 +375,16 @@
 	<span id={logosSermonsId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${logosSermonsId}`)}
 				>
 					{#snippet header()}
@@ -501,12 +517,16 @@
 	<span id={logosId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${logosId}`)}
 				>
 					{#snippet header()}
@@ -608,12 +628,16 @@
 	<span id={drakeId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${drakeId}`)}
 				>
 					{#snippet header()}
@@ -718,12 +742,16 @@
 	<span id={ltfId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${ltfId}`)}
 				>
 					{#snippet header()}
@@ -832,12 +860,16 @@
 	<span id={ugaId}>
 		<TimelineItem>
 			{#snippet orientationSlot()}
-				<span></span>
+				<!-- 1.x replaces the whole marker container with this snippet,
+				     where 0.44 only replaced its contents. -->
+				<div
+					class="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+				></div>
 			{/snippet}
 
 			<Accordion flush transitionType="none">
 				<AccordionItem
-					paddingFlush="0"
+					classes={{ button: 'py-0', content: 'p-0' }}
 					open={expandAll || (expandSpecific && expandSection === `#${ugaId}`)}
 				>
 					{#snippet header()}

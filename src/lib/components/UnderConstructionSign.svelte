@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 	@component
 	Component for displaying a simple under construction block for use on pages that are still being worked on.
 -->
@@ -20,7 +20,7 @@
 </script>
 
 <div class="flex flex-col items-center mx-auto">
-	<Hr classHr="w-[100%] min-h-px mx-auto my-4" />
+	<Hr class="w-[100%] min-h-px mx-auto my-4" />
 
 	<div class="flex mb-4">
 		<Icon size={iconSize} src={BsConeStriped} />
@@ -30,5 +30,5 @@
 
 	<Heading tag={headingTag} class={headingClass}>{headingContent}</Heading>
 
-	<Hr classHr="w-[100%] min-h-px mx-auto my-4" />
+	<Hr class="w-[100%] min-h-px mx-auto my-4" />
 </div>

@@ -53,7 +53,10 @@
 			<DarkMode class="focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700" />
 		</div>
 
-		<NavUl {activeUrl}>
+		<!-- flowbite-svelte 1.x dropped md:space-x-8 from NavUl and moved to
+		     md:p-2 on each NavLi, which halves the gap between nav items.
+		     space-x-4 plus that padding restores the original 32px spacing. -->
+		<NavUl {activeUrl} classes={{ ul: 'mt-4 md:mt-0 md:space-x-4' }}>
 			<NavLi href="/">Home</NavLi>
 
 			{#each NavigationMenus as menu (menu.title)}

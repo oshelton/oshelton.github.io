@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 	@component
 	Component backing the about/education page.
 -->
@@ -46,7 +46,11 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 
 <Timeline order="vertical">
 	<span id="graduate">
-		<TimelineItem title="Graduate School - University of Georgia" date="2010-2013">
+		<TimelineItem
+			title="Graduate School - University of Georgia"
+			date="2010-2013"
+			timeClass="block pl-0 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+		>
 			<div class="flex flex-col gap-4">
 				<P>
 					Graduate school at the <A href="https://www.uga.edu/">University of Georgia</A> was an incredible
@@ -104,7 +108,11 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 	</span>
 
 	<span id="undergraduate">
-		<TimelineItem title="Undergraduate College - Valdosta State University" date="2006-2010">
+		<TimelineItem
+			title="Undergraduate College - Valdosta State University"
+			date="2006-2010"
+			timeClass="block pl-0 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+		>
 			<div class="flex flex-col gap-4">
 				<P
 					>College for me at <A href="https://www.valdosta.edu/">Valdosta State University</A> probably
@@ -163,7 +171,11 @@ I can't claim to *hold* a graduate degree sadly as I did not complete my graduat
 	</span>
 
 	<span id="high-school">
-		<TimelineItem title="High School - Clinch County High School" date="2002-2006">
+		<TimelineItem
+			title="High School - Clinch County High School"
+			date="2002-2006"
+			timeClass="block pl-0 mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+		>
 			<div class="flex flex-col gap-4">
 				<P>
 					High school at <A href="https://www.clinchcounty.com/domain/13"

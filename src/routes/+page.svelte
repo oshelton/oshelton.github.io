@@ -1,4 +1,4 @@
-<script>
+﻿<script>
 	import { Button, Card, Heading, Hr, P, Tooltip } from 'flowbite-svelte';
 	import { ArrowRightOutline } from 'flowbite-svelte-icons';
 	import { Icon } from 'svelte-icons-pack';
@@ -62,11 +62,13 @@ These projects also come plans included.`;
 	giving folks a better picture of who I am and what I am up to.
 </ContentParagraph>
 
-<Hr classHr="w-[90%] min-h-px mx-auto my-2" />
+<Hr class="w-[90%] min-h-px mx-auto my-2" />
 
 <div class="py-4 gap-4 columns-1 lg:columns-2 md:columns-2">
 	{#each NavigationMenus as menu (menu.title)}
-		<Card class="mb-4 max-w-full break-inside-avoid-column">
+		<!-- flowbite-svelte 1.x dropped Card's built-in p-4 sm:p-6, so the
+		     padding has to be supplied here. -->
+		<Card class="p-4 sm:p-6 mb-4 max-w-full break-inside-avoid-column">
 			<Heading tag="h6" class="flex mb-4 align-middle">
 				<svelte:component this={menu.icon} class="w-5 h-5 mr-2 my-auto" />
 				{menu.title}
@@ -96,7 +98,7 @@ These projects also come plans included.`;
 	{/each}
 </div>
 
-<Hr classHr="w-[90%] min-h-px mx-auto my-2" />
+<Hr class="w-[90%] min-h-px mx-auto my-2" />
 
 <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-3">
 	<div class="flex flex-col gap-3 mb-6">
